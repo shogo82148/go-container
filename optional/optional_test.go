@@ -28,3 +28,40 @@ func TestOptional(t *testing.T) {
 		t.Error("should panic, but not")
 	}
 }
+
+func TestGetOr(t *testing.T) {
+	got := New[int](42).GetOr(46)
+	if got != 42 {
+		t.Errorf("want 42, got %d", got)
+	}
+
+	got = None[int]().GetOr(46)
+	if got != 46 {
+		t.Errorf("want 46, got %d", got)
+	}
+}
+
+func TestGetOrFunc(t *testing.T) {
+	called := false
+	f := func() int {
+		called = true
+		return 46
+	}
+
+	got := New[int](42).GetOrFunc(f)
+	if got != 42 {
+		t.Errorf("want 42, got %d", got)
+	}
+	if called {
+		t.Error("the function should be not called, but is called")
+	}
+
+	called = false
+	got = None[int]().GetOrFunc(f)
+	if got != 46 {
+		t.Errorf("want 46, got %d", got)
+	}
+	if !called {
+		t.Error("the function should be called, but is not called")
+	}
+}

@@ -27,3 +27,19 @@ func (v Optional[T]) Get() T {
 		panic("get a value from none")
 	}
 }
+
+func (v Optional[T]) GetOr(defaults T) T {
+	if v.valid {
+		return v.value
+	} else {
+		return defaults
+	}
+}
+
+func (v Optional[T]) GetOrFunc(f func() T) T {
+	if v.valid {
+		return v.value
+	} else {
+		return f()
+	}
+}
