@@ -10,7 +10,7 @@ func TestMap(t *testing.T) {
 	f := func(a int) string {
 		return fmt.Sprintf("<%d>", a)
 	}
-	got := Map(f, in)
+	got := Map(in, f)
 
 	want := []string{"<1>", "<2>", "<3>", "<4>", "<5>", "<6>"}
 
@@ -25,9 +25,12 @@ func TestMap(t *testing.T) {
 }
 
 func ExampleMap() {
-	out := Map(func(a int) string {
-		return fmt.Sprintf("<%d>", a)
-	}, []int{1, 2, 3, 4, 5, 6})
+	out := Map(
+		[]int{1, 2, 3, 4, 5, 6},
+		func(a int) string {
+			return fmt.Sprintf("<%d>", a)
+		},
+	)
 
 	for _, v := range out {
 		fmt.Println(v)
