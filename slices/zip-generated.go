@@ -3,17 +3,15 @@
 package slices
 
 import (
-	"fmt"
-
 	"github.com/shogo82148/go-container/tuples"
 )
 
 // Zip2 returns a slice of 2-tuples.
-// All slices must have same length. the lengths are different, Zip2 panics.
+// The returned slice have the length of the shortest slice.
 func Zip2[T1, T2 any](s1 []T1, s2 []T2) []tuples.Tuple2[T1, T2] {
 	l := len(s1)
-	if len(s2) != l {
-		panic(fmt.Errorf("s2 have different length from s1. len(s2) = %d, len(s1) = %d", len(s2), l))
+	if len(s2) < l {
+		l = len(s2)
 	}
 	ret := make([]tuples.Tuple2[T1, T2], l)
 	for i := 0; i < l; i++ {
@@ -23,14 +21,14 @@ func Zip2[T1, T2 any](s1 []T1, s2 []T2) []tuples.Tuple2[T1, T2] {
 }
 
 // Zip3 returns a slice of 3-tuples.
-// All slices must have same length. the lengths are different, Zip3 panics.
+// The returned slice have the length of the shortest slice.
 func Zip3[T1, T2, T3 any](s1 []T1, s2 []T2, s3 []T3) []tuples.Tuple3[T1, T2, T3] {
 	l := len(s1)
-	if len(s2) != l {
-		panic(fmt.Errorf("s2 have different length from s1. len(s2) = %d, len(s1) = %d", len(s2), l))
+	if len(s2) < l {
+		l = len(s2)
 	}
-	if len(s3) != l {
-		panic(fmt.Errorf("s3 have different length from s1. len(s3) = %d, len(s1) = %d", len(s3), l))
+	if len(s3) < l {
+		l = len(s3)
 	}
 	ret := make([]tuples.Tuple3[T1, T2, T3], l)
 	for i := 0; i < l; i++ {
@@ -40,17 +38,17 @@ func Zip3[T1, T2, T3 any](s1 []T1, s2 []T2, s3 []T3) []tuples.Tuple3[T1, T2, T3]
 }
 
 // Zip4 returns a slice of 4-tuples.
-// All slices must have same length. the lengths are different, Zip4 panics.
+// The returned slice have the length of the shortest slice.
 func Zip4[T1, T2, T3, T4 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4) []tuples.Tuple4[T1, T2, T3, T4] {
 	l := len(s1)
-	if len(s2) != l {
-		panic(fmt.Errorf("s2 have different length from s1. len(s2) = %d, len(s1) = %d", len(s2), l))
+	if len(s2) < l {
+		l = len(s2)
 	}
-	if len(s3) != l {
-		panic(fmt.Errorf("s3 have different length from s1. len(s3) = %d, len(s1) = %d", len(s3), l))
+	if len(s3) < l {
+		l = len(s3)
 	}
-	if len(s4) != l {
-		panic(fmt.Errorf("s4 have different length from s1. len(s4) = %d, len(s1) = %d", len(s4), l))
+	if len(s4) < l {
+		l = len(s4)
 	}
 	ret := make([]tuples.Tuple4[T1, T2, T3, T4], l)
 	for i := 0; i < l; i++ {
@@ -60,20 +58,20 @@ func Zip4[T1, T2, T3, T4 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4) []tuples.Tuple
 }
 
 // Zip5 returns a slice of 5-tuples.
-// All slices must have same length. the lengths are different, Zip5 panics.
+// The returned slice have the length of the shortest slice.
 func Zip5[T1, T2, T3, T4, T5 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5) []tuples.Tuple5[T1, T2, T3, T4, T5] {
 	l := len(s1)
-	if len(s2) != l {
-		panic(fmt.Errorf("s2 have different length from s1. len(s2) = %d, len(s1) = %d", len(s2), l))
+	if len(s2) < l {
+		l = len(s2)
 	}
-	if len(s3) != l {
-		panic(fmt.Errorf("s3 have different length from s1. len(s3) = %d, len(s1) = %d", len(s3), l))
+	if len(s3) < l {
+		l = len(s3)
 	}
-	if len(s4) != l {
-		panic(fmt.Errorf("s4 have different length from s1. len(s4) = %d, len(s1) = %d", len(s4), l))
+	if len(s4) < l {
+		l = len(s4)
 	}
-	if len(s5) != l {
-		panic(fmt.Errorf("s5 have different length from s1. len(s5) = %d, len(s1) = %d", len(s5), l))
+	if len(s5) < l {
+		l = len(s5)
 	}
 	ret := make([]tuples.Tuple5[T1, T2, T3, T4, T5], l)
 	for i := 0; i < l; i++ {
@@ -83,23 +81,23 @@ func Zip5[T1, T2, T3, T4, T5 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5) [
 }
 
 // Zip6 returns a slice of 6-tuples.
-// All slices must have same length. the lengths are different, Zip6 panics.
+// The returned slice have the length of the shortest slice.
 func Zip6[T1, T2, T3, T4, T5, T6 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6) []tuples.Tuple6[T1, T2, T3, T4, T5, T6] {
 	l := len(s1)
-	if len(s2) != l {
-		panic(fmt.Errorf("s2 have different length from s1. len(s2) = %d, len(s1) = %d", len(s2), l))
+	if len(s2) < l {
+		l = len(s2)
 	}
-	if len(s3) != l {
-		panic(fmt.Errorf("s3 have different length from s1. len(s3) = %d, len(s1) = %d", len(s3), l))
+	if len(s3) < l {
+		l = len(s3)
 	}
-	if len(s4) != l {
-		panic(fmt.Errorf("s4 have different length from s1. len(s4) = %d, len(s1) = %d", len(s4), l))
+	if len(s4) < l {
+		l = len(s4)
 	}
-	if len(s5) != l {
-		panic(fmt.Errorf("s5 have different length from s1. len(s5) = %d, len(s1) = %d", len(s5), l))
+	if len(s5) < l {
+		l = len(s5)
 	}
-	if len(s6) != l {
-		panic(fmt.Errorf("s6 have different length from s1. len(s6) = %d, len(s1) = %d", len(s6), l))
+	if len(s6) < l {
+		l = len(s6)
 	}
 	ret := make([]tuples.Tuple6[T1, T2, T3, T4, T5, T6], l)
 	for i := 0; i < l; i++ {
@@ -109,26 +107,26 @@ func Zip6[T1, T2, T3, T4, T5, T6 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T
 }
 
 // Zip7 returns a slice of 7-tuples.
-// All slices must have same length. the lengths are different, Zip7 panics.
+// The returned slice have the length of the shortest slice.
 func Zip7[T1, T2, T3, T4, T5, T6, T7 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7) []tuples.Tuple7[T1, T2, T3, T4, T5, T6, T7] {
 	l := len(s1)
-	if len(s2) != l {
-		panic(fmt.Errorf("s2 have different length from s1. len(s2) = %d, len(s1) = %d", len(s2), l))
+	if len(s2) < l {
+		l = len(s2)
 	}
-	if len(s3) != l {
-		panic(fmt.Errorf("s3 have different length from s1. len(s3) = %d, len(s1) = %d", len(s3), l))
+	if len(s3) < l {
+		l = len(s3)
 	}
-	if len(s4) != l {
-		panic(fmt.Errorf("s4 have different length from s1. len(s4) = %d, len(s1) = %d", len(s4), l))
+	if len(s4) < l {
+		l = len(s4)
 	}
-	if len(s5) != l {
-		panic(fmt.Errorf("s5 have different length from s1. len(s5) = %d, len(s1) = %d", len(s5), l))
+	if len(s5) < l {
+		l = len(s5)
 	}
-	if len(s6) != l {
-		panic(fmt.Errorf("s6 have different length from s1. len(s6) = %d, len(s1) = %d", len(s6), l))
+	if len(s6) < l {
+		l = len(s6)
 	}
-	if len(s7) != l {
-		panic(fmt.Errorf("s7 have different length from s1. len(s7) = %d, len(s1) = %d", len(s7), l))
+	if len(s7) < l {
+		l = len(s7)
 	}
 	ret := make([]tuples.Tuple7[T1, T2, T3, T4, T5, T6, T7], l)
 	for i := 0; i < l; i++ {
@@ -138,29 +136,29 @@ func Zip7[T1, T2, T3, T4, T5, T6, T7 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5
 }
 
 // Zip8 returns a slice of 8-tuples.
-// All slices must have same length. the lengths are different, Zip8 panics.
+// The returned slice have the length of the shortest slice.
 func Zip8[T1, T2, T3, T4, T5, T6, T7, T8 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8) []tuples.Tuple8[T1, T2, T3, T4, T5, T6, T7, T8] {
 	l := len(s1)
-	if len(s2) != l {
-		panic(fmt.Errorf("s2 have different length from s1. len(s2) = %d, len(s1) = %d", len(s2), l))
+	if len(s2) < l {
+		l = len(s2)
 	}
-	if len(s3) != l {
-		panic(fmt.Errorf("s3 have different length from s1. len(s3) = %d, len(s1) = %d", len(s3), l))
+	if len(s3) < l {
+		l = len(s3)
 	}
-	if len(s4) != l {
-		panic(fmt.Errorf("s4 have different length from s1. len(s4) = %d, len(s1) = %d", len(s4), l))
+	if len(s4) < l {
+		l = len(s4)
 	}
-	if len(s5) != l {
-		panic(fmt.Errorf("s5 have different length from s1. len(s5) = %d, len(s1) = %d", len(s5), l))
+	if len(s5) < l {
+		l = len(s5)
 	}
-	if len(s6) != l {
-		panic(fmt.Errorf("s6 have different length from s1. len(s6) = %d, len(s1) = %d", len(s6), l))
+	if len(s6) < l {
+		l = len(s6)
 	}
-	if len(s7) != l {
-		panic(fmt.Errorf("s7 have different length from s1. len(s7) = %d, len(s1) = %d", len(s7), l))
+	if len(s7) < l {
+		l = len(s7)
 	}
-	if len(s8) != l {
-		panic(fmt.Errorf("s8 have different length from s1. len(s8) = %d, len(s1) = %d", len(s8), l))
+	if len(s8) < l {
+		l = len(s8)
 	}
 	ret := make([]tuples.Tuple8[T1, T2, T3, T4, T5, T6, T7, T8], l)
 	for i := 0; i < l; i++ {
@@ -170,32 +168,32 @@ func Zip8[T1, T2, T3, T4, T5, T6, T7, T8 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4
 }
 
 // Zip9 returns a slice of 9-tuples.
-// All slices must have same length. the lengths are different, Zip9 panics.
+// The returned slice have the length of the shortest slice.
 func Zip9[T1, T2, T3, T4, T5, T6, T7, T8, T9 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9) []tuples.Tuple9[T1, T2, T3, T4, T5, T6, T7, T8, T9] {
 	l := len(s1)
-	if len(s2) != l {
-		panic(fmt.Errorf("s2 have different length from s1. len(s2) = %d, len(s1) = %d", len(s2), l))
+	if len(s2) < l {
+		l = len(s2)
 	}
-	if len(s3) != l {
-		panic(fmt.Errorf("s3 have different length from s1. len(s3) = %d, len(s1) = %d", len(s3), l))
+	if len(s3) < l {
+		l = len(s3)
 	}
-	if len(s4) != l {
-		panic(fmt.Errorf("s4 have different length from s1. len(s4) = %d, len(s1) = %d", len(s4), l))
+	if len(s4) < l {
+		l = len(s4)
 	}
-	if len(s5) != l {
-		panic(fmt.Errorf("s5 have different length from s1. len(s5) = %d, len(s1) = %d", len(s5), l))
+	if len(s5) < l {
+		l = len(s5)
 	}
-	if len(s6) != l {
-		panic(fmt.Errorf("s6 have different length from s1. len(s6) = %d, len(s1) = %d", len(s6), l))
+	if len(s6) < l {
+		l = len(s6)
 	}
-	if len(s7) != l {
-		panic(fmt.Errorf("s7 have different length from s1. len(s7) = %d, len(s1) = %d", len(s7), l))
+	if len(s7) < l {
+		l = len(s7)
 	}
-	if len(s8) != l {
-		panic(fmt.Errorf("s8 have different length from s1. len(s8) = %d, len(s1) = %d", len(s8), l))
+	if len(s8) < l {
+		l = len(s8)
 	}
-	if len(s9) != l {
-		panic(fmt.Errorf("s9 have different length from s1. len(s9) = %d, len(s1) = %d", len(s9), l))
+	if len(s9) < l {
+		l = len(s9)
 	}
 	ret := make([]tuples.Tuple9[T1, T2, T3, T4, T5, T6, T7, T8, T9], l)
 	for i := 0; i < l; i++ {
@@ -205,35 +203,35 @@ func Zip9[T1, T2, T3, T4, T5, T6, T7, T8, T9 any](s1 []T1, s2 []T2, s3 []T3, s4 
 }
 
 // Zip10 returns a slice of 10-tuples.
-// All slices must have same length. the lengths are different, Zip10 panics.
+// The returned slice have the length of the shortest slice.
 func Zip10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10) []tuples.Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10] {
 	l := len(s1)
-	if len(s2) != l {
-		panic(fmt.Errorf("s2 have different length from s1. len(s2) = %d, len(s1) = %d", len(s2), l))
+	if len(s2) < l {
+		l = len(s2)
 	}
-	if len(s3) != l {
-		panic(fmt.Errorf("s3 have different length from s1. len(s3) = %d, len(s1) = %d", len(s3), l))
+	if len(s3) < l {
+		l = len(s3)
 	}
-	if len(s4) != l {
-		panic(fmt.Errorf("s4 have different length from s1. len(s4) = %d, len(s1) = %d", len(s4), l))
+	if len(s4) < l {
+		l = len(s4)
 	}
-	if len(s5) != l {
-		panic(fmt.Errorf("s5 have different length from s1. len(s5) = %d, len(s1) = %d", len(s5), l))
+	if len(s5) < l {
+		l = len(s5)
 	}
-	if len(s6) != l {
-		panic(fmt.Errorf("s6 have different length from s1. len(s6) = %d, len(s1) = %d", len(s6), l))
+	if len(s6) < l {
+		l = len(s6)
 	}
-	if len(s7) != l {
-		panic(fmt.Errorf("s7 have different length from s1. len(s7) = %d, len(s1) = %d", len(s7), l))
+	if len(s7) < l {
+		l = len(s7)
 	}
-	if len(s8) != l {
-		panic(fmt.Errorf("s8 have different length from s1. len(s8) = %d, len(s1) = %d", len(s8), l))
+	if len(s8) < l {
+		l = len(s8)
 	}
-	if len(s9) != l {
-		panic(fmt.Errorf("s9 have different length from s1. len(s9) = %d, len(s1) = %d", len(s9), l))
+	if len(s9) < l {
+		l = len(s9)
 	}
-	if len(s10) != l {
-		panic(fmt.Errorf("s10 have different length from s1. len(s10) = %d, len(s1) = %d", len(s10), l))
+	if len(s10) < l {
+		l = len(s10)
 	}
 	ret := make([]tuples.Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10], l)
 	for i := 0; i < l; i++ {

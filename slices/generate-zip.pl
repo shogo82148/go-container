@@ -11,8 +11,6 @@ print $fh <<'END';
 package slices
 
 import (
-	"fmt"
-
 	"github.com/shogo82148/go-container/tuples"
 )
 END
@@ -23,12 +21,12 @@ for my $n(2..10) {
     my $slice_args = join ", ", map { "s$_ []T$_" } 1..$n;
     my $slices = join ", ", map { "s${_}[i]" } 1..$n;
     say $fh "// Zip$n returns a slice of $n-tuples.";
-    say $fh "// All slices must have same length. the lengths are different, Zip$n panics.";
+    say $fh "// The returned slice have the length of the shortest slice.";
     say $fh "func Zip${n}[$types any]($slice_args) []tuples.Tuple${n}[$types] {";
     say $fh "	l := len(s1)";
     for my $i(2..$n) {
-        say $fh "	if len(s$i) != l {";
-        say $fh "		panic(fmt.Errorf(\"s$i have different length from s1. len(s$i) = %d, len(s1) = %d\", len(s$i), l))";
+        say $fh "	if len(s$i) < l {";
+        say $fh "		l = len(s$i)";
         say $fh "	}";
     }
     say $fh "	ret := make([]tuples.Tuple${n}[$types], l)";
