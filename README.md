@@ -3,6 +3,7 @@ Go experimental containers library using generics
 
 ## See Also
 
+- https://cs.opensource.google/go/x/exp/+/master:slices/slices.go
 - https://github.com/mattn/go-generics-example
 - https://github.com/Code-Hex/go-generics-cache
 - https://github.com/moznion/go-optional
