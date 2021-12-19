@@ -6,7 +6,7 @@ import (
 	"github.com/shogo82148/go-container/slices"
 )
 
-func ExampleFor() {
+func ExampleFilter() {
 	out := slices.Filter(
 		[]int{1, 2, 3, 4, 5, 6},
 		func(a int) bool {
@@ -43,4 +43,21 @@ func ExampleMap() {
 	// <4>
 	// <5>
 	// <6>
+}
+
+func ExampleZip() {
+	out := slices.Zip(
+		[]int{1, 2, 3, 4, 5},
+		[]string{"one", "two", "three", "four", "five"},
+	)
+	for _, tuple := range out {
+		fmt.Printf("%d => %q\n", tuple.V1, tuple.V2)
+	}
+
+	//Output:
+	// 1 => "one"
+	// 2 => "two"
+	// 3 => "three"
+	// 4 => "four"
+	// 5 => "five"
 }
