@@ -13,6 +13,11 @@ func New2[T1, T2 any](v1 T1, v2 T2) Tuple2[T1, T2] {
 	return Tuple2[T1, T2]{v1, v2}
 }
 
+// New2 returns a new 2-tuple.
+func (t Tuple2[T1, T2]) Get() (T1, T2) {
+	return t.V1, t.V2
+}
+
 // Tuple3 is a 3-tuple.
 type Tuple3[T1, T2, T3 any] struct {
 	V1 T1
@@ -23,6 +28,11 @@ type Tuple3[T1, T2, T3 any] struct {
 // New3 returns a new 3-tuple.
 func New3[T1, T2, T3 any](v1 T1, v2 T2, v3 T3) Tuple3[T1, T2, T3] {
 	return Tuple3[T1, T2, T3]{v1, v2, v3}
+}
+
+// New3 returns a new 3-tuple.
+func (t Tuple3[T1, T2, T3]) Get() (T1, T2, T3) {
+	return t.V1, t.V2, t.V3
 }
 
 // Tuple4 is a 4-tuple.
@@ -36,6 +46,11 @@ type Tuple4[T1, T2, T3, T4 any] struct {
 // New4 returns a new 4-tuple.
 func New4[T1, T2, T3, T4 any](v1 T1, v2 T2, v3 T3, v4 T4) Tuple4[T1, T2, T3, T4] {
 	return Tuple4[T1, T2, T3, T4]{v1, v2, v3, v4}
+}
+
+// New4 returns a new 4-tuple.
+func (t Tuple4[T1, T2, T3, T4]) Get() (T1, T2, T3, T4) {
+	return t.V1, t.V2, t.V3, t.V4
 }
 
 // Tuple5 is a 5-tuple.
@@ -52,6 +67,11 @@ func New5[T1, T2, T3, T4, T5 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5) Tuple5[T1, 
 	return Tuple5[T1, T2, T3, T4, T5]{v1, v2, v3, v4, v5}
 }
 
+// New5 returns a new 5-tuple.
+func (t Tuple5[T1, T2, T3, T4, T5]) Get() (T1, T2, T3, T4, T5) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5
+}
+
 // Tuple6 is a 6-tuple.
 type Tuple6[T1, T2, T3, T4, T5, T6 any] struct {
 	V1 T1
@@ -65,6 +85,11 @@ type Tuple6[T1, T2, T3, T4, T5, T6 any] struct {
 // New6 returns a new 6-tuple.
 func New6[T1, T2, T3, T4, T5, T6 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6) Tuple6[T1, T2, T3, T4, T5, T6] {
 	return Tuple6[T1, T2, T3, T4, T5, T6]{v1, v2, v3, v4, v5, v6}
+}
+
+// New6 returns a new 6-tuple.
+func (t Tuple6[T1, T2, T3, T4, T5, T6]) Get() (T1, T2, T3, T4, T5, T6) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6
 }
 
 // Tuple7 is a 7-tuple.
@@ -83,6 +108,11 @@ func New7[T1, T2, T3, T4, T5, T6, T7 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 
 	return Tuple7[T1, T2, T3, T4, T5, T6, T7]{v1, v2, v3, v4, v5, v6, v7}
 }
 
+// New7 returns a new 7-tuple.
+func (t Tuple7[T1, T2, T3, T4, T5, T6, T7]) Get() (T1, T2, T3, T4, T5, T6, T7) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7
+}
+
 // Tuple8 is a 8-tuple.
 type Tuple8[T1, T2, T3, T4, T5, T6, T7, T8 any] struct {
 	V1 T1
@@ -98,6 +128,11 @@ type Tuple8[T1, T2, T3, T4, T5, T6, T7, T8 any] struct {
 // New8 returns a new 8-tuple.
 func New8[T1, T2, T3, T4, T5, T6, T7, T8 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8) Tuple8[T1, T2, T3, T4, T5, T6, T7, T8] {
 	return Tuple8[T1, T2, T3, T4, T5, T6, T7, T8]{v1, v2, v3, v4, v5, v6, v7, v8}
+}
+
+// New8 returns a new 8-tuple.
+func (t Tuple8[T1, T2, T3, T4, T5, T6, T7, T8]) Get() (T1, T2, T3, T4, T5, T6, T7, T8) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8
 }
 
 // Tuple9 is a 9-tuple.
@@ -118,6 +153,11 @@ func New9[T1, T2, T3, T4, T5, T6, T7, T8, T9 any](v1 T1, v2 T2, v3 T3, v4 T4, v5
 	return Tuple9[T1, T2, T3, T4, T5, T6, T7, T8, T9]{v1, v2, v3, v4, v5, v6, v7, v8, v9}
 }
 
+// New9 returns a new 9-tuple.
+func (t Tuple9[T1, T2, T3, T4, T5, T6, T7, T8, T9]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9
+}
+
 // Tuple10 is a 10-tuple.
 type Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10 any] struct {
 	V1  T1
@@ -135,4 +175,9 @@ type Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10 any] struct {
 // New10 returns a new 10-tuple.
 func New10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10) Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10] {
 	return Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10}
+}
+
+// New10 returns a new 10-tuple.
+func (t Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10
 }

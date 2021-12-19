@@ -15,3 +15,13 @@ func ExampleNew2() {
 	// 42
 	// foobar
 }
+func ExampleTuple2_Get() {
+	t := tuples.New2(42, "foobar")
+	v1, v2 := t.Get()
+	fmt.Println(v1)
+	fmt.Println(v2)
+
+	//Output:
+	// 42
+	// foobar
+}

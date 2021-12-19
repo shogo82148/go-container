@@ -32,6 +32,13 @@ for my $n(2..10) {
     say $fh "func New${n}[$types any]($args) Tuple${n}[$types] {";
     say $fh "	return Tuple${n}[$types]{$values}";
     say $fh "}";
+    say $fh "";
+
+    my $fields = join ", ", map { "t.V$_" } 1..$n;
+    say $fh "// New${n} returns a new $n-tuple.";
+    say $fh "func (t Tuple${n}[$types]) Get() ($types) {";
+    say $fh "	return $fields";
+    say $fh "}";
 }
 
 close($fh);
