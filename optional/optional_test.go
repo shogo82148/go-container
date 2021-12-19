@@ -2,66 +2,52 @@ package optional
 
 import "testing"
 
-func TestOptional(t *testing.T) {
-	valid := New(42)
-	if !valid.Valid() {
-		t.Error("want valid, but not")
-	}
-	if valid.Get() != 42 {
-		t.Errorf("want %d, got %d", 42, valid.Get())
+var _ Optional[int] = Some[int]{}
+var _ Optional[int] = None[int]{}
+
+func TestNewSome(t *testing.T) {
+	var v Optional[int] = NewSome[int](42)
+
+	if !v.Valid() {
+		t.Error("want valid, got invalid")
 	}
 
-	invalid := None[int]()
-	if invalid.Valid() {
-		t.Error("want invalid, but valid")
+	if got := v.GetOr(46); got != 42 {
+		t.Errorf("want %d, got %d", 42, got)
 	}
 
-	paniced := false
-	func() {
-		defer func() {
-			v := recover()
-			paniced = v != nil
-		}()
-		invalid.Get()
-	}()
-	if !paniced {
-		t.Error("should panic, but not")
+	if got := v.GetOrFunc(func() int { return 46 }); got != 42 {
+		t.Errorf("want %d, got %d", 42, got)
+	}
+
+	switch v := v.(type) {
+	case Some[int]:
+		if v.Get() != 42 {
+			t.Errorf("want %d, got %d", 42, v.Get())
+		}
+	case None[int]:
+		t.Fatal("never reach")
 	}
 }
 
-func TestGetOr(t *testing.T) {
-	got := New[int](42).GetOr(46)
-	if got != 42 {
-		t.Errorf("want 42, got %d", got)
+func TestNewNone(t *testing.T) {
+	var v Optional[int] = NewNone[int]()
+
+	if v.Valid() {
+		t.Error("want invalid, got valid")
 	}
 
-	got = None[int]().GetOr(46)
-	if got != 46 {
-		t.Errorf("want 46, got %d", got)
-	}
-}
-
-func TestGetOrFunc(t *testing.T) {
-	called := false
-	f := func() int {
-		called = true
-		return 46
+	if got := v.GetOr(46); got != 46 {
+		t.Errorf("want %d, got %d", 46, got)
 	}
 
-	got := New[int](42).GetOrFunc(f)
-	if got != 42 {
-		t.Errorf("want 42, got %d", got)
-	}
-	if called {
-		t.Error("the function should be not called, but is called")
+	if got := v.GetOrFunc(func() int { return 46 }); got != 46 {
+		t.Errorf("want %d, got %d", 46, got)
 	}
 
-	called = false
-	got = None[int]().GetOrFunc(f)
-	if got != 46 {
-		t.Errorf("want 46, got %d", got)
-	}
-	if !called {
-		t.Error("the function should be called, but is not called")
+	switch v.(type) {
+	case Some[int]:
+		t.Fatal("never reach")
+	case None[int]:
 	}
 }
