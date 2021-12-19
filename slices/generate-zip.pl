@@ -23,7 +23,7 @@ for my $n(2..10) {
     my $slice_args = join ", ", map { "s$_ []T$_" } 1..$n;
     my $slices = join ", ", map { "s${_}[i]" } 1..$n;
     say $fh "// Zip$n returns a slice of $n-tuples.";
-    say $fh "// All slices must have same length. the lengths are different, Zip$n panics";
+    say $fh "// All slices must have same length. the lengths are different, Zip$n panics.";
     say $fh "func Zip${n}[$types any]($slice_args) []tuples.Tuple${n}[$types] {";
     say $fh "	l := len(s1)";
     for my $i(2..$n) {
