@@ -9,7 +9,7 @@ import (
 )
 
 // Zip2 returns a slice of 2-tuples.
-// All slices must have same length. the lengths are different, Zip2 panics
+// All slices must have same length. the lengths are different, Zip2 panics.
 func Zip2[T1, T2 any](s1 []T1, s2 []T2) []tuples.Tuple2[T1, T2] {
 	l := len(s1)
 	if len(s2) != l {
@@ -23,7 +23,7 @@ func Zip2[T1, T2 any](s1 []T1, s2 []T2) []tuples.Tuple2[T1, T2] {
 }
 
 // Zip3 returns a slice of 3-tuples.
-// All slices must have same length. the lengths are different, Zip3 panics
+// All slices must have same length. the lengths are different, Zip3 panics.
 func Zip3[T1, T2, T3 any](s1 []T1, s2 []T2, s3 []T3) []tuples.Tuple3[T1, T2, T3] {
 	l := len(s1)
 	if len(s2) != l {
@@ -40,7 +40,7 @@ func Zip3[T1, T2, T3 any](s1 []T1, s2 []T2, s3 []T3) []tuples.Tuple3[T1, T2, T3]
 }
 
 // Zip4 returns a slice of 4-tuples.
-// All slices must have same length. the lengths are different, Zip4 panics
+// All slices must have same length. the lengths are different, Zip4 panics.
 func Zip4[T1, T2, T3, T4 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4) []tuples.Tuple4[T1, T2, T3, T4] {
 	l := len(s1)
 	if len(s2) != l {
@@ -60,7 +60,7 @@ func Zip4[T1, T2, T3, T4 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4) []tuples.Tuple
 }
 
 // Zip5 returns a slice of 5-tuples.
-// All slices must have same length. the lengths are different, Zip5 panics
+// All slices must have same length. the lengths are different, Zip5 panics.
 func Zip5[T1, T2, T3, T4, T5 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5) []tuples.Tuple5[T1, T2, T3, T4, T5] {
 	l := len(s1)
 	if len(s2) != l {
@@ -83,7 +83,7 @@ func Zip5[T1, T2, T3, T4, T5 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5) [
 }
 
 // Zip6 returns a slice of 6-tuples.
-// All slices must have same length. the lengths are different, Zip6 panics
+// All slices must have same length. the lengths are different, Zip6 panics.
 func Zip6[T1, T2, T3, T4, T5, T6 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6) []tuples.Tuple6[T1, T2, T3, T4, T5, T6] {
 	l := len(s1)
 	if len(s2) != l {
@@ -109,7 +109,7 @@ func Zip6[T1, T2, T3, T4, T5, T6 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T
 }
 
 // Zip7 returns a slice of 7-tuples.
-// All slices must have same length. the lengths are different, Zip7 panics
+// All slices must have same length. the lengths are different, Zip7 panics.
 func Zip7[T1, T2, T3, T4, T5, T6, T7 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7) []tuples.Tuple7[T1, T2, T3, T4, T5, T6, T7] {
 	l := len(s1)
 	if len(s2) != l {
@@ -138,7 +138,7 @@ func Zip7[T1, T2, T3, T4, T5, T6, T7 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5
 }
 
 // Zip8 returns a slice of 8-tuples.
-// All slices must have same length. the lengths are different, Zip8 panics
+// All slices must have same length. the lengths are different, Zip8 panics.
 func Zip8[T1, T2, T3, T4, T5, T6, T7, T8 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8) []tuples.Tuple8[T1, T2, T3, T4, T5, T6, T7, T8] {
 	l := len(s1)
 	if len(s2) != l {
@@ -170,7 +170,7 @@ func Zip8[T1, T2, T3, T4, T5, T6, T7, T8 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4
 }
 
 // Zip9 returns a slice of 9-tuples.
-// All slices must have same length. the lengths are different, Zip9 panics
+// All slices must have same length. the lengths are different, Zip9 panics.
 func Zip9[T1, T2, T3, T4, T5, T6, T7, T8, T9 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9) []tuples.Tuple9[T1, T2, T3, T4, T5, T6, T7, T8, T9] {
 	l := len(s1)
 	if len(s2) != l {
@@ -205,7 +205,7 @@ func Zip9[T1, T2, T3, T4, T5, T6, T7, T8, T9 any](s1 []T1, s2 []T2, s3 []T3, s4 
 }
 
 // Zip10 returns a slice of 10-tuples.
-// All slices must have same length. the lengths are different, Zip10 panics
+// All slices must have same length. the lengths are different, Zip10 panics.
 func Zip10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10) []tuples.Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10] {
 	l := len(s1)
 	if len(s2) != l {

@@ -1,5 +1,11 @@
 package slices
 
+import (
+	"fmt"
+
+	"github.com/shogo82148/go-container/tuples"
+)
+
 // Zip returns a slice of 2-tuples.
 // All slices must have same length. the lengths are different, Zip panics.
 func Zip[T1, T2 any](s1 []T1, s2 []T2) []tuples.Tuple2[T1, T2] {

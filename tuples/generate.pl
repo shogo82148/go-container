@@ -24,6 +24,14 @@ for my $n(2..10) {
         printf $fh "\tV%-*d T%d\n", $digits, $i, $i;
     }
     say $fh "}";
+    say $fh "";
+
+    my $args = join ", ", map { "v$_ T$_" } 1..$n;
+    my $values = join ", ", map { "v$_" } 1..$n;
+    say $fh "// New${n} returns a new $n-tuple.";
+    say $fh "func New${n}[$types any]($args) Tuple${n}[$types] {";
+    say $fh "	return Tuple${n}[$types]{$values}";
+    say $fh "}";
 }
 
 close($fh);
