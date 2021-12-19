@@ -3,11 +3,11 @@ package slices_test
 import (
 	"fmt"
 
-	slice "github.com/shogo82148/go-container/slices"
+	"github.com/shogo82148/go-container/slices"
 )
 
 func ExampleFor() {
-	out := slice.Filter(
+	out := slices.Filter(
 		[]int{1, 2, 3, 4, 5, 6},
 		func(a int) bool {
 			return a > 3
@@ -25,7 +25,7 @@ func ExampleFor() {
 }
 
 func ExampleMap() {
-	out := slice.Map(
+	out := slices.Map(
 		[]int{1, 2, 3, 4, 5, 6},
 		func(a int) string {
 			return fmt.Sprintf("<%d>", a)
