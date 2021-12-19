@@ -1,9 +1,9 @@
-package slice_test
+package slices_test
 
 import (
 	"fmt"
 
-	"github.com/shogo82148/go-container/slice"
+	slice "github.com/shogo82148/go-container/slices"
 )
 
 func ExampleFor() {

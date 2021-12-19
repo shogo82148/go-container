@@ -1,4 +1,4 @@
-package slice
+package slices
 
 func Reduce[T any](a []T, f func(T, T) T) T {
 	if len(a) == 0 {

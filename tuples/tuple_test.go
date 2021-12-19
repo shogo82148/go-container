@@ -1,4 +1,4 @@
-package tuple
+package tuples
 
 import "testing"
 

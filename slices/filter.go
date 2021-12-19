@@ -1,4 +1,4 @@
-package slice
+package slices
 
 func Filter[T any](a []T, f func(T) bool) []T {
 	ret := make([]T, 0, cap(a))
