@@ -2,52 +2,66 @@ package optional
 
 import "testing"
 
-var _ Optional[int] = Some[int]{}
-var _ Optional[int] = None[int]{}
-
-func TestNewSome(t *testing.T) {
-	var v Optional[int] = NewSome[int](42)
-
-	if !v.Valid() {
-		t.Error("want valid, got invalid")
+func TestOptional(t *testing.T) {
+	valid := New(42)
+	if !valid.Valid() {
+		t.Error("want valid, but not")
+	}
+	if valid.Get() != 42 {
+		t.Errorf("want %d, got %d", 42, valid.Get())
 	}
 
-	if got := v.GetOr(46); got != 42 {
-		t.Errorf("want %d, got %d", 42, got)
+	invalid := None[int]()
+	if invalid.Valid() {
+		t.Error("want invalid, but valid")
 	}
 
-	if got := v.GetOrFunc(func() int { return 46 }); got != 42 {
-		t.Errorf("want %d, got %d", 42, got)
-	}
-
-	switch v := v.(type) {
-	case Some[int]:
-		if v.Get() != 42 {
-			t.Errorf("want %d, got %d", 42, v.Get())
-		}
-	case None[int]:
-		t.Fatal("never reach")
+	paniced := false
+	func() {
+		defer func() {
+			v := recover()
+			paniced = v != nil
+		}()
+		invalid.Get()
+	}()
+	if !paniced {
+		t.Error("should panic, but not")
 	}
 }
 
-func TestNewNone(t *testing.T) {
-	var v Optional[int] = NewNone[int]()
-
-	if v.Valid() {
-		t.Error("want invalid, got valid")
+func TestGetOr(t *testing.T) {
+	got := New[int](42).GetOr(46)
+	if got != 42 {
+		t.Errorf("want 42, got %d", got)
 	}
 
-	if got := v.GetOr(46); got != 46 {
-		t.Errorf("want %d, got %d", 46, got)
+	got = None[int]().GetOr(46)
+	if got != 46 {
+		t.Errorf("want 46, got %d", got)
+	}
+}
+
+func TestGetOrFunc(t *testing.T) {
+	called := false
+	f := func() int {
+		called = true
+		return 46
 	}
 
-	if got := v.GetOrFunc(func() int { return 46 }); got != 46 {
-		t.Errorf("want %d, got %d", 46, got)
+	got := New[int](42).GetOrFunc(f)
+	if got != 42 {
+		t.Errorf("want 42, got %d", got)
+	}
+	if called {
+		t.Error("the function should be not called, but is called")
 	}
 
-	switch v.(type) {
-	case Some[int]:
-		t.Fatal("never reach")
-	case None[int]:
+	called = false
+	got = None[int]().GetOrFunc(f)
+	if got != 46 {
+		t.Errorf("want 46, got %d", got)
+	}
+	if !called {
+		t.Error("the function should be called, but is not called")
 	}
 }

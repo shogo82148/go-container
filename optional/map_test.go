@@ -12,19 +12,19 @@ func TestMap(t *testing.T) {
 		return fmt.Sprintf("<%d>", v)
 	}
 
-	got := Map(NewSome(42), f)
+	got := Map(New(42), f)
 	if !called {
 		t.Error("the function should be called, but not")
 	}
 	if !got.Valid() {
 		t.Error("want valid, but got invalid")
 	}
-	if v := got.(Some[string]).Get(); v != "<42>" {
-		t.Errorf("want %q, got %q", "<42>", v)
+	if got.Get() != "<42>" {
+		t.Errorf("want %q, got %q", "<42>", got.Get())
 	}
 
 	called = false
-	got = Map(NewNone[int](), f)
+	got = Map(None[int](), f)
 	if called {
 		t.Error("the function should not be called, but is called")
 	}

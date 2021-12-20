@@ -1,60 +1,45 @@
 package optional
 
-type Optional[T any] interface {
-	Valid() bool
-	GetOr(defaults T) T
-	GetOrFunc(f func() T) T
-
-	// do not allow the user to implement Optional
-	internal()
-}
-
-type Some[T any] struct {
+type Optional[T any] struct {
 	value T
+	valid bool
 }
 
-func NewSome[T any](v T) Optional[T] {
-	return Some[T]{
+func New[T any](v T) Optional[T] {
+	return Optional[T]{
 		value: v,
+		valid: true,
 	}
 }
 
-func (v Some[T]) Valid() bool {
-	return true
+func None[T any]() Optional[T] {
+	return Optional[T]{}
 }
 
-func (v Some[T]) Get() T {
-	return v.value
+func (v Optional[T]) Valid() bool {
+	return v.valid
 }
 
-func (v Some[T]) GetOr(defaults T) T {
-	return v.value
+func (v Optional[T]) Get() T {
+	if v.valid {
+		return v.value
+	} else {
+		panic("get a value from none")
+	}
 }
 
-func (v Some[T]) GetOrFunc(f func() T) T {
-	return v.value
+func (v Optional[T]) GetOr(defaults T) T {
+	if v.valid {
+		return v.value
+	} else {
+		return defaults
+	}
 }
 
-func (v Some[T]) internal() {
-}
-
-type None[T any] struct{}
-
-func NewNone[T any]() Optional[T] {
-	return None[T]{}
-}
-
-func (v None[T]) Valid() bool {
-	return false
-}
-
-func (v None[T]) GetOr(defaults T) T {
-	return defaults
-}
-
-func (v None[T]) GetOrFunc(f func() T) T {
-	return f()
-}
-
-func (v None[T]) internal() {
+func (v Optional[T]) GetOrFunc(f func() T) T {
+	if v.valid {
+		return v.value
+	} else {
+		return f()
+	}
 }
