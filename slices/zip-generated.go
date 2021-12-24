@@ -6,6 +6,17 @@ import (
 	"github.com/shogo82148/go-container/tuples"
 )
 
+// Zip1 returns a slice of 1-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip1[T1 any](s1 []T1) []tuples.Tuple1[T1] {
+	l := len(s1)
+	ret := make([]tuples.Tuple1[T1], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple1[T1]{s1[i]}
+	}
+	return ret
+}
+
 // Zip2 returns a slice of 2-tuples.
 // The returned slice have the length of the shortest slice.
 func Zip2[T1, T2 any](s1 []T1, s2 []T2) []tuples.Tuple2[T1, T2] {
@@ -236,6 +247,6513 @@ func Zip10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10 any](s1 []T1, s2 []T2, s3 []T
 	ret := make([]tuples.Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10], l)
 	for i := 0; i < l; i++ {
 		ret[i] = tuples.Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i]}
+	}
+	return ret
+}
+
+// Zip11 returns a slice of 11-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip11[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11) []tuples.Tuple11[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	ret := make([]tuples.Tuple11[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple11[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i]}
+	}
+	return ret
+}
+
+// Zip12 returns a slice of 12-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip12[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12) []tuples.Tuple12[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	ret := make([]tuples.Tuple12[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple12[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i]}
+	}
+	return ret
+}
+
+// Zip13 returns a slice of 13-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip13[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13) []tuples.Tuple13[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	ret := make([]tuples.Tuple13[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple13[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i]}
+	}
+	return ret
+}
+
+// Zip14 returns a slice of 14-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip14[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14) []tuples.Tuple14[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	ret := make([]tuples.Tuple14[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple14[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i]}
+	}
+	return ret
+}
+
+// Zip15 returns a slice of 15-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip15[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15) []tuples.Tuple15[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	ret := make([]tuples.Tuple15[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple15[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i]}
+	}
+	return ret
+}
+
+// Zip16 returns a slice of 16-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip16[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16) []tuples.Tuple16[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	ret := make([]tuples.Tuple16[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple16[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i]}
+	}
+	return ret
+}
+
+// Zip17 returns a slice of 17-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip17[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17) []tuples.Tuple17[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	ret := make([]tuples.Tuple17[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple17[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i]}
+	}
+	return ret
+}
+
+// Zip18 returns a slice of 18-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip18[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18) []tuples.Tuple18[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	ret := make([]tuples.Tuple18[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple18[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i]}
+	}
+	return ret
+}
+
+// Zip19 returns a slice of 19-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip19[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19) []tuples.Tuple19[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	ret := make([]tuples.Tuple19[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple19[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i]}
+	}
+	return ret
+}
+
+// Zip20 returns a slice of 20-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip20[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20) []tuples.Tuple20[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	ret := make([]tuples.Tuple20[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple20[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i]}
+	}
+	return ret
+}
+
+// Zip21 returns a slice of 21-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip21[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21) []tuples.Tuple21[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	ret := make([]tuples.Tuple21[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple21[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i]}
+	}
+	return ret
+}
+
+// Zip22 returns a slice of 22-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip22[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22) []tuples.Tuple22[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	ret := make([]tuples.Tuple22[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple22[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i]}
+	}
+	return ret
+}
+
+// Zip23 returns a slice of 23-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip23[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23) []tuples.Tuple23[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	ret := make([]tuples.Tuple23[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple23[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i]}
+	}
+	return ret
+}
+
+// Zip24 returns a slice of 24-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip24[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24) []tuples.Tuple24[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	ret := make([]tuples.Tuple24[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple24[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i]}
+	}
+	return ret
+}
+
+// Zip25 returns a slice of 25-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip25[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25) []tuples.Tuple25[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	ret := make([]tuples.Tuple25[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple25[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i]}
+	}
+	return ret
+}
+
+// Zip26 returns a slice of 26-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip26[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26) []tuples.Tuple26[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	ret := make([]tuples.Tuple26[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple26[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i]}
+	}
+	return ret
+}
+
+// Zip27 returns a slice of 27-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip27[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27) []tuples.Tuple27[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	ret := make([]tuples.Tuple27[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple27[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i]}
+	}
+	return ret
+}
+
+// Zip28 returns a slice of 28-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip28[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28) []tuples.Tuple28[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	ret := make([]tuples.Tuple28[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple28[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i]}
+	}
+	return ret
+}
+
+// Zip29 returns a slice of 29-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip29[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29) []tuples.Tuple29[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	ret := make([]tuples.Tuple29[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple29[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i]}
+	}
+	return ret
+}
+
+// Zip30 returns a slice of 30-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip30[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30) []tuples.Tuple30[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	ret := make([]tuples.Tuple30[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple30[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i]}
+	}
+	return ret
+}
+
+// Zip31 returns a slice of 31-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip31[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31) []tuples.Tuple31[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	ret := make([]tuples.Tuple31[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple31[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i]}
+	}
+	return ret
+}
+
+// Zip32 returns a slice of 32-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip32[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32) []tuples.Tuple32[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	ret := make([]tuples.Tuple32[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple32[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i]}
+	}
+	return ret
+}
+
+// Zip33 returns a slice of 33-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip33[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33) []tuples.Tuple33[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	ret := make([]tuples.Tuple33[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple33[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i]}
+	}
+	return ret
+}
+
+// Zip34 returns a slice of 34-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip34[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34) []tuples.Tuple34[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	ret := make([]tuples.Tuple34[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple34[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i]}
+	}
+	return ret
+}
+
+// Zip35 returns a slice of 35-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip35[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35) []tuples.Tuple35[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	ret := make([]tuples.Tuple35[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple35[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i]}
+	}
+	return ret
+}
+
+// Zip36 returns a slice of 36-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip36[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36) []tuples.Tuple36[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	ret := make([]tuples.Tuple36[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple36[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i]}
+	}
+	return ret
+}
+
+// Zip37 returns a slice of 37-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip37[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37) []tuples.Tuple37[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	ret := make([]tuples.Tuple37[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple37[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i]}
+	}
+	return ret
+}
+
+// Zip38 returns a slice of 38-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip38[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38) []tuples.Tuple38[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	ret := make([]tuples.Tuple38[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple38[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i]}
+	}
+	return ret
+}
+
+// Zip39 returns a slice of 39-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip39[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39) []tuples.Tuple39[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	ret := make([]tuples.Tuple39[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple39[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i]}
+	}
+	return ret
+}
+
+// Zip40 returns a slice of 40-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip40[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40) []tuples.Tuple40[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	ret := make([]tuples.Tuple40[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple40[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i]}
+	}
+	return ret
+}
+
+// Zip41 returns a slice of 41-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip41[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41) []tuples.Tuple41[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	ret := make([]tuples.Tuple41[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple41[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i]}
+	}
+	return ret
+}
+
+// Zip42 returns a slice of 42-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip42[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42) []tuples.Tuple42[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	ret := make([]tuples.Tuple42[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple42[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i]}
+	}
+	return ret
+}
+
+// Zip43 returns a slice of 43-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip43[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43) []tuples.Tuple43[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	ret := make([]tuples.Tuple43[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple43[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i]}
+	}
+	return ret
+}
+
+// Zip44 returns a slice of 44-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip44[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44) []tuples.Tuple44[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	ret := make([]tuples.Tuple44[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple44[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i]}
+	}
+	return ret
+}
+
+// Zip45 returns a slice of 45-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip45[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45) []tuples.Tuple45[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	ret := make([]tuples.Tuple45[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple45[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i]}
+	}
+	return ret
+}
+
+// Zip46 returns a slice of 46-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip46[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45, s46 []T46) []tuples.Tuple46[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	if len(s46) < l {
+		l = len(s46)
+	}
+	ret := make([]tuples.Tuple46[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple46[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i]}
+	}
+	return ret
+}
+
+// Zip47 returns a slice of 47-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip47[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45, s46 []T46, s47 []T47) []tuples.Tuple47[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	if len(s46) < l {
+		l = len(s46)
+	}
+	if len(s47) < l {
+		l = len(s47)
+	}
+	ret := make([]tuples.Tuple47[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple47[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i]}
+	}
+	return ret
+}
+
+// Zip48 returns a slice of 48-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip48[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45, s46 []T46, s47 []T47, s48 []T48) []tuples.Tuple48[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	if len(s46) < l {
+		l = len(s46)
+	}
+	if len(s47) < l {
+		l = len(s47)
+	}
+	if len(s48) < l {
+		l = len(s48)
+	}
+	ret := make([]tuples.Tuple48[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple48[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i]}
+	}
+	return ret
+}
+
+// Zip49 returns a slice of 49-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip49[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45, s46 []T46, s47 []T47, s48 []T48, s49 []T49) []tuples.Tuple49[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	if len(s46) < l {
+		l = len(s46)
+	}
+	if len(s47) < l {
+		l = len(s47)
+	}
+	if len(s48) < l {
+		l = len(s48)
+	}
+	if len(s49) < l {
+		l = len(s49)
+	}
+	ret := make([]tuples.Tuple49[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple49[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i]}
+	}
+	return ret
+}
+
+// Zip50 returns a slice of 50-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip50[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45, s46 []T46, s47 []T47, s48 []T48, s49 []T49, s50 []T50) []tuples.Tuple50[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	if len(s46) < l {
+		l = len(s46)
+	}
+	if len(s47) < l {
+		l = len(s47)
+	}
+	if len(s48) < l {
+		l = len(s48)
+	}
+	if len(s49) < l {
+		l = len(s49)
+	}
+	if len(s50) < l {
+		l = len(s50)
+	}
+	ret := make([]tuples.Tuple50[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple50[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i]}
+	}
+	return ret
+}
+
+// Zip51 returns a slice of 51-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip51[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45, s46 []T46, s47 []T47, s48 []T48, s49 []T49, s50 []T50, s51 []T51) []tuples.Tuple51[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	if len(s46) < l {
+		l = len(s46)
+	}
+	if len(s47) < l {
+		l = len(s47)
+	}
+	if len(s48) < l {
+		l = len(s48)
+	}
+	if len(s49) < l {
+		l = len(s49)
+	}
+	if len(s50) < l {
+		l = len(s50)
+	}
+	if len(s51) < l {
+		l = len(s51)
+	}
+	ret := make([]tuples.Tuple51[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple51[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i]}
+	}
+	return ret
+}
+
+// Zip52 returns a slice of 52-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip52[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45, s46 []T46, s47 []T47, s48 []T48, s49 []T49, s50 []T50, s51 []T51, s52 []T52) []tuples.Tuple52[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	if len(s46) < l {
+		l = len(s46)
+	}
+	if len(s47) < l {
+		l = len(s47)
+	}
+	if len(s48) < l {
+		l = len(s48)
+	}
+	if len(s49) < l {
+		l = len(s49)
+	}
+	if len(s50) < l {
+		l = len(s50)
+	}
+	if len(s51) < l {
+		l = len(s51)
+	}
+	if len(s52) < l {
+		l = len(s52)
+	}
+	ret := make([]tuples.Tuple52[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple52[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i]}
+	}
+	return ret
+}
+
+// Zip53 returns a slice of 53-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip53[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45, s46 []T46, s47 []T47, s48 []T48, s49 []T49, s50 []T50, s51 []T51, s52 []T52, s53 []T53) []tuples.Tuple53[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	if len(s46) < l {
+		l = len(s46)
+	}
+	if len(s47) < l {
+		l = len(s47)
+	}
+	if len(s48) < l {
+		l = len(s48)
+	}
+	if len(s49) < l {
+		l = len(s49)
+	}
+	if len(s50) < l {
+		l = len(s50)
+	}
+	if len(s51) < l {
+		l = len(s51)
+	}
+	if len(s52) < l {
+		l = len(s52)
+	}
+	if len(s53) < l {
+		l = len(s53)
+	}
+	ret := make([]tuples.Tuple53[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple53[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i]}
+	}
+	return ret
+}
+
+// Zip54 returns a slice of 54-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip54[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45, s46 []T46, s47 []T47, s48 []T48, s49 []T49, s50 []T50, s51 []T51, s52 []T52, s53 []T53, s54 []T54) []tuples.Tuple54[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	if len(s46) < l {
+		l = len(s46)
+	}
+	if len(s47) < l {
+		l = len(s47)
+	}
+	if len(s48) < l {
+		l = len(s48)
+	}
+	if len(s49) < l {
+		l = len(s49)
+	}
+	if len(s50) < l {
+		l = len(s50)
+	}
+	if len(s51) < l {
+		l = len(s51)
+	}
+	if len(s52) < l {
+		l = len(s52)
+	}
+	if len(s53) < l {
+		l = len(s53)
+	}
+	if len(s54) < l {
+		l = len(s54)
+	}
+	ret := make([]tuples.Tuple54[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple54[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i]}
+	}
+	return ret
+}
+
+// Zip55 returns a slice of 55-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip55[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45, s46 []T46, s47 []T47, s48 []T48, s49 []T49, s50 []T50, s51 []T51, s52 []T52, s53 []T53, s54 []T54, s55 []T55) []tuples.Tuple55[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	if len(s46) < l {
+		l = len(s46)
+	}
+	if len(s47) < l {
+		l = len(s47)
+	}
+	if len(s48) < l {
+		l = len(s48)
+	}
+	if len(s49) < l {
+		l = len(s49)
+	}
+	if len(s50) < l {
+		l = len(s50)
+	}
+	if len(s51) < l {
+		l = len(s51)
+	}
+	if len(s52) < l {
+		l = len(s52)
+	}
+	if len(s53) < l {
+		l = len(s53)
+	}
+	if len(s54) < l {
+		l = len(s54)
+	}
+	if len(s55) < l {
+		l = len(s55)
+	}
+	ret := make([]tuples.Tuple55[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple55[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i]}
+	}
+	return ret
+}
+
+// Zip56 returns a slice of 56-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip56[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45, s46 []T46, s47 []T47, s48 []T48, s49 []T49, s50 []T50, s51 []T51, s52 []T52, s53 []T53, s54 []T54, s55 []T55, s56 []T56) []tuples.Tuple56[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	if len(s46) < l {
+		l = len(s46)
+	}
+	if len(s47) < l {
+		l = len(s47)
+	}
+	if len(s48) < l {
+		l = len(s48)
+	}
+	if len(s49) < l {
+		l = len(s49)
+	}
+	if len(s50) < l {
+		l = len(s50)
+	}
+	if len(s51) < l {
+		l = len(s51)
+	}
+	if len(s52) < l {
+		l = len(s52)
+	}
+	if len(s53) < l {
+		l = len(s53)
+	}
+	if len(s54) < l {
+		l = len(s54)
+	}
+	if len(s55) < l {
+		l = len(s55)
+	}
+	if len(s56) < l {
+		l = len(s56)
+	}
+	ret := make([]tuples.Tuple56[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple56[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i], s56[i]}
+	}
+	return ret
+}
+
+// Zip57 returns a slice of 57-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip57[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45, s46 []T46, s47 []T47, s48 []T48, s49 []T49, s50 []T50, s51 []T51, s52 []T52, s53 []T53, s54 []T54, s55 []T55, s56 []T56, s57 []T57) []tuples.Tuple57[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	if len(s46) < l {
+		l = len(s46)
+	}
+	if len(s47) < l {
+		l = len(s47)
+	}
+	if len(s48) < l {
+		l = len(s48)
+	}
+	if len(s49) < l {
+		l = len(s49)
+	}
+	if len(s50) < l {
+		l = len(s50)
+	}
+	if len(s51) < l {
+		l = len(s51)
+	}
+	if len(s52) < l {
+		l = len(s52)
+	}
+	if len(s53) < l {
+		l = len(s53)
+	}
+	if len(s54) < l {
+		l = len(s54)
+	}
+	if len(s55) < l {
+		l = len(s55)
+	}
+	if len(s56) < l {
+		l = len(s56)
+	}
+	if len(s57) < l {
+		l = len(s57)
+	}
+	ret := make([]tuples.Tuple57[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple57[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i], s56[i], s57[i]}
+	}
+	return ret
+}
+
+// Zip58 returns a slice of 58-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip58[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45, s46 []T46, s47 []T47, s48 []T48, s49 []T49, s50 []T50, s51 []T51, s52 []T52, s53 []T53, s54 []T54, s55 []T55, s56 []T56, s57 []T57, s58 []T58) []tuples.Tuple58[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	if len(s46) < l {
+		l = len(s46)
+	}
+	if len(s47) < l {
+		l = len(s47)
+	}
+	if len(s48) < l {
+		l = len(s48)
+	}
+	if len(s49) < l {
+		l = len(s49)
+	}
+	if len(s50) < l {
+		l = len(s50)
+	}
+	if len(s51) < l {
+		l = len(s51)
+	}
+	if len(s52) < l {
+		l = len(s52)
+	}
+	if len(s53) < l {
+		l = len(s53)
+	}
+	if len(s54) < l {
+		l = len(s54)
+	}
+	if len(s55) < l {
+		l = len(s55)
+	}
+	if len(s56) < l {
+		l = len(s56)
+	}
+	if len(s57) < l {
+		l = len(s57)
+	}
+	if len(s58) < l {
+		l = len(s58)
+	}
+	ret := make([]tuples.Tuple58[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple58[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i], s56[i], s57[i], s58[i]}
+	}
+	return ret
+}
+
+// Zip59 returns a slice of 59-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip59[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45, s46 []T46, s47 []T47, s48 []T48, s49 []T49, s50 []T50, s51 []T51, s52 []T52, s53 []T53, s54 []T54, s55 []T55, s56 []T56, s57 []T57, s58 []T58, s59 []T59) []tuples.Tuple59[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	if len(s46) < l {
+		l = len(s46)
+	}
+	if len(s47) < l {
+		l = len(s47)
+	}
+	if len(s48) < l {
+		l = len(s48)
+	}
+	if len(s49) < l {
+		l = len(s49)
+	}
+	if len(s50) < l {
+		l = len(s50)
+	}
+	if len(s51) < l {
+		l = len(s51)
+	}
+	if len(s52) < l {
+		l = len(s52)
+	}
+	if len(s53) < l {
+		l = len(s53)
+	}
+	if len(s54) < l {
+		l = len(s54)
+	}
+	if len(s55) < l {
+		l = len(s55)
+	}
+	if len(s56) < l {
+		l = len(s56)
+	}
+	if len(s57) < l {
+		l = len(s57)
+	}
+	if len(s58) < l {
+		l = len(s58)
+	}
+	if len(s59) < l {
+		l = len(s59)
+	}
+	ret := make([]tuples.Tuple59[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple59[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i], s56[i], s57[i], s58[i], s59[i]}
+	}
+	return ret
+}
+
+// Zip60 returns a slice of 60-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip60[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45, s46 []T46, s47 []T47, s48 []T48, s49 []T49, s50 []T50, s51 []T51, s52 []T52, s53 []T53, s54 []T54, s55 []T55, s56 []T56, s57 []T57, s58 []T58, s59 []T59, s60 []T60) []tuples.Tuple60[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	if len(s46) < l {
+		l = len(s46)
+	}
+	if len(s47) < l {
+		l = len(s47)
+	}
+	if len(s48) < l {
+		l = len(s48)
+	}
+	if len(s49) < l {
+		l = len(s49)
+	}
+	if len(s50) < l {
+		l = len(s50)
+	}
+	if len(s51) < l {
+		l = len(s51)
+	}
+	if len(s52) < l {
+		l = len(s52)
+	}
+	if len(s53) < l {
+		l = len(s53)
+	}
+	if len(s54) < l {
+		l = len(s54)
+	}
+	if len(s55) < l {
+		l = len(s55)
+	}
+	if len(s56) < l {
+		l = len(s56)
+	}
+	if len(s57) < l {
+		l = len(s57)
+	}
+	if len(s58) < l {
+		l = len(s58)
+	}
+	if len(s59) < l {
+		l = len(s59)
+	}
+	if len(s60) < l {
+		l = len(s60)
+	}
+	ret := make([]tuples.Tuple60[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple60[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i], s56[i], s57[i], s58[i], s59[i], s60[i]}
+	}
+	return ret
+}
+
+// Zip61 returns a slice of 61-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip61[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45, s46 []T46, s47 []T47, s48 []T48, s49 []T49, s50 []T50, s51 []T51, s52 []T52, s53 []T53, s54 []T54, s55 []T55, s56 []T56, s57 []T57, s58 []T58, s59 []T59, s60 []T60, s61 []T61) []tuples.Tuple61[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	if len(s46) < l {
+		l = len(s46)
+	}
+	if len(s47) < l {
+		l = len(s47)
+	}
+	if len(s48) < l {
+		l = len(s48)
+	}
+	if len(s49) < l {
+		l = len(s49)
+	}
+	if len(s50) < l {
+		l = len(s50)
+	}
+	if len(s51) < l {
+		l = len(s51)
+	}
+	if len(s52) < l {
+		l = len(s52)
+	}
+	if len(s53) < l {
+		l = len(s53)
+	}
+	if len(s54) < l {
+		l = len(s54)
+	}
+	if len(s55) < l {
+		l = len(s55)
+	}
+	if len(s56) < l {
+		l = len(s56)
+	}
+	if len(s57) < l {
+		l = len(s57)
+	}
+	if len(s58) < l {
+		l = len(s58)
+	}
+	if len(s59) < l {
+		l = len(s59)
+	}
+	if len(s60) < l {
+		l = len(s60)
+	}
+	if len(s61) < l {
+		l = len(s61)
+	}
+	ret := make([]tuples.Tuple61[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple61[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i], s56[i], s57[i], s58[i], s59[i], s60[i], s61[i]}
+	}
+	return ret
+}
+
+// Zip62 returns a slice of 62-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip62[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45, s46 []T46, s47 []T47, s48 []T48, s49 []T49, s50 []T50, s51 []T51, s52 []T52, s53 []T53, s54 []T54, s55 []T55, s56 []T56, s57 []T57, s58 []T58, s59 []T59, s60 []T60, s61 []T61, s62 []T62) []tuples.Tuple62[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	if len(s46) < l {
+		l = len(s46)
+	}
+	if len(s47) < l {
+		l = len(s47)
+	}
+	if len(s48) < l {
+		l = len(s48)
+	}
+	if len(s49) < l {
+		l = len(s49)
+	}
+	if len(s50) < l {
+		l = len(s50)
+	}
+	if len(s51) < l {
+		l = len(s51)
+	}
+	if len(s52) < l {
+		l = len(s52)
+	}
+	if len(s53) < l {
+		l = len(s53)
+	}
+	if len(s54) < l {
+		l = len(s54)
+	}
+	if len(s55) < l {
+		l = len(s55)
+	}
+	if len(s56) < l {
+		l = len(s56)
+	}
+	if len(s57) < l {
+		l = len(s57)
+	}
+	if len(s58) < l {
+		l = len(s58)
+	}
+	if len(s59) < l {
+		l = len(s59)
+	}
+	if len(s60) < l {
+		l = len(s60)
+	}
+	if len(s61) < l {
+		l = len(s61)
+	}
+	if len(s62) < l {
+		l = len(s62)
+	}
+	ret := make([]tuples.Tuple62[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple62[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i], s56[i], s57[i], s58[i], s59[i], s60[i], s61[i], s62[i]}
+	}
+	return ret
+}
+
+// Zip63 returns a slice of 63-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip63[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45, s46 []T46, s47 []T47, s48 []T48, s49 []T49, s50 []T50, s51 []T51, s52 []T52, s53 []T53, s54 []T54, s55 []T55, s56 []T56, s57 []T57, s58 []T58, s59 []T59, s60 []T60, s61 []T61, s62 []T62, s63 []T63) []tuples.Tuple63[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	if len(s46) < l {
+		l = len(s46)
+	}
+	if len(s47) < l {
+		l = len(s47)
+	}
+	if len(s48) < l {
+		l = len(s48)
+	}
+	if len(s49) < l {
+		l = len(s49)
+	}
+	if len(s50) < l {
+		l = len(s50)
+	}
+	if len(s51) < l {
+		l = len(s51)
+	}
+	if len(s52) < l {
+		l = len(s52)
+	}
+	if len(s53) < l {
+		l = len(s53)
+	}
+	if len(s54) < l {
+		l = len(s54)
+	}
+	if len(s55) < l {
+		l = len(s55)
+	}
+	if len(s56) < l {
+		l = len(s56)
+	}
+	if len(s57) < l {
+		l = len(s57)
+	}
+	if len(s58) < l {
+		l = len(s58)
+	}
+	if len(s59) < l {
+		l = len(s59)
+	}
+	if len(s60) < l {
+		l = len(s60)
+	}
+	if len(s61) < l {
+		l = len(s61)
+	}
+	if len(s62) < l {
+		l = len(s62)
+	}
+	if len(s63) < l {
+		l = len(s63)
+	}
+	ret := make([]tuples.Tuple63[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple63[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i], s56[i], s57[i], s58[i], s59[i], s60[i], s61[i], s62[i], s63[i]}
+	}
+	return ret
+}
+
+// Zip64 returns a slice of 64-tuples.
+// The returned slice have the length of the shortest slice.
+func Zip64[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64 any](s1 []T1, s2 []T2, s3 []T3, s4 []T4, s5 []T5, s6 []T6, s7 []T7, s8 []T8, s9 []T9, s10 []T10, s11 []T11, s12 []T12, s13 []T13, s14 []T14, s15 []T15, s16 []T16, s17 []T17, s18 []T18, s19 []T19, s20 []T20, s21 []T21, s22 []T22, s23 []T23, s24 []T24, s25 []T25, s26 []T26, s27 []T27, s28 []T28, s29 []T29, s30 []T30, s31 []T31, s32 []T32, s33 []T33, s34 []T34, s35 []T35, s36 []T36, s37 []T37, s38 []T38, s39 []T39, s40 []T40, s41 []T41, s42 []T42, s43 []T43, s44 []T44, s45 []T45, s46 []T46, s47 []T47, s48 []T48, s49 []T49, s50 []T50, s51 []T51, s52 []T52, s53 []T53, s54 []T54, s55 []T55, s56 []T56, s57 []T57, s58 []T58, s59 []T59, s60 []T60, s61 []T61, s62 []T62, s63 []T63, s64 []T64) []tuples.Tuple64[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64] {
+	l := len(s1)
+	if len(s2) < l {
+		l = len(s2)
+	}
+	if len(s3) < l {
+		l = len(s3)
+	}
+	if len(s4) < l {
+		l = len(s4)
+	}
+	if len(s5) < l {
+		l = len(s5)
+	}
+	if len(s6) < l {
+		l = len(s6)
+	}
+	if len(s7) < l {
+		l = len(s7)
+	}
+	if len(s8) < l {
+		l = len(s8)
+	}
+	if len(s9) < l {
+		l = len(s9)
+	}
+	if len(s10) < l {
+		l = len(s10)
+	}
+	if len(s11) < l {
+		l = len(s11)
+	}
+	if len(s12) < l {
+		l = len(s12)
+	}
+	if len(s13) < l {
+		l = len(s13)
+	}
+	if len(s14) < l {
+		l = len(s14)
+	}
+	if len(s15) < l {
+		l = len(s15)
+	}
+	if len(s16) < l {
+		l = len(s16)
+	}
+	if len(s17) < l {
+		l = len(s17)
+	}
+	if len(s18) < l {
+		l = len(s18)
+	}
+	if len(s19) < l {
+		l = len(s19)
+	}
+	if len(s20) < l {
+		l = len(s20)
+	}
+	if len(s21) < l {
+		l = len(s21)
+	}
+	if len(s22) < l {
+		l = len(s22)
+	}
+	if len(s23) < l {
+		l = len(s23)
+	}
+	if len(s24) < l {
+		l = len(s24)
+	}
+	if len(s25) < l {
+		l = len(s25)
+	}
+	if len(s26) < l {
+		l = len(s26)
+	}
+	if len(s27) < l {
+		l = len(s27)
+	}
+	if len(s28) < l {
+		l = len(s28)
+	}
+	if len(s29) < l {
+		l = len(s29)
+	}
+	if len(s30) < l {
+		l = len(s30)
+	}
+	if len(s31) < l {
+		l = len(s31)
+	}
+	if len(s32) < l {
+		l = len(s32)
+	}
+	if len(s33) < l {
+		l = len(s33)
+	}
+	if len(s34) < l {
+		l = len(s34)
+	}
+	if len(s35) < l {
+		l = len(s35)
+	}
+	if len(s36) < l {
+		l = len(s36)
+	}
+	if len(s37) < l {
+		l = len(s37)
+	}
+	if len(s38) < l {
+		l = len(s38)
+	}
+	if len(s39) < l {
+		l = len(s39)
+	}
+	if len(s40) < l {
+		l = len(s40)
+	}
+	if len(s41) < l {
+		l = len(s41)
+	}
+	if len(s42) < l {
+		l = len(s42)
+	}
+	if len(s43) < l {
+		l = len(s43)
+	}
+	if len(s44) < l {
+		l = len(s44)
+	}
+	if len(s45) < l {
+		l = len(s45)
+	}
+	if len(s46) < l {
+		l = len(s46)
+	}
+	if len(s47) < l {
+		l = len(s47)
+	}
+	if len(s48) < l {
+		l = len(s48)
+	}
+	if len(s49) < l {
+		l = len(s49)
+	}
+	if len(s50) < l {
+		l = len(s50)
+	}
+	if len(s51) < l {
+		l = len(s51)
+	}
+	if len(s52) < l {
+		l = len(s52)
+	}
+	if len(s53) < l {
+		l = len(s53)
+	}
+	if len(s54) < l {
+		l = len(s54)
+	}
+	if len(s55) < l {
+		l = len(s55)
+	}
+	if len(s56) < l {
+		l = len(s56)
+	}
+	if len(s57) < l {
+		l = len(s57)
+	}
+	if len(s58) < l {
+		l = len(s58)
+	}
+	if len(s59) < l {
+		l = len(s59)
+	}
+	if len(s60) < l {
+		l = len(s60)
+	}
+	if len(s61) < l {
+		l = len(s61)
+	}
+	if len(s62) < l {
+		l = len(s62)
+	}
+	if len(s63) < l {
+		l = len(s63)
+	}
+	if len(s64) < l {
+		l = len(s64)
+	}
+	ret := make([]tuples.Tuple64[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64], l)
+	for i := 0; i < l; i++ {
+		ret[i] = tuples.Tuple64[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i], s56[i], s57[i], s58[i], s59[i], s60[i], s61[i], s62[i], s63[i], s64[i]}
 	}
 	return ret
 }

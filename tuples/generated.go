@@ -2,6 +2,21 @@
 
 package tuples
 
+// Tuple1 is a 1-tuple.
+type Tuple1[T1 any] struct {
+	V1 T1
+}
+
+// New1 returns a new 1-tuple.
+func New1[T1 any](v1 T1) Tuple1[T1] {
+	return Tuple1[T1]{v1}
+}
+
+// New1 returns a new 1-tuple.
+func (t Tuple1[T1]) Get() (T1) {
+	return t.V1
+}
+
 // Tuple2 is a 2-tuple.
 type Tuple2[T1, T2 any] struct {
 	V1 T1
@@ -180,4 +195,2785 @@ func New10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10 any](v1 T1, v2 T2, v3 T3, v4 
 // New10 returns a new 10-tuple.
 func (t Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10
+}
+
+// Tuple11 is a 11-tuple.
+type Tuple11[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+}
+
+// New11 returns a new 11-tuple.
+func New11[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11) Tuple11[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11] {
+	return Tuple11[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11}
+}
+
+// New11 returns a new 11-tuple.
+func (t Tuple11[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11
+}
+
+// Tuple12 is a 12-tuple.
+type Tuple12[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+}
+
+// New12 returns a new 12-tuple.
+func New12[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12) Tuple12[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12] {
+	return Tuple12[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12}
+}
+
+// New12 returns a new 12-tuple.
+func (t Tuple12[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12
+}
+
+// Tuple13 is a 13-tuple.
+type Tuple13[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+}
+
+// New13 returns a new 13-tuple.
+func New13[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13) Tuple13[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13] {
+	return Tuple13[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13}
+}
+
+// New13 returns a new 13-tuple.
+func (t Tuple13[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13
+}
+
+// Tuple14 is a 14-tuple.
+type Tuple14[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+}
+
+// New14 returns a new 14-tuple.
+func New14[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14) Tuple14[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14] {
+	return Tuple14[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14}
+}
+
+// New14 returns a new 14-tuple.
+func (t Tuple14[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14
+}
+
+// Tuple15 is a 15-tuple.
+type Tuple15[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+}
+
+// New15 returns a new 15-tuple.
+func New15[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15) Tuple15[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15] {
+	return Tuple15[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15}
+}
+
+// New15 returns a new 15-tuple.
+func (t Tuple15[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15
+}
+
+// Tuple16 is a 16-tuple.
+type Tuple16[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+}
+
+// New16 returns a new 16-tuple.
+func New16[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16) Tuple16[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16] {
+	return Tuple16[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16}
+}
+
+// New16 returns a new 16-tuple.
+func (t Tuple16[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16
+}
+
+// Tuple17 is a 17-tuple.
+type Tuple17[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+}
+
+// New17 returns a new 17-tuple.
+func New17[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17) Tuple17[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17] {
+	return Tuple17[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17}
+}
+
+// New17 returns a new 17-tuple.
+func (t Tuple17[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17
+}
+
+// Tuple18 is a 18-tuple.
+type Tuple18[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+}
+
+// New18 returns a new 18-tuple.
+func New18[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18) Tuple18[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18] {
+	return Tuple18[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18}
+}
+
+// New18 returns a new 18-tuple.
+func (t Tuple18[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18
+}
+
+// Tuple19 is a 19-tuple.
+type Tuple19[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+}
+
+// New19 returns a new 19-tuple.
+func New19[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19) Tuple19[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19] {
+	return Tuple19[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19}
+}
+
+// New19 returns a new 19-tuple.
+func (t Tuple19[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19
+}
+
+// Tuple20 is a 20-tuple.
+type Tuple20[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+}
+
+// New20 returns a new 20-tuple.
+func New20[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20) Tuple20[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20] {
+	return Tuple20[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20}
+}
+
+// New20 returns a new 20-tuple.
+func (t Tuple20[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20
+}
+
+// Tuple21 is a 21-tuple.
+type Tuple21[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+}
+
+// New21 returns a new 21-tuple.
+func New21[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21) Tuple21[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21] {
+	return Tuple21[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21}
+}
+
+// New21 returns a new 21-tuple.
+func (t Tuple21[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21
+}
+
+// Tuple22 is a 22-tuple.
+type Tuple22[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+}
+
+// New22 returns a new 22-tuple.
+func New22[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22) Tuple22[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22] {
+	return Tuple22[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22}
+}
+
+// New22 returns a new 22-tuple.
+func (t Tuple22[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22
+}
+
+// Tuple23 is a 23-tuple.
+type Tuple23[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+}
+
+// New23 returns a new 23-tuple.
+func New23[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23) Tuple23[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23] {
+	return Tuple23[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23}
+}
+
+// New23 returns a new 23-tuple.
+func (t Tuple23[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23
+}
+
+// Tuple24 is a 24-tuple.
+type Tuple24[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+}
+
+// New24 returns a new 24-tuple.
+func New24[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24) Tuple24[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24] {
+	return Tuple24[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24}
+}
+
+// New24 returns a new 24-tuple.
+func (t Tuple24[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24
+}
+
+// Tuple25 is a 25-tuple.
+type Tuple25[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+}
+
+// New25 returns a new 25-tuple.
+func New25[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25) Tuple25[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25] {
+	return Tuple25[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25}
+}
+
+// New25 returns a new 25-tuple.
+func (t Tuple25[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25
+}
+
+// Tuple26 is a 26-tuple.
+type Tuple26[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+}
+
+// New26 returns a new 26-tuple.
+func New26[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26) Tuple26[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26] {
+	return Tuple26[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26}
+}
+
+// New26 returns a new 26-tuple.
+func (t Tuple26[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26
+}
+
+// Tuple27 is a 27-tuple.
+type Tuple27[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+}
+
+// New27 returns a new 27-tuple.
+func New27[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27) Tuple27[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27] {
+	return Tuple27[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27}
+}
+
+// New27 returns a new 27-tuple.
+func (t Tuple27[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27
+}
+
+// Tuple28 is a 28-tuple.
+type Tuple28[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+}
+
+// New28 returns a new 28-tuple.
+func New28[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28) Tuple28[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28] {
+	return Tuple28[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28}
+}
+
+// New28 returns a new 28-tuple.
+func (t Tuple28[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28
+}
+
+// Tuple29 is a 29-tuple.
+type Tuple29[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+}
+
+// New29 returns a new 29-tuple.
+func New29[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29) Tuple29[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29] {
+	return Tuple29[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29}
+}
+
+// New29 returns a new 29-tuple.
+func (t Tuple29[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29
+}
+
+// Tuple30 is a 30-tuple.
+type Tuple30[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+}
+
+// New30 returns a new 30-tuple.
+func New30[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30) Tuple30[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30] {
+	return Tuple30[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30}
+}
+
+// New30 returns a new 30-tuple.
+func (t Tuple30[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30
+}
+
+// Tuple31 is a 31-tuple.
+type Tuple31[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+}
+
+// New31 returns a new 31-tuple.
+func New31[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31) Tuple31[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31] {
+	return Tuple31[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31}
+}
+
+// New31 returns a new 31-tuple.
+func (t Tuple31[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31
+}
+
+// Tuple32 is a 32-tuple.
+type Tuple32[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+}
+
+// New32 returns a new 32-tuple.
+func New32[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32) Tuple32[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32] {
+	return Tuple32[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32}
+}
+
+// New32 returns a new 32-tuple.
+func (t Tuple32[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32
+}
+
+// Tuple33 is a 33-tuple.
+type Tuple33[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+}
+
+// New33 returns a new 33-tuple.
+func New33[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33) Tuple33[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33] {
+	return Tuple33[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33}
+}
+
+// New33 returns a new 33-tuple.
+func (t Tuple33[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33
+}
+
+// Tuple34 is a 34-tuple.
+type Tuple34[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+}
+
+// New34 returns a new 34-tuple.
+func New34[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34) Tuple34[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34] {
+	return Tuple34[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34}
+}
+
+// New34 returns a new 34-tuple.
+func (t Tuple34[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34
+}
+
+// Tuple35 is a 35-tuple.
+type Tuple35[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+}
+
+// New35 returns a new 35-tuple.
+func New35[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35) Tuple35[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35] {
+	return Tuple35[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35}
+}
+
+// New35 returns a new 35-tuple.
+func (t Tuple35[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35
+}
+
+// Tuple36 is a 36-tuple.
+type Tuple36[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+}
+
+// New36 returns a new 36-tuple.
+func New36[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36) Tuple36[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36] {
+	return Tuple36[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36}
+}
+
+// New36 returns a new 36-tuple.
+func (t Tuple36[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36
+}
+
+// Tuple37 is a 37-tuple.
+type Tuple37[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+}
+
+// New37 returns a new 37-tuple.
+func New37[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37) Tuple37[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37] {
+	return Tuple37[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37}
+}
+
+// New37 returns a new 37-tuple.
+func (t Tuple37[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37
+}
+
+// Tuple38 is a 38-tuple.
+type Tuple38[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+}
+
+// New38 returns a new 38-tuple.
+func New38[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38) Tuple38[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38] {
+	return Tuple38[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38}
+}
+
+// New38 returns a new 38-tuple.
+func (t Tuple38[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38
+}
+
+// Tuple39 is a 39-tuple.
+type Tuple39[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+}
+
+// New39 returns a new 39-tuple.
+func New39[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39) Tuple39[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39] {
+	return Tuple39[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39}
+}
+
+// New39 returns a new 39-tuple.
+func (t Tuple39[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39
+}
+
+// Tuple40 is a 40-tuple.
+type Tuple40[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+}
+
+// New40 returns a new 40-tuple.
+func New40[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40) Tuple40[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40] {
+	return Tuple40[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40}
+}
+
+// New40 returns a new 40-tuple.
+func (t Tuple40[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40
+}
+
+// Tuple41 is a 41-tuple.
+type Tuple41[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+}
+
+// New41 returns a new 41-tuple.
+func New41[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41) Tuple41[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41] {
+	return Tuple41[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41}
+}
+
+// New41 returns a new 41-tuple.
+func (t Tuple41[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41
+}
+
+// Tuple42 is a 42-tuple.
+type Tuple42[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+}
+
+// New42 returns a new 42-tuple.
+func New42[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42) Tuple42[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42] {
+	return Tuple42[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42}
+}
+
+// New42 returns a new 42-tuple.
+func (t Tuple42[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42
+}
+
+// Tuple43 is a 43-tuple.
+type Tuple43[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+}
+
+// New43 returns a new 43-tuple.
+func New43[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43) Tuple43[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43] {
+	return Tuple43[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43}
+}
+
+// New43 returns a new 43-tuple.
+func (t Tuple43[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43
+}
+
+// Tuple44 is a 44-tuple.
+type Tuple44[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+}
+
+// New44 returns a new 44-tuple.
+func New44[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44) Tuple44[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44] {
+	return Tuple44[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44}
+}
+
+// New44 returns a new 44-tuple.
+func (t Tuple44[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44
+}
+
+// Tuple45 is a 45-tuple.
+type Tuple45[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+}
+
+// New45 returns a new 45-tuple.
+func New45[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45) Tuple45[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45] {
+	return Tuple45[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45}
+}
+
+// New45 returns a new 45-tuple.
+func (t Tuple45[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45
+}
+
+// Tuple46 is a 46-tuple.
+type Tuple46[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+	V46 T46
+}
+
+// New46 returns a new 46-tuple.
+func New46[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45, v46 T46) Tuple46[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46] {
+	return Tuple46[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46}
+}
+
+// New46 returns a new 46-tuple.
+func (t Tuple46[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46
+}
+
+// Tuple47 is a 47-tuple.
+type Tuple47[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+	V46 T46
+	V47 T47
+}
+
+// New47 returns a new 47-tuple.
+func New47[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45, v46 T46, v47 T47) Tuple47[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47] {
+	return Tuple47[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46, v47}
+}
+
+// New47 returns a new 47-tuple.
+func (t Tuple47[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47
+}
+
+// Tuple48 is a 48-tuple.
+type Tuple48[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+	V46 T46
+	V47 T47
+	V48 T48
+}
+
+// New48 returns a new 48-tuple.
+func New48[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45, v46 T46, v47 T47, v48 T48) Tuple48[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48] {
+	return Tuple48[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46, v47, v48}
+}
+
+// New48 returns a new 48-tuple.
+func (t Tuple48[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48
+}
+
+// Tuple49 is a 49-tuple.
+type Tuple49[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+	V46 T46
+	V47 T47
+	V48 T48
+	V49 T49
+}
+
+// New49 returns a new 49-tuple.
+func New49[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45, v46 T46, v47 T47, v48 T48, v49 T49) Tuple49[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49] {
+	return Tuple49[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46, v47, v48, v49}
+}
+
+// New49 returns a new 49-tuple.
+func (t Tuple49[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49
+}
+
+// Tuple50 is a 50-tuple.
+type Tuple50[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+	V46 T46
+	V47 T47
+	V48 T48
+	V49 T49
+	V50 T50
+}
+
+// New50 returns a new 50-tuple.
+func New50[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45, v46 T46, v47 T47, v48 T48, v49 T49, v50 T50) Tuple50[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50] {
+	return Tuple50[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46, v47, v48, v49, v50}
+}
+
+// New50 returns a new 50-tuple.
+func (t Tuple50[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50
+}
+
+// Tuple51 is a 51-tuple.
+type Tuple51[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+	V46 T46
+	V47 T47
+	V48 T48
+	V49 T49
+	V50 T50
+	V51 T51
+}
+
+// New51 returns a new 51-tuple.
+func New51[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45, v46 T46, v47 T47, v48 T48, v49 T49, v50 T50, v51 T51) Tuple51[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51] {
+	return Tuple51[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46, v47, v48, v49, v50, v51}
+}
+
+// New51 returns a new 51-tuple.
+func (t Tuple51[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51
+}
+
+// Tuple52 is a 52-tuple.
+type Tuple52[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+	V46 T46
+	V47 T47
+	V48 T48
+	V49 T49
+	V50 T50
+	V51 T51
+	V52 T52
+}
+
+// New52 returns a new 52-tuple.
+func New52[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45, v46 T46, v47 T47, v48 T48, v49 T49, v50 T50, v51 T51, v52 T52) Tuple52[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52] {
+	return Tuple52[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46, v47, v48, v49, v50, v51, v52}
+}
+
+// New52 returns a new 52-tuple.
+func (t Tuple52[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52
+}
+
+// Tuple53 is a 53-tuple.
+type Tuple53[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+	V46 T46
+	V47 T47
+	V48 T48
+	V49 T49
+	V50 T50
+	V51 T51
+	V52 T52
+	V53 T53
+}
+
+// New53 returns a new 53-tuple.
+func New53[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45, v46 T46, v47 T47, v48 T48, v49 T49, v50 T50, v51 T51, v52 T52, v53 T53) Tuple53[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53] {
+	return Tuple53[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46, v47, v48, v49, v50, v51, v52, v53}
+}
+
+// New53 returns a new 53-tuple.
+func (t Tuple53[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53
+}
+
+// Tuple54 is a 54-tuple.
+type Tuple54[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+	V46 T46
+	V47 T47
+	V48 T48
+	V49 T49
+	V50 T50
+	V51 T51
+	V52 T52
+	V53 T53
+	V54 T54
+}
+
+// New54 returns a new 54-tuple.
+func New54[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45, v46 T46, v47 T47, v48 T48, v49 T49, v50 T50, v51 T51, v52 T52, v53 T53, v54 T54) Tuple54[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54] {
+	return Tuple54[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46, v47, v48, v49, v50, v51, v52, v53, v54}
+}
+
+// New54 returns a new 54-tuple.
+func (t Tuple54[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54
+}
+
+// Tuple55 is a 55-tuple.
+type Tuple55[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+	V46 T46
+	V47 T47
+	V48 T48
+	V49 T49
+	V50 T50
+	V51 T51
+	V52 T52
+	V53 T53
+	V54 T54
+	V55 T55
+}
+
+// New55 returns a new 55-tuple.
+func New55[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45, v46 T46, v47 T47, v48 T48, v49 T49, v50 T50, v51 T51, v52 T52, v53 T53, v54 T54, v55 T55) Tuple55[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55] {
+	return Tuple55[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46, v47, v48, v49, v50, v51, v52, v53, v54, v55}
+}
+
+// New55 returns a new 55-tuple.
+func (t Tuple55[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55
+}
+
+// Tuple56 is a 56-tuple.
+type Tuple56[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+	V46 T46
+	V47 T47
+	V48 T48
+	V49 T49
+	V50 T50
+	V51 T51
+	V52 T52
+	V53 T53
+	V54 T54
+	V55 T55
+	V56 T56
+}
+
+// New56 returns a new 56-tuple.
+func New56[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45, v46 T46, v47 T47, v48 T48, v49 T49, v50 T50, v51 T51, v52 T52, v53 T53, v54 T54, v55 T55, v56 T56) Tuple56[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56] {
+	return Tuple56[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46, v47, v48, v49, v50, v51, v52, v53, v54, v55, v56}
+}
+
+// New56 returns a new 56-tuple.
+func (t Tuple56[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56
+}
+
+// Tuple57 is a 57-tuple.
+type Tuple57[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+	V46 T46
+	V47 T47
+	V48 T48
+	V49 T49
+	V50 T50
+	V51 T51
+	V52 T52
+	V53 T53
+	V54 T54
+	V55 T55
+	V56 T56
+	V57 T57
+}
+
+// New57 returns a new 57-tuple.
+func New57[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45, v46 T46, v47 T47, v48 T48, v49 T49, v50 T50, v51 T51, v52 T52, v53 T53, v54 T54, v55 T55, v56 T56, v57 T57) Tuple57[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57] {
+	return Tuple57[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46, v47, v48, v49, v50, v51, v52, v53, v54, v55, v56, v57}
+}
+
+// New57 returns a new 57-tuple.
+func (t Tuple57[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57
+}
+
+// Tuple58 is a 58-tuple.
+type Tuple58[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+	V46 T46
+	V47 T47
+	V48 T48
+	V49 T49
+	V50 T50
+	V51 T51
+	V52 T52
+	V53 T53
+	V54 T54
+	V55 T55
+	V56 T56
+	V57 T57
+	V58 T58
+}
+
+// New58 returns a new 58-tuple.
+func New58[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45, v46 T46, v47 T47, v48 T48, v49 T49, v50 T50, v51 T51, v52 T52, v53 T53, v54 T54, v55 T55, v56 T56, v57 T57, v58 T58) Tuple58[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58] {
+	return Tuple58[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46, v47, v48, v49, v50, v51, v52, v53, v54, v55, v56, v57, v58}
+}
+
+// New58 returns a new 58-tuple.
+func (t Tuple58[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58
+}
+
+// Tuple59 is a 59-tuple.
+type Tuple59[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+	V46 T46
+	V47 T47
+	V48 T48
+	V49 T49
+	V50 T50
+	V51 T51
+	V52 T52
+	V53 T53
+	V54 T54
+	V55 T55
+	V56 T56
+	V57 T57
+	V58 T58
+	V59 T59
+}
+
+// New59 returns a new 59-tuple.
+func New59[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45, v46 T46, v47 T47, v48 T48, v49 T49, v50 T50, v51 T51, v52 T52, v53 T53, v54 T54, v55 T55, v56 T56, v57 T57, v58 T58, v59 T59) Tuple59[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59] {
+	return Tuple59[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46, v47, v48, v49, v50, v51, v52, v53, v54, v55, v56, v57, v58, v59}
+}
+
+// New59 returns a new 59-tuple.
+func (t Tuple59[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58, t.V59
+}
+
+// Tuple60 is a 60-tuple.
+type Tuple60[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+	V46 T46
+	V47 T47
+	V48 T48
+	V49 T49
+	V50 T50
+	V51 T51
+	V52 T52
+	V53 T53
+	V54 T54
+	V55 T55
+	V56 T56
+	V57 T57
+	V58 T58
+	V59 T59
+	V60 T60
+}
+
+// New60 returns a new 60-tuple.
+func New60[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45, v46 T46, v47 T47, v48 T48, v49 T49, v50 T50, v51 T51, v52 T52, v53 T53, v54 T54, v55 T55, v56 T56, v57 T57, v58 T58, v59 T59, v60 T60) Tuple60[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60] {
+	return Tuple60[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46, v47, v48, v49, v50, v51, v52, v53, v54, v55, v56, v57, v58, v59, v60}
+}
+
+// New60 returns a new 60-tuple.
+func (t Tuple60[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58, t.V59, t.V60
+}
+
+// Tuple61 is a 61-tuple.
+type Tuple61[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+	V46 T46
+	V47 T47
+	V48 T48
+	V49 T49
+	V50 T50
+	V51 T51
+	V52 T52
+	V53 T53
+	V54 T54
+	V55 T55
+	V56 T56
+	V57 T57
+	V58 T58
+	V59 T59
+	V60 T60
+	V61 T61
+}
+
+// New61 returns a new 61-tuple.
+func New61[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45, v46 T46, v47 T47, v48 T48, v49 T49, v50 T50, v51 T51, v52 T52, v53 T53, v54 T54, v55 T55, v56 T56, v57 T57, v58 T58, v59 T59, v60 T60, v61 T61) Tuple61[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61] {
+	return Tuple61[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46, v47, v48, v49, v50, v51, v52, v53, v54, v55, v56, v57, v58, v59, v60, v61}
+}
+
+// New61 returns a new 61-tuple.
+func (t Tuple61[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58, t.V59, t.V60, t.V61
+}
+
+// Tuple62 is a 62-tuple.
+type Tuple62[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+	V46 T46
+	V47 T47
+	V48 T48
+	V49 T49
+	V50 T50
+	V51 T51
+	V52 T52
+	V53 T53
+	V54 T54
+	V55 T55
+	V56 T56
+	V57 T57
+	V58 T58
+	V59 T59
+	V60 T60
+	V61 T61
+	V62 T62
+}
+
+// New62 returns a new 62-tuple.
+func New62[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45, v46 T46, v47 T47, v48 T48, v49 T49, v50 T50, v51 T51, v52 T52, v53 T53, v54 T54, v55 T55, v56 T56, v57 T57, v58 T58, v59 T59, v60 T60, v61 T61, v62 T62) Tuple62[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62] {
+	return Tuple62[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46, v47, v48, v49, v50, v51, v52, v53, v54, v55, v56, v57, v58, v59, v60, v61, v62}
+}
+
+// New62 returns a new 62-tuple.
+func (t Tuple62[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58, t.V59, t.V60, t.V61, t.V62
+}
+
+// Tuple63 is a 63-tuple.
+type Tuple63[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+	V46 T46
+	V47 T47
+	V48 T48
+	V49 T49
+	V50 T50
+	V51 T51
+	V52 T52
+	V53 T53
+	V54 T54
+	V55 T55
+	V56 T56
+	V57 T57
+	V58 T58
+	V59 T59
+	V60 T60
+	V61 T61
+	V62 T62
+	V63 T63
+}
+
+// New63 returns a new 63-tuple.
+func New63[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45, v46 T46, v47 T47, v48 T48, v49 T49, v50 T50, v51 T51, v52 T52, v53 T53, v54 T54, v55 T55, v56 T56, v57 T57, v58 T58, v59 T59, v60 T60, v61 T61, v62 T62, v63 T63) Tuple63[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63] {
+	return Tuple63[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46, v47, v48, v49, v50, v51, v52, v53, v54, v55, v56, v57, v58, v59, v60, v61, v62, v63}
+}
+
+// New63 returns a new 63-tuple.
+func (t Tuple63[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58, t.V59, t.V60, t.V61, t.V62, t.V63
+}
+
+// Tuple64 is a 64-tuple.
+type Tuple64[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64 any] struct {
+	V1  T1
+	V2  T2
+	V3  T3
+	V4  T4
+	V5  T5
+	V6  T6
+	V7  T7
+	V8  T8
+	V9  T9
+	V10 T10
+	V11 T11
+	V12 T12
+	V13 T13
+	V14 T14
+	V15 T15
+	V16 T16
+	V17 T17
+	V18 T18
+	V19 T19
+	V20 T20
+	V21 T21
+	V22 T22
+	V23 T23
+	V24 T24
+	V25 T25
+	V26 T26
+	V27 T27
+	V28 T28
+	V29 T29
+	V30 T30
+	V31 T31
+	V32 T32
+	V33 T33
+	V34 T34
+	V35 T35
+	V36 T36
+	V37 T37
+	V38 T38
+	V39 T39
+	V40 T40
+	V41 T41
+	V42 T42
+	V43 T43
+	V44 T44
+	V45 T45
+	V46 T46
+	V47 T47
+	V48 T48
+	V49 T49
+	V50 T50
+	V51 T51
+	V52 T52
+	V53 T53
+	V54 T54
+	V55 T55
+	V56 T56
+	V57 T57
+	V58 T58
+	V59 T59
+	V60 T60
+	V61 T61
+	V62 T62
+	V63 T63
+	V64 T64
+}
+
+// New64 returns a new 64-tuple.
+func New64[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6, v7 T7, v8 T8, v9 T9, v10 T10, v11 T11, v12 T12, v13 T13, v14 T14, v15 T15, v16 T16, v17 T17, v18 T18, v19 T19, v20 T20, v21 T21, v22 T22, v23 T23, v24 T24, v25 T25, v26 T26, v27 T27, v28 T28, v29 T29, v30 T30, v31 T31, v32 T32, v33 T33, v34 T34, v35 T35, v36 T36, v37 T37, v38 T38, v39 T39, v40 T40, v41 T41, v42 T42, v43 T43, v44 T44, v45 T45, v46 T46, v47 T47, v48 T48, v49 T49, v50 T50, v51 T51, v52 T52, v53 T53, v54 T54, v55 T55, v56 T56, v57 T57, v58 T58, v59 T59, v60 T60, v61 T61, v62 T62, v63 T63, v64 T64) Tuple64[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64] {
+	return Tuple64[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64]{v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46, v47, v48, v49, v50, v51, v52, v53, v54, v55, v56, v57, v58, v59, v60, v61, v62, v63, v64}
+}
+
+// New64 returns a new 64-tuple.
+func (t Tuple64[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64) {
+	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58, t.V59, t.V60, t.V61, t.V62, t.V63, t.V64
 }

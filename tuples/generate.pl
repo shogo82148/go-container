@@ -3,6 +3,16 @@
 use v5.34.0;
 use warnings;
 
+sub digits {
+    my $n = shift;
+    my $digits = 1;
+    while ($n >= 10) {
+        $n = int($n / 10);
+        $digits++;
+    }
+    return $digits;
+}
+
 open my $fh, ">", "generated.go" or die "failed to open: $!";
 
 print $fh <<'END';
@@ -11,16 +21,13 @@ print $fh <<'END';
 package tuples
 END
 
-for my $n(2..10) {
+for my $n(1..64) {
     say $fh "";
     my $types = join ", ", map { "T$_" } 1..$n;
     say $fh "// Tuple$n is a $n-tuple.";
     say $fh "type Tuple${n}[$types any] struct {";
+    my $digits = digits($n);
     for my $i (1..$n) {
-        my $digits = 1;
-        if ($n >= 10) {
-            $digits = 2;
-        }
         printf $fh "\tV%-*d T%d\n", $digits, $i, $i;
     }
     say $fh "}";

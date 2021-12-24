@@ -15,7 +15,7 @@ import (
 )
 END
 
-for my $n(2..10) {
+for my $n(1..64) {
     say $fh "";
     my $types = join ", ", map { "T$_" } 1..$n;
     my $slice_args = join ", ", map { "s$_ []T$_" } 1..$n;

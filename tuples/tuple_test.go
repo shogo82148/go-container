@@ -10,4 +10,9 @@ func TestTuple(t *testing.T) {
 	if pair.V2 != "foobar" {
 		t.Errorf("unexpected value: want %q, got %q", "foobar", pair.V2)
 	}
+
+	// compile test
+	awesomeFunc(pair.Get())
 }
+
+func awesomeFunc(int, string) {}
