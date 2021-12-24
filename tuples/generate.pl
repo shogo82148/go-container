@@ -43,7 +43,11 @@ for my $n(1..64) {
 
     my $fields = join ", ", map { "t.V$_" } 1..$n;
     say $fh "// New${n} returns a new $n-tuple.";
-    say $fh "func (t Tuple${n}[$types]) Get() ($types) {";
+    if ($n == 1) {
+        say $fh "func (t Tuple${n}[$types]) Get() $types {";
+    } else {
+        say $fh "func (t Tuple${n}[$types]) Get() ($types) {";
+    }
     say $fh "	return $fields";
     say $fh "}";
 }

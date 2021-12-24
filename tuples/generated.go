@@ -13,7 +13,7 @@ func New1[T1 any](v1 T1) Tuple1[T1] {
 }
 
 // New1 returns a new 1-tuple.
-func (t Tuple1[T1]) Get() (T1) {
+func (t Tuple1[T1]) Get() T1 {
 	return t.V1
 }
 

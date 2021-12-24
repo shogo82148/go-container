@@ -1,5 +1,7 @@
 package optional
 
+//go:generate perl generate_zip.pl
+
 type Optional[T any] struct {
 	value T
 	valid bool
