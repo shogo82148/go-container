@@ -104,3 +104,49 @@ func TestRemove(t *testing.T) {
 		t.Error("want not contains \"a\", but it does")
 	}
 }
+
+func TestEqual(t *testing.T) {
+	cases := []struct {
+		a    Set[string]
+		b    Set[string]
+		want bool
+	}{
+		{
+			a:    New[string](),
+			b:    New[string](),
+			want: true,
+		},
+		{
+			a:    New[string]("a"),
+			b:    New[string](),
+			want: false,
+		},
+		{
+			a:    New[string](),
+			b:    New[string]("a"),
+			want: false,
+		},
+		{
+			a:    New[string]("a"),
+			b:    New[string]("a"),
+			want: true,
+		},
+		{
+			a:    New[string]("a"),
+			b:    New[string]("b"),
+			want: false,
+		},
+		{
+			a:    New[string]("a", "b", "c"),
+			b:    New[string]("c", "b", "a"),
+			want: true,
+		},
+	}
+
+	for _, tt := range cases {
+		got := tt.a.Equal(tt.b)
+		if got != tt.want {
+			t.Errorf("want %t, got %t", tt.want, got)
+		}
+	}
+}

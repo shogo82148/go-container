@@ -32,3 +32,17 @@ func (set Set[T]) Contains(item T) bool {
 	_, ok := set[item]
 	return ok
 }
+
+// Equal reports the other has same items.
+func (set Set[T]) Equal(other Set[T]) bool {
+	if len(set) != len(other) {
+		return false
+	}
+
+	for v := range set {
+		if _, ok := other[v]; !ok {
+			return false
+		}
+	}
+	return true
+}
