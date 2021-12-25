@@ -1,6 +1,7 @@
 package optional
 
 //go:generate perl generate_zip.pl
+//go:generate perl generate_unzip.pl
 
 type Optional[T any] struct {
 	value T
