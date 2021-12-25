@@ -47,6 +47,17 @@ func (set Set[T]) Equal(other Set[T]) bool {
 	return true
 }
 
+// For calls the f for each items in the set.
+// If the f returns an error, For stops the iteration and return the error.
+func (set Set[T]) For(f func(v T) error) error {
+	for v := range set {
+		if err := f(v); err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
 // Map converts all items in the set by using the mapper.
 func Map[T, U comparable](set Set[T], mapper func(v T) U) Set[U] {
 	ret := make(Set[U], len(set))

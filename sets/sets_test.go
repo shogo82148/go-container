@@ -154,6 +154,19 @@ func TestEqual(t *testing.T) {
 	}
 }
 
+func TestFor(t *testing.T) {
+	set := New(1, 2, 3)
+	got := New[string]()
+	set.For(func(v int) error {
+		got.Add(fmt.Sprintf("<%d>", v))
+		return nil
+	})
+	want := New("<1>", "<2>", "<3>")
+	if !got.Equal(want) {
+		t.Errorf("want %v, got %v", want, got)
+	}
+}
+
 func TestMap(t *testing.T) {
 	in := New(1, 2, 3)
 	got := Map(in, func(v int) string {
