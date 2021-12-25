@@ -6,12 +6,12 @@ import (
 
 // Zip returns a slice of 2-tuples.
 // The returned slice have the length of the shortest slice.
-func Zip[T1, T2 any](s1 []T1, s2 []T2) []tuples.Tuple2[T1, T2] {
+func Zip[S ~[]tuples.Tuple2[T1, T2], T1, T2 any](s1 []T1, s2 []T2) S {
 	l := len(s1)
 	if len(s2) < l {
 		l = len(s2)
 	}
-	ret := make([]tuples.Tuple2[T1, T2], l)
+	ret := make(S, l)
 	for i := 0; i < l; i++ {
 		ret[i] = tuples.Tuple2[T1, T2]{s1[i], s2[i]}
 	}

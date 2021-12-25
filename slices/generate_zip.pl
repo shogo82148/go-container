@@ -22,14 +22,14 @@ for my $n(1..64) {
     my $slices = join ", ", map { "s${_}[i]" } 1..$n;
     say $fh "// Zip$n returns a slice of $n-tuples.";
     say $fh "// The returned slice have the length of the shortest slice.";
-    say $fh "func Zip${n}[$types any]($slice_args) []tuples.Tuple${n}[$types] {";
+    say $fh "func Zip${n}[S ~[]tuples.Tuple${n}[$types], $types any]($slice_args) S {";
     say $fh "	l := len(s1)";
     for my $i(2..$n) {
         say $fh "	if len(s$i) < l {";
         say $fh "		l = len(s$i)";
         say $fh "	}";
     }
-    say $fh "	ret := make([]tuples.Tuple${n}[$types], l)";
+    say $fh "	ret := make(S, l)";
     say $fh "	for i := 0; i < l; i++ {";
     say $fh "		ret[i] = tuples.Tuple${n}[$types]{$slices}";
     say $fh "	}";

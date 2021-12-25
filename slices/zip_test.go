@@ -91,3 +91,55 @@ func TestZip2_shortest(t *testing.T) {
 		}
 	}
 }
+
+func TestZip_underlying(t *testing.T) {
+	type IntStrings []tuples.Tuple2[int, string]
+	in1 := []int{1, 2, 3, 4, 5}
+	in2 := []string{"one", "two", "three", "four", "five"}
+	got := Zip[IntStrings](in1, in2)
+	want := IntStrings{
+		{1, "one"},
+		{2, "two"},
+		{3, "three"},
+		{4, "four"},
+		{5, "five"},
+	}
+
+	if _, ok := (interface{})(got).(IntStrings); !ok {
+		t.Errorf("want IntStrings type, got %T", got)
+	}
+	if len(got) != len(want) {
+		t.Fatalf("unexpected length: want %d, got %d", len(in1), len(got))
+	}
+	for i := range got {
+		if got[i] != want[i] {
+			t.Errorf("unexpected item: want got[%d] = %v, want[%d] = %v", i, got[i], i, want[i])
+		}
+	}
+}
+
+func TestZip2_underlying(t *testing.T) {
+	type IntStrings []tuples.Tuple2[int, string]
+	in1 := []int{1, 2, 3, 4, 5}
+	in2 := []string{"one", "two", "three", "four", "five"}
+	got := Zip2[IntStrings](in1, in2)
+	want := IntStrings{
+		{1, "one"},
+		{2, "two"},
+		{3, "three"},
+		{4, "four"},
+		{5, "five"},
+	}
+
+	if _, ok := (interface{})(got).(IntStrings); !ok {
+		t.Errorf("want IntStrings type, got %T", got)
+	}
+	if len(got) != len(want) {
+		t.Fatalf("unexpected length: want %d, got %d", len(in1), len(got))
+	}
+	for i := range got {
+		if got[i] != want[i] {
+			t.Errorf("unexpected item: want got[%d] = %v, want[%d] = %v", i, got[i], i, want[i])
+		}
+	}
+}
