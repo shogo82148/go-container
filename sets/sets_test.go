@@ -108,6 +108,13 @@ func TestRemove(t *testing.T) {
 	}
 }
 
+func TestLen(t *testing.T) {
+	set := New("a", "b")
+	if set.Len() != 2 {
+		t.Errorf("want %d, got %d", 2, set.Len())
+	}
+}
+
 func TestEqual(t *testing.T) {
 	cases := []struct {
 		a    Set[string]

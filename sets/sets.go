@@ -33,6 +33,11 @@ func (set Set[T]) Contains(item T) bool {
 	return ok
 }
 
+// Len returns the number of items in the set.
+func (set Set[T]) Len() int {
+	return len(set)
+}
+
 // Equal reports the other has same items.
 func (set Set[T]) Equal(other Set[T]) bool {
 	if len(set) != len(other) {
