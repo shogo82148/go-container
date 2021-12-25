@@ -46,3 +46,12 @@ func (set Set[T]) Equal(other Set[T]) bool {
 	}
 	return true
 }
+
+// Map converts all items in the set by using the mapper.
+func Map[T, U comparable](set Set[T], mapper func(v T) U) Set[U] {
+	ret := make(Set[U], len(set))
+	for v := range set {
+		ret[mapper(v)] = struct{}{}
+	}
+	return ret
+}

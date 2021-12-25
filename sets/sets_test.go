@@ -1,6 +1,9 @@
 package sets
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestNew(t *testing.T) {
 	t.Run("empty set", func(t *testing.T) {
@@ -148,5 +151,16 @@ func TestEqual(t *testing.T) {
 		if got != tt.want {
 			t.Errorf("want %t, got %t", tt.want, got)
 		}
+	}
+}
+
+func TestMap(t *testing.T) {
+	in := New(1, 2, 3)
+	got := Map(in, func(v int) string {
+		return fmt.Sprintf("<%d>", v)
+	})
+	want := New("<1>", "<2>", "<3>")
+	if !got.Equal(want) {
+		t.Errorf("want %v, got %v", want, got)
 	}
 }
