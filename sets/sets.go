@@ -58,6 +58,17 @@ func (set Set[T]) For(f func(v T) error) error {
 	return nil
 }
 
+// Filter returns a new subset where f returns true for all items.
+func (set Set[T]) Filter(f func(v T) bool) Set[T] {
+	ret := make(Set[T], len(set))
+	for v := range set {
+		if f(v) {
+			ret[v] = struct{}{}
+		}
+	}
+	return ret
+}
+
 // Map converts all items in the set by using the mapper.
 func Map[T, U comparable](set Set[T], mapper func(v T) U) Set[U] {
 	ret := make(Set[U], len(set))

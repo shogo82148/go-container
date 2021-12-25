@@ -167,6 +167,17 @@ func TestFor(t *testing.T) {
 	}
 }
 
+func TestFilter(t *testing.T) {
+	set := New(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+	got := set.Filter(func(v int) bool {
+		return v > 5
+	})
+	want := New(6, 7, 8, 9, 10)
+	if !got.Equal(want) {
+		t.Errorf("want %v, got %v", want, got)
+	}
+}
+
 func TestMap(t *testing.T) {
 	in := New(1, 2, 3)
 	got := Map(in, func(v int) string {
