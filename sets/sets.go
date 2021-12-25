@@ -52,6 +52,71 @@ func (set Set[T]) Equal(other Set[T]) bool {
 	return true
 }
 
+// Clone returns a new set that has same items with the set.
+func (set Set[T]) Clone() Set[T] {
+	ret := make(Set[T], len(set))
+	for v := range set {
+		ret[v] = struct{}{}
+	}
+	return ret
+}
+
+// Union returns a new set that with all items that are included by the set or the other.
+func (set Set[T]) Union(other Set[T]) Set[T] {
+	ret := make(Set[T], len(set)+len(other))
+	for v := range set {
+		ret[v] = struct{}{}
+	}
+	for v := range other {
+		ret[v] = struct{}{}
+	}
+	return ret
+}
+
+// Intersection returns a new set with items that are included by both of the set and the other.
+func (set Set[T]) Intersection(other Set[T]) Set[T] {
+	a, b := set, other
+	if len(a) > len(b) {
+		// Minimize the number of the loops.
+		a, b = b, a
+	}
+
+	ret := make(Set[T], len(a))
+	for v := range a {
+		if _, ok := b[v]; ok {
+			ret[v] = struct{}{}
+		}
+	}
+	return ret
+}
+
+// Difference returns a new set with items that are included by the set but not the other.
+func (set Set[T]) Difference(other Set[T]) Set[T] {
+	ret := make(Set[T], len(set))
+	for v := range set {
+		if _, ok := other[v]; !ok {
+			ret[v] = struct{}{}
+		}
+	}
+	return ret
+}
+
+// SymmetricDifference returns a new set.
+func (set Set[T]) SymmetricDifference(other Set[T]) Set[T] {
+	ret := make(Set[T], len(set)+len(other))
+	for v := range set {
+		if _, ok := other[v]; !ok {
+			ret[v] = struct{}{}
+		}
+	}
+	for v := range other {
+		if _, ok := set[v]; !ok {
+			ret[v] = struct{}{}
+		}
+	}
+	return ret
+}
+
 // For calls the f for each items in the set.
 // If the f returns an error, For stops the iteration and return the error.
 func (set Set[T]) For(f func(v T) error) error {

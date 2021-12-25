@@ -2,6 +2,7 @@ package sets
 
 import (
 	"fmt"
+	"runtime"
 	"testing"
 )
 
@@ -159,6 +160,327 @@ func TestEqual(t *testing.T) {
 			t.Errorf("want %t, got %t", tt.want, got)
 		}
 	}
+}
+
+func TestClone(t *testing.T) {
+	set := New(1, 2, 3)
+	got := set.Clone()
+
+	// update the original set.
+	set.Add(4)
+
+	// the update doesn't effect the new set.
+	want := New(1, 2, 3)
+	if !got.Equal(want) {
+		t.Errorf("want %v, got %v", want, got)
+	}
+}
+
+func BenchmarkClone(b *testing.B) {
+	set := New[int]()
+	for i := 0; i < 10000; i++ {
+		set.Add(i)
+	}
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		runtime.KeepAlive(set.Clone())
+	}
+}
+
+func TestUnion(t *testing.T) {
+	cases := []struct {
+		a    Set[int]
+		b    Set[int]
+		want Set[int]
+	}{
+		{
+			a:    New[int](),
+			b:    New[int](),
+			want: New[int](),
+		},
+		{
+			a:    New(1, 2, 3),
+			b:    New[int](),
+			want: New(1, 2, 3),
+		},
+		{
+			a:    New[int](),
+			b:    New(1, 2, 3),
+			want: New(1, 2, 3),
+		},
+		{
+			a:    New(1, 2, 3),
+			b:    New(1, 2, 3),
+			want: New(1, 2, 3),
+		},
+		{
+			a:    New(1, 2, 3),
+			b:    New(2, 3, 4),
+			want: New(1, 2, 3, 4),
+		},
+		{
+			a:    New(1, 2, 3),
+			b:    New(6, 7, 8),
+			want: New(1, 2, 3, 6, 7, 8),
+		},
+	}
+
+	for _, tt := range cases {
+		got := tt.a.Union(tt.b)
+		if !got.Equal(tt.want) {
+			t.Errorf("want %v, got %v", tt.want, got)
+		}
+	}
+}
+
+func BenchmarkUnion(b *testing.B) {
+	b.Run("max result", func(b *testing.B) {
+		s := New[int]()
+		t := New[int]()
+		for i := 0; i < 10000; i++ {
+			s.Add(i)
+			t.Add(-i)
+		}
+		b.ResetTimer()
+		for i := 0; i < b.N; i++ {
+			runtime.KeepAlive(s.Union(t))
+		}
+	})
+
+	b.Run("min result", func(b *testing.B) {
+		s := New[int]()
+		t := New[int]()
+		for i := 0; i < 10000; i++ {
+			s.Add(i)
+			t.Add(i)
+		}
+		b.ResetTimer()
+		for i := 0; i < b.N; i++ {
+			runtime.KeepAlive(s.Union(t))
+		}
+	})
+}
+
+func TestIntersection(t *testing.T) {
+	cases := []struct {
+		a    Set[int]
+		b    Set[int]
+		want Set[int]
+	}{
+		{
+			a:    New[int](),
+			b:    New[int](),
+			want: New[int](),
+		},
+		{
+			a:    New(1, 2, 3),
+			b:    New[int](),
+			want: New[int](),
+		},
+		{
+			a:    New[int](),
+			b:    New(1, 2, 3),
+			want: New[int](),
+		},
+		{
+			a:    New(1, 2, 3),
+			b:    New(1, 2, 3),
+			want: New(1, 2, 3),
+		},
+		{
+			a:    New(1, 2, 3),
+			b:    New(2, 3, 4),
+			want: New(2, 3),
+		},
+		{
+			a:    New(1, 2, 3),
+			b:    New(6, 7, 8),
+			want: New[int](),
+		},
+	}
+
+	for _, tt := range cases {
+		got := tt.a.Intersection(tt.b)
+		if !got.Equal(tt.want) {
+			t.Errorf("want %v, got %v", tt.want, got)
+		}
+	}
+}
+
+func BenchmarkIntersection(b *testing.B) {
+	b.Run("max result", func(b *testing.B) {
+		s := New[int]()
+		t := New[int]()
+		for i := 0; i < 10000; i++ {
+			s.Add(i)
+			t.Add(i)
+		}
+		b.ResetTimer()
+		for i := 0; i < b.N; i++ {
+			runtime.KeepAlive(s.Intersection(t))
+		}
+	})
+
+	b.Run("min result", func(b *testing.B) {
+		s := New[int]()
+		t := New[int]()
+		for i := 0; i < 10000; i++ {
+			s.Add(i)
+			t.Add(-i)
+		}
+		b.ResetTimer()
+		for i := 0; i < b.N; i++ {
+			runtime.KeepAlive(s.Intersection(t))
+		}
+	})
+}
+
+func TestDifference(t *testing.T) {
+	cases := []struct {
+		a    Set[int]
+		b    Set[int]
+		want Set[int]
+	}{
+		{
+			a:    New[int](),
+			b:    New[int](),
+			want: New[int](),
+		},
+		{
+			a:    New(1, 2, 3),
+			b:    New[int](),
+			want: New(1, 2, 3),
+		},
+		{
+			a:    New[int](),
+			b:    New(1, 2, 3),
+			want: New[int](),
+		},
+		{
+			a:    New(1, 2, 3),
+			b:    New(1, 2, 3),
+			want: New[int](),
+		},
+		{
+			a:    New(1, 2, 3),
+			b:    New(2, 3, 4),
+			want: New(1),
+		},
+		{
+			a:    New(1, 2, 3),
+			b:    New(6, 7, 8),
+			want: New(1, 2, 3),
+		},
+	}
+
+	for _, tt := range cases {
+		got := tt.a.Difference(tt.b)
+		if !got.Equal(tt.want) {
+			t.Errorf("want %v, got %v", tt.want, got)
+		}
+	}
+}
+
+func BenchmarkDifference(b *testing.B) {
+	b.Run("max result", func(b *testing.B) {
+		s := New[int]()
+		t := New[int]()
+		for i := 0; i < 10000; i++ {
+			s.Add(i)
+			t.Add(-i)
+		}
+		b.ResetTimer()
+		for i := 0; i < b.N; i++ {
+			runtime.KeepAlive(s.Difference(t))
+		}
+	})
+
+	b.Run("min result", func(b *testing.B) {
+		s := New[int]()
+		t := New[int]()
+		for i := 0; i < 10000; i++ {
+			s.Add(i)
+			t.Add(i)
+		}
+		b.ResetTimer()
+		for i := 0; i < b.N; i++ {
+			runtime.KeepAlive(s.Difference(t))
+		}
+	})
+}
+
+func TestSymmetricDifference(t *testing.T) {
+	cases := []struct {
+		a    Set[int]
+		b    Set[int]
+		want Set[int]
+	}{
+		{
+			a:    New[int](),
+			b:    New[int](),
+			want: New[int](),
+		},
+		{
+			a:    New(1, 2, 3),
+			b:    New[int](),
+			want: New(1, 2, 3),
+		},
+		{
+			a:    New[int](),
+			b:    New(1, 2, 3),
+			want: New(1, 2, 3),
+		},
+		{
+			a:    New(1, 2, 3),
+			b:    New(1, 2, 3),
+			want: New[int](),
+		},
+		{
+			a:    New(1, 2, 3),
+			b:    New(2, 3, 4),
+			want: New(1, 4),
+		},
+		{
+			a:    New(1, 2, 3),
+			b:    New(6, 7, 8),
+			want: New(1, 2, 3, 6, 7, 8),
+		},
+	}
+
+	for _, tt := range cases {
+		got := tt.a.SymmetricDifference(tt.b)
+		if !got.Equal(tt.want) {
+			t.Errorf("want %v, got %v", tt.want, got)
+		}
+	}
+}
+
+func BenchmarkSymmetricDifference(b *testing.B) {
+	b.Run("max result", func(b *testing.B) {
+		s := New[int]()
+		t := New[int]()
+		for i := 0; i < 10000; i++ {
+			s.Add(i)
+			t.Add(-i)
+		}
+		b.ResetTimer()
+		for i := 0; i < b.N; i++ {
+			runtime.KeepAlive(s.SymmetricDifference(t))
+		}
+	})
+
+	b.Run("min result", func(b *testing.B) {
+		s := New[int]()
+		t := New[int]()
+		for i := 0; i < 10000; i++ {
+			s.Add(i)
+			t.Add(i)
+		}
+		b.ResetTimer()
+		for i := 0; i < b.N; i++ {
+			runtime.KeepAlive(s.SymmetricDifference(t))
+		}
+	})
 }
 
 func TestFor(t *testing.T) {
