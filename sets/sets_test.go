@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"runtime"
 	"testing"
+
+	"github.com/shogo82148/go-container/tuples"
 )
 
 func TestNew(t *testing.T) {
@@ -592,6 +594,20 @@ func TestMap(t *testing.T) {
 		return fmt.Sprintf("<%d>", v)
 	})
 	want := New("<1>", "<2>", "<3>")
+	if !got.Equal(want) {
+		t.Errorf("want %v, got %v", want, got)
+	}
+}
+
+func TestProduct(t *testing.T) {
+	a := New(1, 2, 3)
+	b := New("a", "b", "c")
+	got := Product(a, b)
+	want := New(
+		tuples.New2(1, "a"), tuples.New2(1, "b"), tuples.New2(1, "c"),
+		tuples.New2(2, "a"), tuples.New2(2, "b"), tuples.New2(2, "c"),
+		tuples.New2(3, "a"), tuples.New2(3, "b"), tuples.New2(3, "c"),
+	)
 	if !got.Equal(want) {
 		t.Errorf("want %v, got %v", want, got)
 	}

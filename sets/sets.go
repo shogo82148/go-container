@@ -1,5 +1,9 @@
 package sets
 
+import (
+	"github.com/shogo82148/go-container/tuples"
+)
+
 type Set[T comparable] map[T]struct{}
 
 // New returns a new set that contains items.
@@ -172,6 +176,17 @@ func Map[T, U comparable](set Set[T], mapper func(v T) U) Set[U] {
 	ret := make(Set[U], len(set))
 	for v := range set {
 		ret[mapper(v)] = struct{}{}
+	}
+	return ret
+}
+
+// Product returns a new set.
+func Product[T1, T2 comparable](s1 Set[T1], s2 Set[T2]) Set[tuples.Tuple2[T1, T2]] {
+	ret := make(Set[tuples.Tuple2[T1, T2]], len(s1)*len(s2))
+	for v1 := range s1 {
+		for v2 := range s2 {
+			ret[tuples.Tuple2[T1, T2]{v1, v2}] = struct{}{}
+		}
 	}
 	return ret
 }
