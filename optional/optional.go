@@ -3,6 +3,13 @@ package optional
 //go:generate perl generate_zip.pl
 //go:generate perl generate_unzip.pl
 
+type optional[T any] interface {
+	~struct {
+		value T
+		valid bool
+	}
+}
+
 type Optional[T any] struct {
 	value T
 	valid bool
