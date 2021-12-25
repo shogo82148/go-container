@@ -18,20 +18,21 @@ END
 for my $n(1..64) {
     say $fh "";
     my $types = join ", ", map { "T$_" } 1..$n;
-    my $ret_types = join ", ", map { "Optional[T$_]" } 1..$n;
+    my $opt_types = join ", ", map { "O$_ optional[T$_]" } 1..$n;
+    my $ret_types = join ", ", map { "O$_" } 1..$n;
     if ($n > 1) {
         $ret_types = "($ret_types)"
     }
     say $fh "// Unzip$n returns an optional of $n-tuples.";
-    say $fh "func Unzip${n}[$types any](v Optional[tuples.Tuple${n}[$types]]) $ret_types {";
+    say $fh "func Unzip${n}[$opt_types, $types any](v Optional[tuples.Tuple${n}[$types]]) $ret_types {";
     say $fh "\tif v.valid {";
     if ($n == 1) {
-        say $fh "\t\treturn ", join(", ", map { "Optional[T$_]{\n\t\t\tvalue: v.value.V$_,\n\t\t\tvalid: true,\n\t\t}" } 1..$n);
+        say $fh "\t\treturn ", join(", ", map { "O${_}{\n\t\t\tvalue: v.value.V$_,\n\t\t\tvalid: true,\n\t\t}" } 1..$n);
     } else {
-        say $fh "\t\treturn ", join(", ", map { "Optional[T$_]{\n\t\t\t\tvalue: v.value.V$_,\n\t\t\t\tvalid: true,\n\t\t\t}" } 1..$n);
+        say $fh "\t\treturn ", join(", ", map { "O${_}{\n\t\t\t\tvalue: v.value.V$_,\n\t\t\t\tvalid: true,\n\t\t\t}" } 1..$n);
     }
     say $fh "\t}";
-    say $fh "\treturn ", join(", ", map { "Optional[T$_]{}" } 1..$n);
+    say $fh "\treturn ", join(", ", map { "O${_}{}" } 1..$n);
     say $fh "}";
 }
 
