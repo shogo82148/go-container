@@ -2,6 +2,8 @@
 
 package tuples
 
+import "fmt"
+
 // Tuple1 is a 1-tuple.
 type Tuple1[T1 any] struct {
 	V1 T1
@@ -15,6 +17,10 @@ func New1[T1 any](v1 T1) Tuple1[T1] {
 // New1 returns a new 1-tuple.
 func (t Tuple1[T1]) Get() T1 {
 	return t.V1
+}
+
+func (t Tuple1[T1]) String() string {
+	return fmt.Sprintf("(%v)", t.V1)
 }
 
 // Tuple2 is a 2-tuple.
@@ -31,6 +37,10 @@ func New2[T1, T2 any](v1 T1, v2 T2) Tuple2[T1, T2] {
 // New2 returns a new 2-tuple.
 func (t Tuple2[T1, T2]) Get() (T1, T2) {
 	return t.V1, t.V2
+}
+
+func (t Tuple2[T1, T2]) String() string {
+	return fmt.Sprintf("(%v, %v)", t.V1, t.V2)
 }
 
 // Tuple3 is a 3-tuple.
@@ -50,6 +60,10 @@ func (t Tuple3[T1, T2, T3]) Get() (T1, T2, T3) {
 	return t.V1, t.V2, t.V3
 }
 
+func (t Tuple3[T1, T2, T3]) String() string {
+	return fmt.Sprintf("(%v, %v, %v)", t.V1, t.V2, t.V3)
+}
+
 // Tuple4 is a 4-tuple.
 type Tuple4[T1, T2, T3, T4 any] struct {
 	V1 T1
@@ -66,6 +80,10 @@ func New4[T1, T2, T3, T4 any](v1 T1, v2 T2, v3 T3, v4 T4) Tuple4[T1, T2, T3, T4]
 // New4 returns a new 4-tuple.
 func (t Tuple4[T1, T2, T3, T4]) Get() (T1, T2, T3, T4) {
 	return t.V1, t.V2, t.V3, t.V4
+}
+
+func (t Tuple4[T1, T2, T3, T4]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4)
 }
 
 // Tuple5 is a 5-tuple.
@@ -87,6 +105,10 @@ func (t Tuple5[T1, T2, T3, T4, T5]) Get() (T1, T2, T3, T4, T5) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5
 }
 
+func (t Tuple5[T1, T2, T3, T4, T5]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5)
+}
+
 // Tuple6 is a 6-tuple.
 type Tuple6[T1, T2, T3, T4, T5, T6 any] struct {
 	V1 T1
@@ -105,6 +127,10 @@ func New6[T1, T2, T3, T4, T5, T6 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5, v6 T6) 
 // New6 returns a new 6-tuple.
 func (t Tuple6[T1, T2, T3, T4, T5, T6]) Get() (T1, T2, T3, T4, T5, T6) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6
+}
+
+func (t Tuple6[T1, T2, T3, T4, T5, T6]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6)
 }
 
 // Tuple7 is a 7-tuple.
@@ -128,6 +154,10 @@ func (t Tuple7[T1, T2, T3, T4, T5, T6, T7]) Get() (T1, T2, T3, T4, T5, T6, T7) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7
 }
 
+func (t Tuple7[T1, T2, T3, T4, T5, T6, T7]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7)
+}
+
 // Tuple8 is a 8-tuple.
 type Tuple8[T1, T2, T3, T4, T5, T6, T7, T8 any] struct {
 	V1 T1
@@ -148,6 +178,10 @@ func New8[T1, T2, T3, T4, T5, T6, T7, T8 any](v1 T1, v2 T2, v3 T3, v4 T4, v5 T5,
 // New8 returns a new 8-tuple.
 func (t Tuple8[T1, T2, T3, T4, T5, T6, T7, T8]) Get() (T1, T2, T3, T4, T5, T6, T7, T8) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8
+}
+
+func (t Tuple8[T1, T2, T3, T4, T5, T6, T7, T8]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8)
 }
 
 // Tuple9 is a 9-tuple.
@@ -173,6 +207,10 @@ func (t Tuple9[T1, T2, T3, T4, T5, T6, T7, T8, T9]) Get() (T1, T2, T3, T4, T5, T
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9
 }
 
+func (t Tuple9[T1, T2, T3, T4, T5, T6, T7, T8, T9]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9)
+}
+
 // Tuple10 is a 10-tuple.
 type Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10 any] struct {
 	V1  T1
@@ -195,6 +233,10 @@ func New10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10 any](v1 T1, v2 T2, v3 T3, v4 
 // New10 returns a new 10-tuple.
 func (t Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10
+}
+
+func (t Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10)
 }
 
 // Tuple11 is a 11-tuple.
@@ -222,6 +264,10 @@ func (t Tuple11[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11]) Get() (T1, T2, T3
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11
 }
 
+func (t Tuple11[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11)
+}
+
 // Tuple12 is a 12-tuple.
 type Tuple12[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12 any] struct {
 	V1  T1
@@ -246,6 +292,10 @@ func New12[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12 any](v1 T1, v2 T2, 
 // New12 returns a new 12-tuple.
 func (t Tuple12[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12
+}
+
+func (t Tuple12[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12)
 }
 
 // Tuple13 is a 13-tuple.
@@ -275,6 +325,10 @@ func (t Tuple13[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13]) Get() (
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13
 }
 
+func (t Tuple13[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13)
+}
+
 // Tuple14 is a 14-tuple.
 type Tuple14[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14 any] struct {
 	V1  T1
@@ -301,6 +355,10 @@ func New14[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14 any](v1 T
 // New14 returns a new 14-tuple.
 func (t Tuple14[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14
+}
+
+func (t Tuple14[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14)
 }
 
 // Tuple15 is a 15-tuple.
@@ -332,6 +390,10 @@ func (t Tuple15[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15
 }
 
+func (t Tuple15[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15)
+}
+
 // Tuple16 is a 16-tuple.
 type Tuple16[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16 any] struct {
 	V1  T1
@@ -360,6 +422,10 @@ func New16[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New16 returns a new 16-tuple.
 func (t Tuple16[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16
+}
+
+func (t Tuple16[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16)
 }
 
 // Tuple17 is a 17-tuple.
@@ -393,6 +459,10 @@ func (t Tuple17[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17
 }
 
+func (t Tuple17[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17)
+}
+
 // Tuple18 is a 18-tuple.
 type Tuple18[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18 any] struct {
 	V1  T1
@@ -423,6 +493,10 @@ func New18[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New18 returns a new 18-tuple.
 func (t Tuple18[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18
+}
+
+func (t Tuple18[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18)
 }
 
 // Tuple19 is a 19-tuple.
@@ -458,6 +532,10 @@ func (t Tuple19[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19
 }
 
+func (t Tuple19[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19)
+}
+
 // Tuple20 is a 20-tuple.
 type Tuple20[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20 any] struct {
 	V1  T1
@@ -490,6 +568,10 @@ func New20[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New20 returns a new 20-tuple.
 func (t Tuple20[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20
+}
+
+func (t Tuple20[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20)
 }
 
 // Tuple21 is a 21-tuple.
@@ -527,6 +609,10 @@ func (t Tuple21[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21
 }
 
+func (t Tuple21[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21)
+}
+
 // Tuple22 is a 22-tuple.
 type Tuple22[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22 any] struct {
 	V1  T1
@@ -561,6 +647,10 @@ func New22[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New22 returns a new 22-tuple.
 func (t Tuple22[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22
+}
+
+func (t Tuple22[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22)
 }
 
 // Tuple23 is a 23-tuple.
@@ -600,6 +690,10 @@ func (t Tuple23[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23
 }
 
+func (t Tuple23[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23)
+}
+
 // Tuple24 is a 24-tuple.
 type Tuple24[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24 any] struct {
 	V1  T1
@@ -636,6 +730,10 @@ func New24[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New24 returns a new 24-tuple.
 func (t Tuple24[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24
+}
+
+func (t Tuple24[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24)
 }
 
 // Tuple25 is a 25-tuple.
@@ -677,6 +775,10 @@ func (t Tuple25[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25
 }
 
+func (t Tuple25[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25)
+}
+
 // Tuple26 is a 26-tuple.
 type Tuple26[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26 any] struct {
 	V1  T1
@@ -715,6 +817,10 @@ func New26[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New26 returns a new 26-tuple.
 func (t Tuple26[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26
+}
+
+func (t Tuple26[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26)
 }
 
 // Tuple27 is a 27-tuple.
@@ -758,6 +864,10 @@ func (t Tuple27[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27
 }
 
+func (t Tuple27[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27)
+}
+
 // Tuple28 is a 28-tuple.
 type Tuple28[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28 any] struct {
 	V1  T1
@@ -798,6 +908,10 @@ func New28[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New28 returns a new 28-tuple.
 func (t Tuple28[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28
+}
+
+func (t Tuple28[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28)
 }
 
 // Tuple29 is a 29-tuple.
@@ -843,6 +957,10 @@ func (t Tuple29[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29
 }
 
+func (t Tuple29[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29)
+}
+
 // Tuple30 is a 30-tuple.
 type Tuple30[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30 any] struct {
 	V1  T1
@@ -885,6 +1003,10 @@ func New30[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New30 returns a new 30-tuple.
 func (t Tuple30[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30
+}
+
+func (t Tuple30[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30)
 }
 
 // Tuple31 is a 31-tuple.
@@ -932,6 +1054,10 @@ func (t Tuple31[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31
 }
 
+func (t Tuple31[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31)
+}
+
 // Tuple32 is a 32-tuple.
 type Tuple32[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32 any] struct {
 	V1  T1
@@ -976,6 +1102,10 @@ func New32[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New32 returns a new 32-tuple.
 func (t Tuple32[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32
+}
+
+func (t Tuple32[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32)
 }
 
 // Tuple33 is a 33-tuple.
@@ -1025,6 +1155,10 @@ func (t Tuple33[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33
 }
 
+func (t Tuple33[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33)
+}
+
 // Tuple34 is a 34-tuple.
 type Tuple34[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34 any] struct {
 	V1  T1
@@ -1071,6 +1205,10 @@ func New34[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New34 returns a new 34-tuple.
 func (t Tuple34[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34
+}
+
+func (t Tuple34[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34)
 }
 
 // Tuple35 is a 35-tuple.
@@ -1122,6 +1260,10 @@ func (t Tuple35[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35
 }
 
+func (t Tuple35[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35)
+}
+
 // Tuple36 is a 36-tuple.
 type Tuple36[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36 any] struct {
 	V1  T1
@@ -1170,6 +1312,10 @@ func New36[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New36 returns a new 36-tuple.
 func (t Tuple36[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36
+}
+
+func (t Tuple36[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36)
 }
 
 // Tuple37 is a 37-tuple.
@@ -1223,6 +1369,10 @@ func (t Tuple37[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37
 }
 
+func (t Tuple37[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37)
+}
+
 // Tuple38 is a 38-tuple.
 type Tuple38[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38 any] struct {
 	V1  T1
@@ -1273,6 +1423,10 @@ func New38[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New38 returns a new 38-tuple.
 func (t Tuple38[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38
+}
+
+func (t Tuple38[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38)
 }
 
 // Tuple39 is a 39-tuple.
@@ -1328,6 +1482,10 @@ func (t Tuple39[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39
 }
 
+func (t Tuple39[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39)
+}
+
 // Tuple40 is a 40-tuple.
 type Tuple40[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40 any] struct {
 	V1  T1
@@ -1380,6 +1538,10 @@ func New40[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New40 returns a new 40-tuple.
 func (t Tuple40[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40
+}
+
+func (t Tuple40[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40)
 }
 
 // Tuple41 is a 41-tuple.
@@ -1437,6 +1599,10 @@ func (t Tuple41[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41
 }
 
+func (t Tuple41[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41)
+}
+
 // Tuple42 is a 42-tuple.
 type Tuple42[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42 any] struct {
 	V1  T1
@@ -1491,6 +1657,10 @@ func New42[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New42 returns a new 42-tuple.
 func (t Tuple42[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42
+}
+
+func (t Tuple42[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42)
 }
 
 // Tuple43 is a 43-tuple.
@@ -1550,6 +1720,10 @@ func (t Tuple43[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43
 }
 
+func (t Tuple43[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43)
+}
+
 // Tuple44 is a 44-tuple.
 type Tuple44[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44 any] struct {
 	V1  T1
@@ -1606,6 +1780,10 @@ func New44[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New44 returns a new 44-tuple.
 func (t Tuple44[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44
+}
+
+func (t Tuple44[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44)
 }
 
 // Tuple45 is a 45-tuple.
@@ -1667,6 +1845,10 @@ func (t Tuple45[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45
 }
 
+func (t Tuple45[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45)
+}
+
 // Tuple46 is a 46-tuple.
 type Tuple46[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46 any] struct {
 	V1  T1
@@ -1725,6 +1907,10 @@ func New46[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New46 returns a new 46-tuple.
 func (t Tuple46[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46
+}
+
+func (t Tuple46[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46)
 }
 
 // Tuple47 is a 47-tuple.
@@ -1788,6 +1974,10 @@ func (t Tuple47[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47
 }
 
+func (t Tuple47[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47)
+}
+
 // Tuple48 is a 48-tuple.
 type Tuple48[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48 any] struct {
 	V1  T1
@@ -1848,6 +2038,10 @@ func New48[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New48 returns a new 48-tuple.
 func (t Tuple48[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48
+}
+
+func (t Tuple48[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48)
 }
 
 // Tuple49 is a 49-tuple.
@@ -1913,6 +2107,10 @@ func (t Tuple49[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49
 }
 
+func (t Tuple49[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49)
+}
+
 // Tuple50 is a 50-tuple.
 type Tuple50[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50 any] struct {
 	V1  T1
@@ -1975,6 +2173,10 @@ func New50[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New50 returns a new 50-tuple.
 func (t Tuple50[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50
+}
+
+func (t Tuple50[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50)
 }
 
 // Tuple51 is a 51-tuple.
@@ -2042,6 +2244,10 @@ func (t Tuple51[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51
 }
 
+func (t Tuple51[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51)
+}
+
 // Tuple52 is a 52-tuple.
 type Tuple52[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52 any] struct {
 	V1  T1
@@ -2106,6 +2312,10 @@ func New52[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New52 returns a new 52-tuple.
 func (t Tuple52[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52
+}
+
+func (t Tuple52[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52)
 }
 
 // Tuple53 is a 53-tuple.
@@ -2175,6 +2385,10 @@ func (t Tuple53[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53
 }
 
+func (t Tuple53[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53)
+}
+
 // Tuple54 is a 54-tuple.
 type Tuple54[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54 any] struct {
 	V1  T1
@@ -2241,6 +2455,10 @@ func New54[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New54 returns a new 54-tuple.
 func (t Tuple54[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54
+}
+
+func (t Tuple54[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54)
 }
 
 // Tuple55 is a 55-tuple.
@@ -2312,6 +2530,10 @@ func (t Tuple55[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55
 }
 
+func (t Tuple55[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55)
+}
+
 // Tuple56 is a 56-tuple.
 type Tuple56[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56 any] struct {
 	V1  T1
@@ -2380,6 +2602,10 @@ func New56[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New56 returns a new 56-tuple.
 func (t Tuple56[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56
+}
+
+func (t Tuple56[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56)
 }
 
 // Tuple57 is a 57-tuple.
@@ -2453,6 +2679,10 @@ func (t Tuple57[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57
 }
 
+func (t Tuple57[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57)
+}
+
 // Tuple58 is a 58-tuple.
 type Tuple58[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58 any] struct {
 	V1  T1
@@ -2523,6 +2753,10 @@ func New58[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New58 returns a new 58-tuple.
 func (t Tuple58[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58
+}
+
+func (t Tuple58[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58)
 }
 
 // Tuple59 is a 59-tuple.
@@ -2598,6 +2832,10 @@ func (t Tuple59[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58, t.V59
 }
 
+func (t Tuple59[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58, t.V59)
+}
+
 // Tuple60 is a 60-tuple.
 type Tuple60[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60 any] struct {
 	V1  T1
@@ -2670,6 +2908,10 @@ func New60[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New60 returns a new 60-tuple.
 func (t Tuple60[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58, t.V59, t.V60
+}
+
+func (t Tuple60[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58, t.V59, t.V60)
 }
 
 // Tuple61 is a 61-tuple.
@@ -2747,6 +2989,10 @@ func (t Tuple61[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58, t.V59, t.V60, t.V61
 }
 
+func (t Tuple61[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58, t.V59, t.V60, t.V61)
+}
+
 // Tuple62 is a 62-tuple.
 type Tuple62[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62 any] struct {
 	V1  T1
@@ -2821,6 +3067,10 @@ func New62[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New62 returns a new 62-tuple.
 func (t Tuple62[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58, t.V59, t.V60, t.V61, t.V62
+}
+
+func (t Tuple62[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58, t.V59, t.V60, t.V61, t.V62)
 }
 
 // Tuple63 is a 63-tuple.
@@ -2900,6 +3150,10 @@ func (t Tuple63[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58, t.V59, t.V60, t.V61, t.V62, t.V63
 }
 
+func (t Tuple63[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58, t.V59, t.V60, t.V61, t.V62, t.V63)
+}
+
 // Tuple64 is a 64-tuple.
 type Tuple64[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64 any] struct {
 	V1  T1
@@ -2976,4 +3230,8 @@ func New64[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16
 // New64 returns a new 64-tuple.
 func (t Tuple64[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64]) Get() (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64) {
 	return t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58, t.V59, t.V60, t.V61, t.V62, t.V63, t.V64
+}
+
+func (t Tuple64[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64]) String() string {
+	return fmt.Sprintf("(%v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v, %v)", t.V1, t.V2, t.V3, t.V4, t.V5, t.V6, t.V7, t.V8, t.V9, t.V10, t.V11, t.V12, t.V13, t.V14, t.V15, t.V16, t.V17, t.V18, t.V19, t.V20, t.V21, t.V22, t.V23, t.V24, t.V25, t.V26, t.V27, t.V28, t.V29, t.V30, t.V31, t.V32, t.V33, t.V34, t.V35, t.V36, t.V37, t.V38, t.V39, t.V40, t.V41, t.V42, t.V43, t.V44, t.V45, t.V46, t.V47, t.V48, t.V49, t.V50, t.V51, t.V52, t.V53, t.V54, t.V55, t.V56, t.V57, t.V58, t.V59, t.V60, t.V61, t.V62, t.V63, t.V64)
 }

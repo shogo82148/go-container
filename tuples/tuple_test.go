@@ -16,3 +16,12 @@ func TestTuple(t *testing.T) {
 }
 
 func awesomeFunc(int, string) {}
+
+func TestString(t *testing.T) {
+	pair := New2(42, "foobar")
+	got := pair.String()
+	want := "(42, foobar)"
+	if got != want {
+		t.Errorf("want %q, got %q", want, got)
+	}
+}
