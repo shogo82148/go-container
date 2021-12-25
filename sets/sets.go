@@ -117,6 +117,34 @@ func (set Set[T]) SymmetricDifference(other Set[T]) Set[T] {
 	return ret
 }
 
+// IsSubset reports whether the set is a subset of the other.
+func (set Set[T]) IsSubset(other Set[T]) bool {
+	if len(set) > len(other) {
+		return false
+	}
+	for v := range set {
+		if _, ok := other[v]; !ok {
+			return false
+		}
+	}
+	return true
+}
+
+// IsProperSubset reports whether the set is a proper subset of the other.
+func (set Set[T]) IsProperSubset(other Set[T]) bool {
+	return len(set) < len(other) && set.IsSubset(other)
+}
+
+// IsSuperset reports whether the set is a superset of the other.
+func (set Set[T]) IsSuperset(other Set[T]) bool {
+	return other.IsSubset(set)
+}
+
+// IsProperSuperset reports whether the set is a proper superset of the other.
+func (set Set[T]) IsProperSuperset(other Set[T]) bool {
+	return len(set) > len(other) && other.IsSubset(set)
+}
+
 // For calls the f for each items in the set.
 // If the f returns an error, For stops the iteration and return the error.
 func (set Set[T]) For(f func(v T) error) error {

@@ -483,6 +483,85 @@ func BenchmarkSymmetricDifference(b *testing.B) {
 	})
 }
 
+func TestIsSubset(t *testing.T) {
+	cases := []struct {
+		a                Set[int]
+		b                Set[int]
+		isSubset         bool
+		isProperSubset   bool
+		isSuperset       bool
+		isProperSuperset bool
+	}{
+		{
+			a:                New[int](),
+			b:                New[int](),
+			isSubset:         true,
+			isProperSubset:   false,
+			isSuperset:       true,
+			isProperSuperset: false,
+		},
+		{
+			a:                New[int](),
+			b:                New[int](1, 2, 3),
+			isSubset:         true,
+			isProperSubset:   true,
+			isSuperset:       false,
+			isProperSuperset: false,
+		},
+		{
+			a:                New[int](1),
+			b:                New[int](1, 2, 3),
+			isSubset:         true,
+			isProperSubset:   true,
+			isSuperset:       false,
+			isProperSuperset: false,
+		},
+		{
+			a:                New[int](1, 2, 3),
+			b:                New[int](1, 2, 3),
+			isSubset:         true,
+			isProperSubset:   false,
+			isSuperset:       true,
+			isProperSuperset: false,
+		},
+		{
+			a:                New[int](1, 2, 3, 4),
+			b:                New[int](1, 2, 3),
+			isSubset:         false,
+			isProperSubset:   false,
+			isSuperset:       true,
+			isProperSuperset: true,
+		},
+		{
+			a:                New[int](2, 3, 4),
+			b:                New[int](1, 2, 3),
+			isSubset:         false,
+			isProperSubset:   false,
+			isSuperset:       false,
+			isProperSuperset: false,
+		},
+	}
+
+	for _, tt := range cases {
+		isSubset := tt.a.IsSubset(tt.b)
+		if isSubset != tt.isSubset {
+			t.Errorf("%v.IsSubset(%v): want %t, got %t", tt.a, tt.b, tt.isSubset, isSubset)
+		}
+		isProperSubset := tt.a.IsProperSubset(tt.b)
+		if isProperSubset != tt.isProperSubset {
+			t.Errorf("%v.IsProperSubset(%v): want %t, got %t", tt.a, tt.b, tt.isProperSubset, isProperSubset)
+		}
+		isSuperset := tt.a.IsSuperset(tt.b)
+		if isSuperset != tt.isSuperset {
+			t.Errorf("%v.IsSuperset(%v): want %t, got %t", tt.a, tt.b, tt.isSuperset, isSuperset)
+		}
+		isProperSuperset := tt.a.IsProperSuperset(tt.b)
+		if isProperSuperset != tt.isProperSuperset {
+			t.Errorf("%v.IsProperSuperset(%v): want %t, got %t", tt.a, tt.b, tt.isProperSuperset, isProperSuperset)
+		}
+	}
+}
+
 func TestFor(t *testing.T) {
 	set := New(1, 2, 3)
 	got := New[string]()
