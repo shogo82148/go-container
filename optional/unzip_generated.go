@@ -7,6753 +7,6753 @@ import (
 )
 
 // Unzip1 returns an optional of 1-tuples.
-func Unzip1[O1 optional[T1], T1 any](v Optional[tuples.Tuple1[T1]]) O1 {
+func Unzip1[T1 any](v Optional[tuples.Tuple1[T1]]) Optional[T1] {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 			value: v.value.V1,
 			valid: true,
 		}
 	}
-	return O1{}
+	return Optional[T1]{}
 }
 
 // Unzip2 returns an optional of 2-tuples.
-func Unzip2[O1 optional[T1], O2 optional[T2], T1, T2 any](v Optional[tuples.Tuple2[T1, T2]]) (O1, O2) {
+func Unzip2[T1, T2 any](v Optional[tuples.Tuple2[T1, T2]]) (Optional[T1], Optional[T2]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}
+	return Optional[T1]{}, Optional[T2]{}
 }
 
 // Unzip3 returns an optional of 3-tuples.
-func Unzip3[O1 optional[T1], O2 optional[T2], O3 optional[T3], T1, T2, T3 any](v Optional[tuples.Tuple3[T1, T2, T3]]) (O1, O2, O3) {
+func Unzip3[T1, T2, T3 any](v Optional[tuples.Tuple3[T1, T2, T3]]) (Optional[T1], Optional[T2], Optional[T3]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}
 }
 
 // Unzip4 returns an optional of 4-tuples.
-func Unzip4[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], T1, T2, T3, T4 any](v Optional[tuples.Tuple4[T1, T2, T3, T4]]) (O1, O2, O3, O4) {
+func Unzip4[T1, T2, T3, T4 any](v Optional[tuples.Tuple4[T1, T2, T3, T4]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}
 }
 
 // Unzip5 returns an optional of 5-tuples.
-func Unzip5[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], T1, T2, T3, T4, T5 any](v Optional[tuples.Tuple5[T1, T2, T3, T4, T5]]) (O1, O2, O3, O4, O5) {
+func Unzip5[T1, T2, T3, T4, T5 any](v Optional[tuples.Tuple5[T1, T2, T3, T4, T5]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}
 }
 
 // Unzip6 returns an optional of 6-tuples.
-func Unzip6[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], T1, T2, T3, T4, T5, T6 any](v Optional[tuples.Tuple6[T1, T2, T3, T4, T5, T6]]) (O1, O2, O3, O4, O5, O6) {
+func Unzip6[T1, T2, T3, T4, T5, T6 any](v Optional[tuples.Tuple6[T1, T2, T3, T4, T5, T6]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}
 }
 
 // Unzip7 returns an optional of 7-tuples.
-func Unzip7[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], T1, T2, T3, T4, T5, T6, T7 any](v Optional[tuples.Tuple7[T1, T2, T3, T4, T5, T6, T7]]) (O1, O2, O3, O4, O5, O6, O7) {
+func Unzip7[T1, T2, T3, T4, T5, T6, T7 any](v Optional[tuples.Tuple7[T1, T2, T3, T4, T5, T6, T7]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}
 }
 
 // Unzip8 returns an optional of 8-tuples.
-func Unzip8[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], T1, T2, T3, T4, T5, T6, T7, T8 any](v Optional[tuples.Tuple8[T1, T2, T3, T4, T5, T6, T7, T8]]) (O1, O2, O3, O4, O5, O6, O7, O8) {
+func Unzip8[T1, T2, T3, T4, T5, T6, T7, T8 any](v Optional[tuples.Tuple8[T1, T2, T3, T4, T5, T6, T7, T8]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}
 }
 
 // Unzip9 returns an optional of 9-tuples.
-func Unzip9[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], T1, T2, T3, T4, T5, T6, T7, T8, T9 any](v Optional[tuples.Tuple9[T1, T2, T3, T4, T5, T6, T7, T8, T9]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9) {
+func Unzip9[T1, T2, T3, T4, T5, T6, T7, T8, T9 any](v Optional[tuples.Tuple9[T1, T2, T3, T4, T5, T6, T7, T8, T9]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}
 }
 
 // Unzip10 returns an optional of 10-tuples.
-func Unzip10[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10 any](v Optional[tuples.Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10) {
+func Unzip10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10 any](v Optional[tuples.Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}
 }
 
 // Unzip11 returns an optional of 11-tuples.
-func Unzip11[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11 any](v Optional[tuples.Tuple11[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11) {
+func Unzip11[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11 any](v Optional[tuples.Tuple11[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}
 }
 
 // Unzip12 returns an optional of 12-tuples.
-func Unzip12[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12 any](v Optional[tuples.Tuple12[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12) {
+func Unzip12[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12 any](v Optional[tuples.Tuple12[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}
 }
 
 // Unzip13 returns an optional of 13-tuples.
-func Unzip13[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13 any](v Optional[tuples.Tuple13[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13) {
+func Unzip13[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13 any](v Optional[tuples.Tuple13[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}
 }
 
 // Unzip14 returns an optional of 14-tuples.
-func Unzip14[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14 any](v Optional[tuples.Tuple14[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14) {
+func Unzip14[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14 any](v Optional[tuples.Tuple14[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}
 }
 
 // Unzip15 returns an optional of 15-tuples.
-func Unzip15[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15 any](v Optional[tuples.Tuple15[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15) {
+func Unzip15[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15 any](v Optional[tuples.Tuple15[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}
 }
 
 // Unzip16 returns an optional of 16-tuples.
-func Unzip16[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16 any](v Optional[tuples.Tuple16[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16) {
+func Unzip16[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16 any](v Optional[tuples.Tuple16[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}
 }
 
 // Unzip17 returns an optional of 17-tuples.
-func Unzip17[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17 any](v Optional[tuples.Tuple17[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17) {
+func Unzip17[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17 any](v Optional[tuples.Tuple17[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}
 }
 
 // Unzip18 returns an optional of 18-tuples.
-func Unzip18[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18 any](v Optional[tuples.Tuple18[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18) {
+func Unzip18[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18 any](v Optional[tuples.Tuple18[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}
 }
 
 // Unzip19 returns an optional of 19-tuples.
-func Unzip19[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19 any](v Optional[tuples.Tuple19[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19) {
+func Unzip19[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19 any](v Optional[tuples.Tuple19[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}
 }
 
 // Unzip20 returns an optional of 20-tuples.
-func Unzip20[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20 any](v Optional[tuples.Tuple20[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20) {
+func Unzip20[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20 any](v Optional[tuples.Tuple20[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}
 }
 
 // Unzip21 returns an optional of 21-tuples.
-func Unzip21[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21 any](v Optional[tuples.Tuple21[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21) {
+func Unzip21[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21 any](v Optional[tuples.Tuple21[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}
 }
 
 // Unzip22 returns an optional of 22-tuples.
-func Unzip22[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22 any](v Optional[tuples.Tuple22[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22) {
+func Unzip22[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22 any](v Optional[tuples.Tuple22[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}
 }
 
 // Unzip23 returns an optional of 23-tuples.
-func Unzip23[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23 any](v Optional[tuples.Tuple23[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23) {
+func Unzip23[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23 any](v Optional[tuples.Tuple23[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}
 }
 
 // Unzip24 returns an optional of 24-tuples.
-func Unzip24[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24 any](v Optional[tuples.Tuple24[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24) {
+func Unzip24[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24 any](v Optional[tuples.Tuple24[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}
 }
 
 // Unzip25 returns an optional of 25-tuples.
-func Unzip25[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25 any](v Optional[tuples.Tuple25[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25) {
+func Unzip25[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25 any](v Optional[tuples.Tuple25[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}
 }
 
 // Unzip26 returns an optional of 26-tuples.
-func Unzip26[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26 any](v Optional[tuples.Tuple26[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26) {
+func Unzip26[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26 any](v Optional[tuples.Tuple26[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}
 }
 
 // Unzip27 returns an optional of 27-tuples.
-func Unzip27[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27 any](v Optional[tuples.Tuple27[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27) {
+func Unzip27[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27 any](v Optional[tuples.Tuple27[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}
 }
 
 // Unzip28 returns an optional of 28-tuples.
-func Unzip28[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28 any](v Optional[tuples.Tuple28[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28) {
+func Unzip28[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28 any](v Optional[tuples.Tuple28[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}
 }
 
 // Unzip29 returns an optional of 29-tuples.
-func Unzip29[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29 any](v Optional[tuples.Tuple29[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29) {
+func Unzip29[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29 any](v Optional[tuples.Tuple29[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}
 }
 
 // Unzip30 returns an optional of 30-tuples.
-func Unzip30[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30 any](v Optional[tuples.Tuple30[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30) {
+func Unzip30[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30 any](v Optional[tuples.Tuple30[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}
 }
 
 // Unzip31 returns an optional of 31-tuples.
-func Unzip31[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31 any](v Optional[tuples.Tuple31[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31) {
+func Unzip31[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31 any](v Optional[tuples.Tuple31[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}
 }
 
 // Unzip32 returns an optional of 32-tuples.
-func Unzip32[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32 any](v Optional[tuples.Tuple32[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32) {
+func Unzip32[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32 any](v Optional[tuples.Tuple32[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}
 }
 
 // Unzip33 returns an optional of 33-tuples.
-func Unzip33[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33 any](v Optional[tuples.Tuple33[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33) {
+func Unzip33[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33 any](v Optional[tuples.Tuple33[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}
 }
 
 // Unzip34 returns an optional of 34-tuples.
-func Unzip34[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34 any](v Optional[tuples.Tuple34[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34) {
+func Unzip34[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34 any](v Optional[tuples.Tuple34[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}
 }
 
 // Unzip35 returns an optional of 35-tuples.
-func Unzip35[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35 any](v Optional[tuples.Tuple35[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35) {
+func Unzip35[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35 any](v Optional[tuples.Tuple35[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}
 }
 
 // Unzip36 returns an optional of 36-tuples.
-func Unzip36[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36 any](v Optional[tuples.Tuple36[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36) {
+func Unzip36[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36 any](v Optional[tuples.Tuple36[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}
 }
 
 // Unzip37 returns an optional of 37-tuples.
-func Unzip37[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37 any](v Optional[tuples.Tuple37[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37) {
+func Unzip37[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37 any](v Optional[tuples.Tuple37[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}
 }
 
 // Unzip38 returns an optional of 38-tuples.
-func Unzip38[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38 any](v Optional[tuples.Tuple38[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38) {
+func Unzip38[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38 any](v Optional[tuples.Tuple38[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}
 }
 
 // Unzip39 returns an optional of 39-tuples.
-func Unzip39[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39 any](v Optional[tuples.Tuple39[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39) {
+func Unzip39[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39 any](v Optional[tuples.Tuple39[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}
 }
 
 // Unzip40 returns an optional of 40-tuples.
-func Unzip40[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40 any](v Optional[tuples.Tuple40[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40) {
+func Unzip40[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40 any](v Optional[tuples.Tuple40[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}
 }
 
 // Unzip41 returns an optional of 41-tuples.
-func Unzip41[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41 any](v Optional[tuples.Tuple41[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41) {
+func Unzip41[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41 any](v Optional[tuples.Tuple41[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}
 }
 
 // Unzip42 returns an optional of 42-tuples.
-func Unzip42[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42 any](v Optional[tuples.Tuple42[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42) {
+func Unzip42[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42 any](v Optional[tuples.Tuple42[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}
 }
 
 // Unzip43 returns an optional of 43-tuples.
-func Unzip43[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43 any](v Optional[tuples.Tuple43[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43) {
+func Unzip43[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43 any](v Optional[tuples.Tuple43[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}
 }
 
 // Unzip44 returns an optional of 44-tuples.
-func Unzip44[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44 any](v Optional[tuples.Tuple44[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44) {
+func Unzip44[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44 any](v Optional[tuples.Tuple44[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}
 }
 
 // Unzip45 returns an optional of 45-tuples.
-func Unzip45[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45 any](v Optional[tuples.Tuple45[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45) {
+func Unzip45[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45 any](v Optional[tuples.Tuple45[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}
 }
 
 // Unzip46 returns an optional of 46-tuples.
-func Unzip46[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], O46 optional[T46], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46 any](v Optional[tuples.Tuple46[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45, O46) {
+func Unzip46[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46 any](v Optional[tuples.Tuple46[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45], Optional[T46]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
-			}, O46{
+			}, Optional[T46]{
 				value: v.value.V46,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}, O46{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}, Optional[T46]{}
 }
 
 // Unzip47 returns an optional of 47-tuples.
-func Unzip47[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], O46 optional[T46], O47 optional[T47], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47 any](v Optional[tuples.Tuple47[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45, O46, O47) {
+func Unzip47[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47 any](v Optional[tuples.Tuple47[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45], Optional[T46], Optional[T47]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
-			}, O46{
+			}, Optional[T46]{
 				value: v.value.V46,
 				valid: true,
-			}, O47{
+			}, Optional[T47]{
 				value: v.value.V47,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}, O46{}, O47{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}, Optional[T46]{}, Optional[T47]{}
 }
 
 // Unzip48 returns an optional of 48-tuples.
-func Unzip48[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], O46 optional[T46], O47 optional[T47], O48 optional[T48], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48 any](v Optional[tuples.Tuple48[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45, O46, O47, O48) {
+func Unzip48[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48 any](v Optional[tuples.Tuple48[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45], Optional[T46], Optional[T47], Optional[T48]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
-			}, O46{
+			}, Optional[T46]{
 				value: v.value.V46,
 				valid: true,
-			}, O47{
+			}, Optional[T47]{
 				value: v.value.V47,
 				valid: true,
-			}, O48{
+			}, Optional[T48]{
 				value: v.value.V48,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}, O46{}, O47{}, O48{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}, Optional[T46]{}, Optional[T47]{}, Optional[T48]{}
 }
 
 // Unzip49 returns an optional of 49-tuples.
-func Unzip49[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], O46 optional[T46], O47 optional[T47], O48 optional[T48], O49 optional[T49], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49 any](v Optional[tuples.Tuple49[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45, O46, O47, O48, O49) {
+func Unzip49[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49 any](v Optional[tuples.Tuple49[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45], Optional[T46], Optional[T47], Optional[T48], Optional[T49]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
-			}, O46{
+			}, Optional[T46]{
 				value: v.value.V46,
 				valid: true,
-			}, O47{
+			}, Optional[T47]{
 				value: v.value.V47,
 				valid: true,
-			}, O48{
+			}, Optional[T48]{
 				value: v.value.V48,
 				valid: true,
-			}, O49{
+			}, Optional[T49]{
 				value: v.value.V49,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}, O46{}, O47{}, O48{}, O49{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}, Optional[T46]{}, Optional[T47]{}, Optional[T48]{}, Optional[T49]{}
 }
 
 // Unzip50 returns an optional of 50-tuples.
-func Unzip50[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], O46 optional[T46], O47 optional[T47], O48 optional[T48], O49 optional[T49], O50 optional[T50], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50 any](v Optional[tuples.Tuple50[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45, O46, O47, O48, O49, O50) {
+func Unzip50[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50 any](v Optional[tuples.Tuple50[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45], Optional[T46], Optional[T47], Optional[T48], Optional[T49], Optional[T50]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
-			}, O46{
+			}, Optional[T46]{
 				value: v.value.V46,
 				valid: true,
-			}, O47{
+			}, Optional[T47]{
 				value: v.value.V47,
 				valid: true,
-			}, O48{
+			}, Optional[T48]{
 				value: v.value.V48,
 				valid: true,
-			}, O49{
+			}, Optional[T49]{
 				value: v.value.V49,
 				valid: true,
-			}, O50{
+			}, Optional[T50]{
 				value: v.value.V50,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}, O46{}, O47{}, O48{}, O49{}, O50{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}, Optional[T46]{}, Optional[T47]{}, Optional[T48]{}, Optional[T49]{}, Optional[T50]{}
 }
 
 // Unzip51 returns an optional of 51-tuples.
-func Unzip51[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], O46 optional[T46], O47 optional[T47], O48 optional[T48], O49 optional[T49], O50 optional[T50], O51 optional[T51], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51 any](v Optional[tuples.Tuple51[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45, O46, O47, O48, O49, O50, O51) {
+func Unzip51[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51 any](v Optional[tuples.Tuple51[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45], Optional[T46], Optional[T47], Optional[T48], Optional[T49], Optional[T50], Optional[T51]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
-			}, O46{
+			}, Optional[T46]{
 				value: v.value.V46,
 				valid: true,
-			}, O47{
+			}, Optional[T47]{
 				value: v.value.V47,
 				valid: true,
-			}, O48{
+			}, Optional[T48]{
 				value: v.value.V48,
 				valid: true,
-			}, O49{
+			}, Optional[T49]{
 				value: v.value.V49,
 				valid: true,
-			}, O50{
+			}, Optional[T50]{
 				value: v.value.V50,
 				valid: true,
-			}, O51{
+			}, Optional[T51]{
 				value: v.value.V51,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}, O46{}, O47{}, O48{}, O49{}, O50{}, O51{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}, Optional[T46]{}, Optional[T47]{}, Optional[T48]{}, Optional[T49]{}, Optional[T50]{}, Optional[T51]{}
 }
 
 // Unzip52 returns an optional of 52-tuples.
-func Unzip52[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], O46 optional[T46], O47 optional[T47], O48 optional[T48], O49 optional[T49], O50 optional[T50], O51 optional[T51], O52 optional[T52], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52 any](v Optional[tuples.Tuple52[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45, O46, O47, O48, O49, O50, O51, O52) {
+func Unzip52[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52 any](v Optional[tuples.Tuple52[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45], Optional[T46], Optional[T47], Optional[T48], Optional[T49], Optional[T50], Optional[T51], Optional[T52]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
-			}, O46{
+			}, Optional[T46]{
 				value: v.value.V46,
 				valid: true,
-			}, O47{
+			}, Optional[T47]{
 				value: v.value.V47,
 				valid: true,
-			}, O48{
+			}, Optional[T48]{
 				value: v.value.V48,
 				valid: true,
-			}, O49{
+			}, Optional[T49]{
 				value: v.value.V49,
 				valid: true,
-			}, O50{
+			}, Optional[T50]{
 				value: v.value.V50,
 				valid: true,
-			}, O51{
+			}, Optional[T51]{
 				value: v.value.V51,
 				valid: true,
-			}, O52{
+			}, Optional[T52]{
 				value: v.value.V52,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}, O46{}, O47{}, O48{}, O49{}, O50{}, O51{}, O52{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}, Optional[T46]{}, Optional[T47]{}, Optional[T48]{}, Optional[T49]{}, Optional[T50]{}, Optional[T51]{}, Optional[T52]{}
 }
 
 // Unzip53 returns an optional of 53-tuples.
-func Unzip53[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], O46 optional[T46], O47 optional[T47], O48 optional[T48], O49 optional[T49], O50 optional[T50], O51 optional[T51], O52 optional[T52], O53 optional[T53], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53 any](v Optional[tuples.Tuple53[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45, O46, O47, O48, O49, O50, O51, O52, O53) {
+func Unzip53[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53 any](v Optional[tuples.Tuple53[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45], Optional[T46], Optional[T47], Optional[T48], Optional[T49], Optional[T50], Optional[T51], Optional[T52], Optional[T53]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
-			}, O46{
+			}, Optional[T46]{
 				value: v.value.V46,
 				valid: true,
-			}, O47{
+			}, Optional[T47]{
 				value: v.value.V47,
 				valid: true,
-			}, O48{
+			}, Optional[T48]{
 				value: v.value.V48,
 				valid: true,
-			}, O49{
+			}, Optional[T49]{
 				value: v.value.V49,
 				valid: true,
-			}, O50{
+			}, Optional[T50]{
 				value: v.value.V50,
 				valid: true,
-			}, O51{
+			}, Optional[T51]{
 				value: v.value.V51,
 				valid: true,
-			}, O52{
+			}, Optional[T52]{
 				value: v.value.V52,
 				valid: true,
-			}, O53{
+			}, Optional[T53]{
 				value: v.value.V53,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}, O46{}, O47{}, O48{}, O49{}, O50{}, O51{}, O52{}, O53{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}, Optional[T46]{}, Optional[T47]{}, Optional[T48]{}, Optional[T49]{}, Optional[T50]{}, Optional[T51]{}, Optional[T52]{}, Optional[T53]{}
 }
 
 // Unzip54 returns an optional of 54-tuples.
-func Unzip54[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], O46 optional[T46], O47 optional[T47], O48 optional[T48], O49 optional[T49], O50 optional[T50], O51 optional[T51], O52 optional[T52], O53 optional[T53], O54 optional[T54], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54 any](v Optional[tuples.Tuple54[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45, O46, O47, O48, O49, O50, O51, O52, O53, O54) {
+func Unzip54[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54 any](v Optional[tuples.Tuple54[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45], Optional[T46], Optional[T47], Optional[T48], Optional[T49], Optional[T50], Optional[T51], Optional[T52], Optional[T53], Optional[T54]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
-			}, O46{
+			}, Optional[T46]{
 				value: v.value.V46,
 				valid: true,
-			}, O47{
+			}, Optional[T47]{
 				value: v.value.V47,
 				valid: true,
-			}, O48{
+			}, Optional[T48]{
 				value: v.value.V48,
 				valid: true,
-			}, O49{
+			}, Optional[T49]{
 				value: v.value.V49,
 				valid: true,
-			}, O50{
+			}, Optional[T50]{
 				value: v.value.V50,
 				valid: true,
-			}, O51{
+			}, Optional[T51]{
 				value: v.value.V51,
 				valid: true,
-			}, O52{
+			}, Optional[T52]{
 				value: v.value.V52,
 				valid: true,
-			}, O53{
+			}, Optional[T53]{
 				value: v.value.V53,
 				valid: true,
-			}, O54{
+			}, Optional[T54]{
 				value: v.value.V54,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}, O46{}, O47{}, O48{}, O49{}, O50{}, O51{}, O52{}, O53{}, O54{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}, Optional[T46]{}, Optional[T47]{}, Optional[T48]{}, Optional[T49]{}, Optional[T50]{}, Optional[T51]{}, Optional[T52]{}, Optional[T53]{}, Optional[T54]{}
 }
 
 // Unzip55 returns an optional of 55-tuples.
-func Unzip55[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], O46 optional[T46], O47 optional[T47], O48 optional[T48], O49 optional[T49], O50 optional[T50], O51 optional[T51], O52 optional[T52], O53 optional[T53], O54 optional[T54], O55 optional[T55], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55 any](v Optional[tuples.Tuple55[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45, O46, O47, O48, O49, O50, O51, O52, O53, O54, O55) {
+func Unzip55[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55 any](v Optional[tuples.Tuple55[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45], Optional[T46], Optional[T47], Optional[T48], Optional[T49], Optional[T50], Optional[T51], Optional[T52], Optional[T53], Optional[T54], Optional[T55]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
-			}, O46{
+			}, Optional[T46]{
 				value: v.value.V46,
 				valid: true,
-			}, O47{
+			}, Optional[T47]{
 				value: v.value.V47,
 				valid: true,
-			}, O48{
+			}, Optional[T48]{
 				value: v.value.V48,
 				valid: true,
-			}, O49{
+			}, Optional[T49]{
 				value: v.value.V49,
 				valid: true,
-			}, O50{
+			}, Optional[T50]{
 				value: v.value.V50,
 				valid: true,
-			}, O51{
+			}, Optional[T51]{
 				value: v.value.V51,
 				valid: true,
-			}, O52{
+			}, Optional[T52]{
 				value: v.value.V52,
 				valid: true,
-			}, O53{
+			}, Optional[T53]{
 				value: v.value.V53,
 				valid: true,
-			}, O54{
+			}, Optional[T54]{
 				value: v.value.V54,
 				valid: true,
-			}, O55{
+			}, Optional[T55]{
 				value: v.value.V55,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}, O46{}, O47{}, O48{}, O49{}, O50{}, O51{}, O52{}, O53{}, O54{}, O55{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}, Optional[T46]{}, Optional[T47]{}, Optional[T48]{}, Optional[T49]{}, Optional[T50]{}, Optional[T51]{}, Optional[T52]{}, Optional[T53]{}, Optional[T54]{}, Optional[T55]{}
 }
 
 // Unzip56 returns an optional of 56-tuples.
-func Unzip56[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], O46 optional[T46], O47 optional[T47], O48 optional[T48], O49 optional[T49], O50 optional[T50], O51 optional[T51], O52 optional[T52], O53 optional[T53], O54 optional[T54], O55 optional[T55], O56 optional[T56], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56 any](v Optional[tuples.Tuple56[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45, O46, O47, O48, O49, O50, O51, O52, O53, O54, O55, O56) {
+func Unzip56[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56 any](v Optional[tuples.Tuple56[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45], Optional[T46], Optional[T47], Optional[T48], Optional[T49], Optional[T50], Optional[T51], Optional[T52], Optional[T53], Optional[T54], Optional[T55], Optional[T56]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
-			}, O46{
+			}, Optional[T46]{
 				value: v.value.V46,
 				valid: true,
-			}, O47{
+			}, Optional[T47]{
 				value: v.value.V47,
 				valid: true,
-			}, O48{
+			}, Optional[T48]{
 				value: v.value.V48,
 				valid: true,
-			}, O49{
+			}, Optional[T49]{
 				value: v.value.V49,
 				valid: true,
-			}, O50{
+			}, Optional[T50]{
 				value: v.value.V50,
 				valid: true,
-			}, O51{
+			}, Optional[T51]{
 				value: v.value.V51,
 				valid: true,
-			}, O52{
+			}, Optional[T52]{
 				value: v.value.V52,
 				valid: true,
-			}, O53{
+			}, Optional[T53]{
 				value: v.value.V53,
 				valid: true,
-			}, O54{
+			}, Optional[T54]{
 				value: v.value.V54,
 				valid: true,
-			}, O55{
+			}, Optional[T55]{
 				value: v.value.V55,
 				valid: true,
-			}, O56{
+			}, Optional[T56]{
 				value: v.value.V56,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}, O46{}, O47{}, O48{}, O49{}, O50{}, O51{}, O52{}, O53{}, O54{}, O55{}, O56{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}, Optional[T46]{}, Optional[T47]{}, Optional[T48]{}, Optional[T49]{}, Optional[T50]{}, Optional[T51]{}, Optional[T52]{}, Optional[T53]{}, Optional[T54]{}, Optional[T55]{}, Optional[T56]{}
 }
 
 // Unzip57 returns an optional of 57-tuples.
-func Unzip57[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], O46 optional[T46], O47 optional[T47], O48 optional[T48], O49 optional[T49], O50 optional[T50], O51 optional[T51], O52 optional[T52], O53 optional[T53], O54 optional[T54], O55 optional[T55], O56 optional[T56], O57 optional[T57], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57 any](v Optional[tuples.Tuple57[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45, O46, O47, O48, O49, O50, O51, O52, O53, O54, O55, O56, O57) {
+func Unzip57[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57 any](v Optional[tuples.Tuple57[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45], Optional[T46], Optional[T47], Optional[T48], Optional[T49], Optional[T50], Optional[T51], Optional[T52], Optional[T53], Optional[T54], Optional[T55], Optional[T56], Optional[T57]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
-			}, O46{
+			}, Optional[T46]{
 				value: v.value.V46,
 				valid: true,
-			}, O47{
+			}, Optional[T47]{
 				value: v.value.V47,
 				valid: true,
-			}, O48{
+			}, Optional[T48]{
 				value: v.value.V48,
 				valid: true,
-			}, O49{
+			}, Optional[T49]{
 				value: v.value.V49,
 				valid: true,
-			}, O50{
+			}, Optional[T50]{
 				value: v.value.V50,
 				valid: true,
-			}, O51{
+			}, Optional[T51]{
 				value: v.value.V51,
 				valid: true,
-			}, O52{
+			}, Optional[T52]{
 				value: v.value.V52,
 				valid: true,
-			}, O53{
+			}, Optional[T53]{
 				value: v.value.V53,
 				valid: true,
-			}, O54{
+			}, Optional[T54]{
 				value: v.value.V54,
 				valid: true,
-			}, O55{
+			}, Optional[T55]{
 				value: v.value.V55,
 				valid: true,
-			}, O56{
+			}, Optional[T56]{
 				value: v.value.V56,
 				valid: true,
-			}, O57{
+			}, Optional[T57]{
 				value: v.value.V57,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}, O46{}, O47{}, O48{}, O49{}, O50{}, O51{}, O52{}, O53{}, O54{}, O55{}, O56{}, O57{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}, Optional[T46]{}, Optional[T47]{}, Optional[T48]{}, Optional[T49]{}, Optional[T50]{}, Optional[T51]{}, Optional[T52]{}, Optional[T53]{}, Optional[T54]{}, Optional[T55]{}, Optional[T56]{}, Optional[T57]{}
 }
 
 // Unzip58 returns an optional of 58-tuples.
-func Unzip58[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], O46 optional[T46], O47 optional[T47], O48 optional[T48], O49 optional[T49], O50 optional[T50], O51 optional[T51], O52 optional[T52], O53 optional[T53], O54 optional[T54], O55 optional[T55], O56 optional[T56], O57 optional[T57], O58 optional[T58], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58 any](v Optional[tuples.Tuple58[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45, O46, O47, O48, O49, O50, O51, O52, O53, O54, O55, O56, O57, O58) {
+func Unzip58[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58 any](v Optional[tuples.Tuple58[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45], Optional[T46], Optional[T47], Optional[T48], Optional[T49], Optional[T50], Optional[T51], Optional[T52], Optional[T53], Optional[T54], Optional[T55], Optional[T56], Optional[T57], Optional[T58]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
-			}, O46{
+			}, Optional[T46]{
 				value: v.value.V46,
 				valid: true,
-			}, O47{
+			}, Optional[T47]{
 				value: v.value.V47,
 				valid: true,
-			}, O48{
+			}, Optional[T48]{
 				value: v.value.V48,
 				valid: true,
-			}, O49{
+			}, Optional[T49]{
 				value: v.value.V49,
 				valid: true,
-			}, O50{
+			}, Optional[T50]{
 				value: v.value.V50,
 				valid: true,
-			}, O51{
+			}, Optional[T51]{
 				value: v.value.V51,
 				valid: true,
-			}, O52{
+			}, Optional[T52]{
 				value: v.value.V52,
 				valid: true,
-			}, O53{
+			}, Optional[T53]{
 				value: v.value.V53,
 				valid: true,
-			}, O54{
+			}, Optional[T54]{
 				value: v.value.V54,
 				valid: true,
-			}, O55{
+			}, Optional[T55]{
 				value: v.value.V55,
 				valid: true,
-			}, O56{
+			}, Optional[T56]{
 				value: v.value.V56,
 				valid: true,
-			}, O57{
+			}, Optional[T57]{
 				value: v.value.V57,
 				valid: true,
-			}, O58{
+			}, Optional[T58]{
 				value: v.value.V58,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}, O46{}, O47{}, O48{}, O49{}, O50{}, O51{}, O52{}, O53{}, O54{}, O55{}, O56{}, O57{}, O58{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}, Optional[T46]{}, Optional[T47]{}, Optional[T48]{}, Optional[T49]{}, Optional[T50]{}, Optional[T51]{}, Optional[T52]{}, Optional[T53]{}, Optional[T54]{}, Optional[T55]{}, Optional[T56]{}, Optional[T57]{}, Optional[T58]{}
 }
 
 // Unzip59 returns an optional of 59-tuples.
-func Unzip59[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], O46 optional[T46], O47 optional[T47], O48 optional[T48], O49 optional[T49], O50 optional[T50], O51 optional[T51], O52 optional[T52], O53 optional[T53], O54 optional[T54], O55 optional[T55], O56 optional[T56], O57 optional[T57], O58 optional[T58], O59 optional[T59], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59 any](v Optional[tuples.Tuple59[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45, O46, O47, O48, O49, O50, O51, O52, O53, O54, O55, O56, O57, O58, O59) {
+func Unzip59[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59 any](v Optional[tuples.Tuple59[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45], Optional[T46], Optional[T47], Optional[T48], Optional[T49], Optional[T50], Optional[T51], Optional[T52], Optional[T53], Optional[T54], Optional[T55], Optional[T56], Optional[T57], Optional[T58], Optional[T59]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
-			}, O46{
+			}, Optional[T46]{
 				value: v.value.V46,
 				valid: true,
-			}, O47{
+			}, Optional[T47]{
 				value: v.value.V47,
 				valid: true,
-			}, O48{
+			}, Optional[T48]{
 				value: v.value.V48,
 				valid: true,
-			}, O49{
+			}, Optional[T49]{
 				value: v.value.V49,
 				valid: true,
-			}, O50{
+			}, Optional[T50]{
 				value: v.value.V50,
 				valid: true,
-			}, O51{
+			}, Optional[T51]{
 				value: v.value.V51,
 				valid: true,
-			}, O52{
+			}, Optional[T52]{
 				value: v.value.V52,
 				valid: true,
-			}, O53{
+			}, Optional[T53]{
 				value: v.value.V53,
 				valid: true,
-			}, O54{
+			}, Optional[T54]{
 				value: v.value.V54,
 				valid: true,
-			}, O55{
+			}, Optional[T55]{
 				value: v.value.V55,
 				valid: true,
-			}, O56{
+			}, Optional[T56]{
 				value: v.value.V56,
 				valid: true,
-			}, O57{
+			}, Optional[T57]{
 				value: v.value.V57,
 				valid: true,
-			}, O58{
+			}, Optional[T58]{
 				value: v.value.V58,
 				valid: true,
-			}, O59{
+			}, Optional[T59]{
 				value: v.value.V59,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}, O46{}, O47{}, O48{}, O49{}, O50{}, O51{}, O52{}, O53{}, O54{}, O55{}, O56{}, O57{}, O58{}, O59{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}, Optional[T46]{}, Optional[T47]{}, Optional[T48]{}, Optional[T49]{}, Optional[T50]{}, Optional[T51]{}, Optional[T52]{}, Optional[T53]{}, Optional[T54]{}, Optional[T55]{}, Optional[T56]{}, Optional[T57]{}, Optional[T58]{}, Optional[T59]{}
 }
 
 // Unzip60 returns an optional of 60-tuples.
-func Unzip60[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], O46 optional[T46], O47 optional[T47], O48 optional[T48], O49 optional[T49], O50 optional[T50], O51 optional[T51], O52 optional[T52], O53 optional[T53], O54 optional[T54], O55 optional[T55], O56 optional[T56], O57 optional[T57], O58 optional[T58], O59 optional[T59], O60 optional[T60], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60 any](v Optional[tuples.Tuple60[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45, O46, O47, O48, O49, O50, O51, O52, O53, O54, O55, O56, O57, O58, O59, O60) {
+func Unzip60[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60 any](v Optional[tuples.Tuple60[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45], Optional[T46], Optional[T47], Optional[T48], Optional[T49], Optional[T50], Optional[T51], Optional[T52], Optional[T53], Optional[T54], Optional[T55], Optional[T56], Optional[T57], Optional[T58], Optional[T59], Optional[T60]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
-			}, O46{
+			}, Optional[T46]{
 				value: v.value.V46,
 				valid: true,
-			}, O47{
+			}, Optional[T47]{
 				value: v.value.V47,
 				valid: true,
-			}, O48{
+			}, Optional[T48]{
 				value: v.value.V48,
 				valid: true,
-			}, O49{
+			}, Optional[T49]{
 				value: v.value.V49,
 				valid: true,
-			}, O50{
+			}, Optional[T50]{
 				value: v.value.V50,
 				valid: true,
-			}, O51{
+			}, Optional[T51]{
 				value: v.value.V51,
 				valid: true,
-			}, O52{
+			}, Optional[T52]{
 				value: v.value.V52,
 				valid: true,
-			}, O53{
+			}, Optional[T53]{
 				value: v.value.V53,
 				valid: true,
-			}, O54{
+			}, Optional[T54]{
 				value: v.value.V54,
 				valid: true,
-			}, O55{
+			}, Optional[T55]{
 				value: v.value.V55,
 				valid: true,
-			}, O56{
+			}, Optional[T56]{
 				value: v.value.V56,
 				valid: true,
-			}, O57{
+			}, Optional[T57]{
 				value: v.value.V57,
 				valid: true,
-			}, O58{
+			}, Optional[T58]{
 				value: v.value.V58,
 				valid: true,
-			}, O59{
+			}, Optional[T59]{
 				value: v.value.V59,
 				valid: true,
-			}, O60{
+			}, Optional[T60]{
 				value: v.value.V60,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}, O46{}, O47{}, O48{}, O49{}, O50{}, O51{}, O52{}, O53{}, O54{}, O55{}, O56{}, O57{}, O58{}, O59{}, O60{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}, Optional[T46]{}, Optional[T47]{}, Optional[T48]{}, Optional[T49]{}, Optional[T50]{}, Optional[T51]{}, Optional[T52]{}, Optional[T53]{}, Optional[T54]{}, Optional[T55]{}, Optional[T56]{}, Optional[T57]{}, Optional[T58]{}, Optional[T59]{}, Optional[T60]{}
 }
 
 // Unzip61 returns an optional of 61-tuples.
-func Unzip61[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], O46 optional[T46], O47 optional[T47], O48 optional[T48], O49 optional[T49], O50 optional[T50], O51 optional[T51], O52 optional[T52], O53 optional[T53], O54 optional[T54], O55 optional[T55], O56 optional[T56], O57 optional[T57], O58 optional[T58], O59 optional[T59], O60 optional[T60], O61 optional[T61], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61 any](v Optional[tuples.Tuple61[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45, O46, O47, O48, O49, O50, O51, O52, O53, O54, O55, O56, O57, O58, O59, O60, O61) {
+func Unzip61[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61 any](v Optional[tuples.Tuple61[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45], Optional[T46], Optional[T47], Optional[T48], Optional[T49], Optional[T50], Optional[T51], Optional[T52], Optional[T53], Optional[T54], Optional[T55], Optional[T56], Optional[T57], Optional[T58], Optional[T59], Optional[T60], Optional[T61]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
-			}, O46{
+			}, Optional[T46]{
 				value: v.value.V46,
 				valid: true,
-			}, O47{
+			}, Optional[T47]{
 				value: v.value.V47,
 				valid: true,
-			}, O48{
+			}, Optional[T48]{
 				value: v.value.V48,
 				valid: true,
-			}, O49{
+			}, Optional[T49]{
 				value: v.value.V49,
 				valid: true,
-			}, O50{
+			}, Optional[T50]{
 				value: v.value.V50,
 				valid: true,
-			}, O51{
+			}, Optional[T51]{
 				value: v.value.V51,
 				valid: true,
-			}, O52{
+			}, Optional[T52]{
 				value: v.value.V52,
 				valid: true,
-			}, O53{
+			}, Optional[T53]{
 				value: v.value.V53,
 				valid: true,
-			}, O54{
+			}, Optional[T54]{
 				value: v.value.V54,
 				valid: true,
-			}, O55{
+			}, Optional[T55]{
 				value: v.value.V55,
 				valid: true,
-			}, O56{
+			}, Optional[T56]{
 				value: v.value.V56,
 				valid: true,
-			}, O57{
+			}, Optional[T57]{
 				value: v.value.V57,
 				valid: true,
-			}, O58{
+			}, Optional[T58]{
 				value: v.value.V58,
 				valid: true,
-			}, O59{
+			}, Optional[T59]{
 				value: v.value.V59,
 				valid: true,
-			}, O60{
+			}, Optional[T60]{
 				value: v.value.V60,
 				valid: true,
-			}, O61{
+			}, Optional[T61]{
 				value: v.value.V61,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}, O46{}, O47{}, O48{}, O49{}, O50{}, O51{}, O52{}, O53{}, O54{}, O55{}, O56{}, O57{}, O58{}, O59{}, O60{}, O61{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}, Optional[T46]{}, Optional[T47]{}, Optional[T48]{}, Optional[T49]{}, Optional[T50]{}, Optional[T51]{}, Optional[T52]{}, Optional[T53]{}, Optional[T54]{}, Optional[T55]{}, Optional[T56]{}, Optional[T57]{}, Optional[T58]{}, Optional[T59]{}, Optional[T60]{}, Optional[T61]{}
 }
 
 // Unzip62 returns an optional of 62-tuples.
-func Unzip62[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], O46 optional[T46], O47 optional[T47], O48 optional[T48], O49 optional[T49], O50 optional[T50], O51 optional[T51], O52 optional[T52], O53 optional[T53], O54 optional[T54], O55 optional[T55], O56 optional[T56], O57 optional[T57], O58 optional[T58], O59 optional[T59], O60 optional[T60], O61 optional[T61], O62 optional[T62], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62 any](v Optional[tuples.Tuple62[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45, O46, O47, O48, O49, O50, O51, O52, O53, O54, O55, O56, O57, O58, O59, O60, O61, O62) {
+func Unzip62[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62 any](v Optional[tuples.Tuple62[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45], Optional[T46], Optional[T47], Optional[T48], Optional[T49], Optional[T50], Optional[T51], Optional[T52], Optional[T53], Optional[T54], Optional[T55], Optional[T56], Optional[T57], Optional[T58], Optional[T59], Optional[T60], Optional[T61], Optional[T62]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
-			}, O46{
+			}, Optional[T46]{
 				value: v.value.V46,
 				valid: true,
-			}, O47{
+			}, Optional[T47]{
 				value: v.value.V47,
 				valid: true,
-			}, O48{
+			}, Optional[T48]{
 				value: v.value.V48,
 				valid: true,
-			}, O49{
+			}, Optional[T49]{
 				value: v.value.V49,
 				valid: true,
-			}, O50{
+			}, Optional[T50]{
 				value: v.value.V50,
 				valid: true,
-			}, O51{
+			}, Optional[T51]{
 				value: v.value.V51,
 				valid: true,
-			}, O52{
+			}, Optional[T52]{
 				value: v.value.V52,
 				valid: true,
-			}, O53{
+			}, Optional[T53]{
 				value: v.value.V53,
 				valid: true,
-			}, O54{
+			}, Optional[T54]{
 				value: v.value.V54,
 				valid: true,
-			}, O55{
+			}, Optional[T55]{
 				value: v.value.V55,
 				valid: true,
-			}, O56{
+			}, Optional[T56]{
 				value: v.value.V56,
 				valid: true,
-			}, O57{
+			}, Optional[T57]{
 				value: v.value.V57,
 				valid: true,
-			}, O58{
+			}, Optional[T58]{
 				value: v.value.V58,
 				valid: true,
-			}, O59{
+			}, Optional[T59]{
 				value: v.value.V59,
 				valid: true,
-			}, O60{
+			}, Optional[T60]{
 				value: v.value.V60,
 				valid: true,
-			}, O61{
+			}, Optional[T61]{
 				value: v.value.V61,
 				valid: true,
-			}, O62{
+			}, Optional[T62]{
 				value: v.value.V62,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}, O46{}, O47{}, O48{}, O49{}, O50{}, O51{}, O52{}, O53{}, O54{}, O55{}, O56{}, O57{}, O58{}, O59{}, O60{}, O61{}, O62{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}, Optional[T46]{}, Optional[T47]{}, Optional[T48]{}, Optional[T49]{}, Optional[T50]{}, Optional[T51]{}, Optional[T52]{}, Optional[T53]{}, Optional[T54]{}, Optional[T55]{}, Optional[T56]{}, Optional[T57]{}, Optional[T58]{}, Optional[T59]{}, Optional[T60]{}, Optional[T61]{}, Optional[T62]{}
 }
 
 // Unzip63 returns an optional of 63-tuples.
-func Unzip63[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], O46 optional[T46], O47 optional[T47], O48 optional[T48], O49 optional[T49], O50 optional[T50], O51 optional[T51], O52 optional[T52], O53 optional[T53], O54 optional[T54], O55 optional[T55], O56 optional[T56], O57 optional[T57], O58 optional[T58], O59 optional[T59], O60 optional[T60], O61 optional[T61], O62 optional[T62], O63 optional[T63], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63 any](v Optional[tuples.Tuple63[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45, O46, O47, O48, O49, O50, O51, O52, O53, O54, O55, O56, O57, O58, O59, O60, O61, O62, O63) {
+func Unzip63[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63 any](v Optional[tuples.Tuple63[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45], Optional[T46], Optional[T47], Optional[T48], Optional[T49], Optional[T50], Optional[T51], Optional[T52], Optional[T53], Optional[T54], Optional[T55], Optional[T56], Optional[T57], Optional[T58], Optional[T59], Optional[T60], Optional[T61], Optional[T62], Optional[T63]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
-			}, O46{
+			}, Optional[T46]{
 				value: v.value.V46,
 				valid: true,
-			}, O47{
+			}, Optional[T47]{
 				value: v.value.V47,
 				valid: true,
-			}, O48{
+			}, Optional[T48]{
 				value: v.value.V48,
 				valid: true,
-			}, O49{
+			}, Optional[T49]{
 				value: v.value.V49,
 				valid: true,
-			}, O50{
+			}, Optional[T50]{
 				value: v.value.V50,
 				valid: true,
-			}, O51{
+			}, Optional[T51]{
 				value: v.value.V51,
 				valid: true,
-			}, O52{
+			}, Optional[T52]{
 				value: v.value.V52,
 				valid: true,
-			}, O53{
+			}, Optional[T53]{
 				value: v.value.V53,
 				valid: true,
-			}, O54{
+			}, Optional[T54]{
 				value: v.value.V54,
 				valid: true,
-			}, O55{
+			}, Optional[T55]{
 				value: v.value.V55,
 				valid: true,
-			}, O56{
+			}, Optional[T56]{
 				value: v.value.V56,
 				valid: true,
-			}, O57{
+			}, Optional[T57]{
 				value: v.value.V57,
 				valid: true,
-			}, O58{
+			}, Optional[T58]{
 				value: v.value.V58,
 				valid: true,
-			}, O59{
+			}, Optional[T59]{
 				value: v.value.V59,
 				valid: true,
-			}, O60{
+			}, Optional[T60]{
 				value: v.value.V60,
 				valid: true,
-			}, O61{
+			}, Optional[T61]{
 				value: v.value.V61,
 				valid: true,
-			}, O62{
+			}, Optional[T62]{
 				value: v.value.V62,
 				valid: true,
-			}, O63{
+			}, Optional[T63]{
 				value: v.value.V63,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}, O46{}, O47{}, O48{}, O49{}, O50{}, O51{}, O52{}, O53{}, O54{}, O55{}, O56{}, O57{}, O58{}, O59{}, O60{}, O61{}, O62{}, O63{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}, Optional[T46]{}, Optional[T47]{}, Optional[T48]{}, Optional[T49]{}, Optional[T50]{}, Optional[T51]{}, Optional[T52]{}, Optional[T53]{}, Optional[T54]{}, Optional[T55]{}, Optional[T56]{}, Optional[T57]{}, Optional[T58]{}, Optional[T59]{}, Optional[T60]{}, Optional[T61]{}, Optional[T62]{}, Optional[T63]{}
 }
 
 // Unzip64 returns an optional of 64-tuples.
-func Unzip64[O1 optional[T1], O2 optional[T2], O3 optional[T3], O4 optional[T4], O5 optional[T5], O6 optional[T6], O7 optional[T7], O8 optional[T8], O9 optional[T9], O10 optional[T10], O11 optional[T11], O12 optional[T12], O13 optional[T13], O14 optional[T14], O15 optional[T15], O16 optional[T16], O17 optional[T17], O18 optional[T18], O19 optional[T19], O20 optional[T20], O21 optional[T21], O22 optional[T22], O23 optional[T23], O24 optional[T24], O25 optional[T25], O26 optional[T26], O27 optional[T27], O28 optional[T28], O29 optional[T29], O30 optional[T30], O31 optional[T31], O32 optional[T32], O33 optional[T33], O34 optional[T34], O35 optional[T35], O36 optional[T36], O37 optional[T37], O38 optional[T38], O39 optional[T39], O40 optional[T40], O41 optional[T41], O42 optional[T42], O43 optional[T43], O44 optional[T44], O45 optional[T45], O46 optional[T46], O47 optional[T47], O48 optional[T48], O49 optional[T49], O50 optional[T50], O51 optional[T51], O52 optional[T52], O53 optional[T53], O54 optional[T54], O55 optional[T55], O56 optional[T56], O57 optional[T57], O58 optional[T58], O59 optional[T59], O60 optional[T60], O61 optional[T61], O62 optional[T62], O63 optional[T63], O64 optional[T64], T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64 any](v Optional[tuples.Tuple64[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64]]) (O1, O2, O3, O4, O5, O6, O7, O8, O9, O10, O11, O12, O13, O14, O15, O16, O17, O18, O19, O20, O21, O22, O23, O24, O25, O26, O27, O28, O29, O30, O31, O32, O33, O34, O35, O36, O37, O38, O39, O40, O41, O42, O43, O44, O45, O46, O47, O48, O49, O50, O51, O52, O53, O54, O55, O56, O57, O58, O59, O60, O61, O62, O63, O64) {
+func Unzip64[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64 any](v Optional[tuples.Tuple64[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64]]) (Optional[T1], Optional[T2], Optional[T3], Optional[T4], Optional[T5], Optional[T6], Optional[T7], Optional[T8], Optional[T9], Optional[T10], Optional[T11], Optional[T12], Optional[T13], Optional[T14], Optional[T15], Optional[T16], Optional[T17], Optional[T18], Optional[T19], Optional[T20], Optional[T21], Optional[T22], Optional[T23], Optional[T24], Optional[T25], Optional[T26], Optional[T27], Optional[T28], Optional[T29], Optional[T30], Optional[T31], Optional[T32], Optional[T33], Optional[T34], Optional[T35], Optional[T36], Optional[T37], Optional[T38], Optional[T39], Optional[T40], Optional[T41], Optional[T42], Optional[T43], Optional[T44], Optional[T45], Optional[T46], Optional[T47], Optional[T48], Optional[T49], Optional[T50], Optional[T51], Optional[T52], Optional[T53], Optional[T54], Optional[T55], Optional[T56], Optional[T57], Optional[T58], Optional[T59], Optional[T60], Optional[T61], Optional[T62], Optional[T63], Optional[T64]) {
 	if v.valid {
-		return O1{
+		return Optional[T1]{
 				value: v.value.V1,
 				valid: true,
-			}, O2{
+			}, Optional[T2]{
 				value: v.value.V2,
 				valid: true,
-			}, O3{
+			}, Optional[T3]{
 				value: v.value.V3,
 				valid: true,
-			}, O4{
+			}, Optional[T4]{
 				value: v.value.V4,
 				valid: true,
-			}, O5{
+			}, Optional[T5]{
 				value: v.value.V5,
 				valid: true,
-			}, O6{
+			}, Optional[T6]{
 				value: v.value.V6,
 				valid: true,
-			}, O7{
+			}, Optional[T7]{
 				value: v.value.V7,
 				valid: true,
-			}, O8{
+			}, Optional[T8]{
 				value: v.value.V8,
 				valid: true,
-			}, O9{
+			}, Optional[T9]{
 				value: v.value.V9,
 				valid: true,
-			}, O10{
+			}, Optional[T10]{
 				value: v.value.V10,
 				valid: true,
-			}, O11{
+			}, Optional[T11]{
 				value: v.value.V11,
 				valid: true,
-			}, O12{
+			}, Optional[T12]{
 				value: v.value.V12,
 				valid: true,
-			}, O13{
+			}, Optional[T13]{
 				value: v.value.V13,
 				valid: true,
-			}, O14{
+			}, Optional[T14]{
 				value: v.value.V14,
 				valid: true,
-			}, O15{
+			}, Optional[T15]{
 				value: v.value.V15,
 				valid: true,
-			}, O16{
+			}, Optional[T16]{
 				value: v.value.V16,
 				valid: true,
-			}, O17{
+			}, Optional[T17]{
 				value: v.value.V17,
 				valid: true,
-			}, O18{
+			}, Optional[T18]{
 				value: v.value.V18,
 				valid: true,
-			}, O19{
+			}, Optional[T19]{
 				value: v.value.V19,
 				valid: true,
-			}, O20{
+			}, Optional[T20]{
 				value: v.value.V20,
 				valid: true,
-			}, O21{
+			}, Optional[T21]{
 				value: v.value.V21,
 				valid: true,
-			}, O22{
+			}, Optional[T22]{
 				value: v.value.V22,
 				valid: true,
-			}, O23{
+			}, Optional[T23]{
 				value: v.value.V23,
 				valid: true,
-			}, O24{
+			}, Optional[T24]{
 				value: v.value.V24,
 				valid: true,
-			}, O25{
+			}, Optional[T25]{
 				value: v.value.V25,
 				valid: true,
-			}, O26{
+			}, Optional[T26]{
 				value: v.value.V26,
 				valid: true,
-			}, O27{
+			}, Optional[T27]{
 				value: v.value.V27,
 				valid: true,
-			}, O28{
+			}, Optional[T28]{
 				value: v.value.V28,
 				valid: true,
-			}, O29{
+			}, Optional[T29]{
 				value: v.value.V29,
 				valid: true,
-			}, O30{
+			}, Optional[T30]{
 				value: v.value.V30,
 				valid: true,
-			}, O31{
+			}, Optional[T31]{
 				value: v.value.V31,
 				valid: true,
-			}, O32{
+			}, Optional[T32]{
 				value: v.value.V32,
 				valid: true,
-			}, O33{
+			}, Optional[T33]{
 				value: v.value.V33,
 				valid: true,
-			}, O34{
+			}, Optional[T34]{
 				value: v.value.V34,
 				valid: true,
-			}, O35{
+			}, Optional[T35]{
 				value: v.value.V35,
 				valid: true,
-			}, O36{
+			}, Optional[T36]{
 				value: v.value.V36,
 				valid: true,
-			}, O37{
+			}, Optional[T37]{
 				value: v.value.V37,
 				valid: true,
-			}, O38{
+			}, Optional[T38]{
 				value: v.value.V38,
 				valid: true,
-			}, O39{
+			}, Optional[T39]{
 				value: v.value.V39,
 				valid: true,
-			}, O40{
+			}, Optional[T40]{
 				value: v.value.V40,
 				valid: true,
-			}, O41{
+			}, Optional[T41]{
 				value: v.value.V41,
 				valid: true,
-			}, O42{
+			}, Optional[T42]{
 				value: v.value.V42,
 				valid: true,
-			}, O43{
+			}, Optional[T43]{
 				value: v.value.V43,
 				valid: true,
-			}, O44{
+			}, Optional[T44]{
 				value: v.value.V44,
 				valid: true,
-			}, O45{
+			}, Optional[T45]{
 				value: v.value.V45,
 				valid: true,
-			}, O46{
+			}, Optional[T46]{
 				value: v.value.V46,
 				valid: true,
-			}, O47{
+			}, Optional[T47]{
 				value: v.value.V47,
 				valid: true,
-			}, O48{
+			}, Optional[T48]{
 				value: v.value.V48,
 				valid: true,
-			}, O49{
+			}, Optional[T49]{
 				value: v.value.V49,
 				valid: true,
-			}, O50{
+			}, Optional[T50]{
 				value: v.value.V50,
 				valid: true,
-			}, O51{
+			}, Optional[T51]{
 				value: v.value.V51,
 				valid: true,
-			}, O52{
+			}, Optional[T52]{
 				value: v.value.V52,
 				valid: true,
-			}, O53{
+			}, Optional[T53]{
 				value: v.value.V53,
 				valid: true,
-			}, O54{
+			}, Optional[T54]{
 				value: v.value.V54,
 				valid: true,
-			}, O55{
+			}, Optional[T55]{
 				value: v.value.V55,
 				valid: true,
-			}, O56{
+			}, Optional[T56]{
 				value: v.value.V56,
 				valid: true,
-			}, O57{
+			}, Optional[T57]{
 				value: v.value.V57,
 				valid: true,
-			}, O58{
+			}, Optional[T58]{
 				value: v.value.V58,
 				valid: true,
-			}, O59{
+			}, Optional[T59]{
 				value: v.value.V59,
 				valid: true,
-			}, O60{
+			}, Optional[T60]{
 				value: v.value.V60,
 				valid: true,
-			}, O61{
+			}, Optional[T61]{
 				value: v.value.V61,
 				valid: true,
-			}, O62{
+			}, Optional[T62]{
 				value: v.value.V62,
 				valid: true,
-			}, O63{
+			}, Optional[T63]{
 				value: v.value.V63,
 				valid: true,
-			}, O64{
+			}, Optional[T64]{
 				value: v.value.V64,
 				valid: true,
 			}
 	}
-	return O1{}, O2{}, O3{}, O4{}, O5{}, O6{}, O7{}, O8{}, O9{}, O10{}, O11{}, O12{}, O13{}, O14{}, O15{}, O16{}, O17{}, O18{}, O19{}, O20{}, O21{}, O22{}, O23{}, O24{}, O25{}, O26{}, O27{}, O28{}, O29{}, O30{}, O31{}, O32{}, O33{}, O34{}, O35{}, O36{}, O37{}, O38{}, O39{}, O40{}, O41{}, O42{}, O43{}, O44{}, O45{}, O46{}, O47{}, O48{}, O49{}, O50{}, O51{}, O52{}, O53{}, O54{}, O55{}, O56{}, O57{}, O58{}, O59{}, O60{}, O61{}, O62{}, O63{}, O64{}
+	return Optional[T1]{}, Optional[T2]{}, Optional[T3]{}, Optional[T4]{}, Optional[T5]{}, Optional[T6]{}, Optional[T7]{}, Optional[T8]{}, Optional[T9]{}, Optional[T10]{}, Optional[T11]{}, Optional[T12]{}, Optional[T13]{}, Optional[T14]{}, Optional[T15]{}, Optional[T16]{}, Optional[T17]{}, Optional[T18]{}, Optional[T19]{}, Optional[T20]{}, Optional[T21]{}, Optional[T22]{}, Optional[T23]{}, Optional[T24]{}, Optional[T25]{}, Optional[T26]{}, Optional[T27]{}, Optional[T28]{}, Optional[T29]{}, Optional[T30]{}, Optional[T31]{}, Optional[T32]{}, Optional[T33]{}, Optional[T34]{}, Optional[T35]{}, Optional[T36]{}, Optional[T37]{}, Optional[T38]{}, Optional[T39]{}, Optional[T40]{}, Optional[T41]{}, Optional[T42]{}, Optional[T43]{}, Optional[T44]{}, Optional[T45]{}, Optional[T46]{}, Optional[T47]{}, Optional[T48]{}, Optional[T49]{}, Optional[T50]{}, Optional[T51]{}, Optional[T52]{}, Optional[T53]{}, Optional[T54]{}, Optional[T55]{}, Optional[T56]{}, Optional[T57]{}, Optional[T58]{}, Optional[T59]{}, Optional[T60]{}, Optional[T61]{}, Optional[T62]{}, Optional[T63]{}, Optional[T64]{}
 }
