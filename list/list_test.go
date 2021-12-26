@@ -116,4 +116,21 @@ func TestList(t *testing.T) {
 	e2 = l.InsertAfter("2", e3) // insert after back
 	checkListPointers(t, l, []*Element[string]{e1, e4, e3, e2})
 	l.Remove(e2)
+
+	// Check standard iteration.
+	str := ""
+	for e := l.Front(); e != nil; e = e.Next() {
+		str += e.Value + ","
+	}
+	if str != "1,banana,3," {
+		t.Errorf("l = %s, want 1,banana,3,", str)
+	}
+
+	// Clear all elements by iterating
+	var next *Element[string]
+	for e := l.Front(); e != nil; e = next {
+		next = e.Next()
+		l.Remove(e)
+	}
+	checkListPointers(t, l, []*Element[string]{})
 }
