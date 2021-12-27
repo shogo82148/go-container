@@ -31,7 +31,7 @@ for my $n(1..64) {
     }
     say $fh "	ret := make(S, l)";
     say $fh "	for i := 0; i < l; i++ {";
-    say $fh "		ret[i] = tuples.Tuple${n}[$types]{$slices}";
+    say $fh "		ret[i] = tuples.Tuple${n}[$types]{", join(", ", map { "V$_: s${_}[i]" } 1..$n), "}";
     say $fh "	}";
     say $fh "	return ret";
     say $fh "}";

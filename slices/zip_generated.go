@@ -12,7 +12,7 @@ func Zip1[S ~[]tuples.Tuple1[T1], T1 any](s1 []T1) S {
 	l := len(s1)
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple1[T1]{s1[i]}
+		ret[i] = tuples.Tuple1[T1]{V1: s1[i]}
 	}
 	return ret
 }
@@ -26,7 +26,7 @@ func Zip2[S ~[]tuples.Tuple2[T1, T2], T1, T2 any](s1 []T1, s2 []T2) S {
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple2[T1, T2]{s1[i], s2[i]}
+		ret[i] = tuples.Tuple2[T1, T2]{V1: s1[i], V2: s2[i]}
 	}
 	return ret
 }
@@ -43,7 +43,7 @@ func Zip3[S ~[]tuples.Tuple3[T1, T2, T3], T1, T2, T3 any](s1 []T1, s2 []T2, s3 [
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple3[T1, T2, T3]{s1[i], s2[i], s3[i]}
+		ret[i] = tuples.Tuple3[T1, T2, T3]{V1: s1[i], V2: s2[i], V3: s3[i]}
 	}
 	return ret
 }
@@ -63,7 +63,7 @@ func Zip4[S ~[]tuples.Tuple4[T1, T2, T3, T4], T1, T2, T3, T4 any](s1 []T1, s2 []
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple4[T1, T2, T3, T4]{s1[i], s2[i], s3[i], s4[i]}
+		ret[i] = tuples.Tuple4[T1, T2, T3, T4]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i]}
 	}
 	return ret
 }
@@ -86,7 +86,7 @@ func Zip5[S ~[]tuples.Tuple5[T1, T2, T3, T4, T5], T1, T2, T3, T4, T5 any](s1 []T
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple5[T1, T2, T3, T4, T5]{s1[i], s2[i], s3[i], s4[i], s5[i]}
+		ret[i] = tuples.Tuple5[T1, T2, T3, T4, T5]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i]}
 	}
 	return ret
 }
@@ -112,7 +112,7 @@ func Zip6[S ~[]tuples.Tuple6[T1, T2, T3, T4, T5, T6], T1, T2, T3, T4, T5, T6 any
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple6[T1, T2, T3, T4, T5, T6]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i]}
+		ret[i] = tuples.Tuple6[T1, T2, T3, T4, T5, T6]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i]}
 	}
 	return ret
 }
@@ -141,7 +141,7 @@ func Zip7[S ~[]tuples.Tuple7[T1, T2, T3, T4, T5, T6, T7], T1, T2, T3, T4, T5, T6
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple7[T1, T2, T3, T4, T5, T6, T7]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i]}
+		ret[i] = tuples.Tuple7[T1, T2, T3, T4, T5, T6, T7]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i]}
 	}
 	return ret
 }
@@ -173,7 +173,7 @@ func Zip8[S ~[]tuples.Tuple8[T1, T2, T3, T4, T5, T6, T7, T8], T1, T2, T3, T4, T5
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple8[T1, T2, T3, T4, T5, T6, T7, T8]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i]}
+		ret[i] = tuples.Tuple8[T1, T2, T3, T4, T5, T6, T7, T8]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i]}
 	}
 	return ret
 }
@@ -208,7 +208,7 @@ func Zip9[S ~[]tuples.Tuple9[T1, T2, T3, T4, T5, T6, T7, T8, T9], T1, T2, T3, T4
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple9[T1, T2, T3, T4, T5, T6, T7, T8, T9]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i]}
+		ret[i] = tuples.Tuple9[T1, T2, T3, T4, T5, T6, T7, T8, T9]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i]}
 	}
 	return ret
 }
@@ -246,7 +246,7 @@ func Zip10[S ~[]tuples.Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10], T1, T2,
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i]}
+		ret[i] = tuples.Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i]}
 	}
 	return ret
 }
@@ -287,7 +287,7 @@ func Zip11[S ~[]tuples.Tuple11[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11], T1
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple11[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i]}
+		ret[i] = tuples.Tuple11[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i]}
 	}
 	return ret
 }
@@ -331,7 +331,7 @@ func Zip12[S ~[]tuples.Tuple12[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple12[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i]}
+		ret[i] = tuples.Tuple12[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i]}
 	}
 	return ret
 }
@@ -378,7 +378,7 @@ func Zip13[S ~[]tuples.Tuple13[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple13[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i]}
+		ret[i] = tuples.Tuple13[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i]}
 	}
 	return ret
 }
@@ -428,7 +428,7 @@ func Zip14[S ~[]tuples.Tuple14[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple14[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i]}
+		ret[i] = tuples.Tuple14[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i]}
 	}
 	return ret
 }
@@ -481,7 +481,7 @@ func Zip15[S ~[]tuples.Tuple15[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple15[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i]}
+		ret[i] = tuples.Tuple15[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i]}
 	}
 	return ret
 }
@@ -537,7 +537,7 @@ func Zip16[S ~[]tuples.Tuple16[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple16[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i]}
+		ret[i] = tuples.Tuple16[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i]}
 	}
 	return ret
 }
@@ -596,7 +596,7 @@ func Zip17[S ~[]tuples.Tuple17[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple17[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i]}
+		ret[i] = tuples.Tuple17[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i]}
 	}
 	return ret
 }
@@ -658,7 +658,7 @@ func Zip18[S ~[]tuples.Tuple18[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple18[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i]}
+		ret[i] = tuples.Tuple18[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i]}
 	}
 	return ret
 }
@@ -723,7 +723,7 @@ func Zip19[S ~[]tuples.Tuple19[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple19[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i]}
+		ret[i] = tuples.Tuple19[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i]}
 	}
 	return ret
 }
@@ -791,7 +791,7 @@ func Zip20[S ~[]tuples.Tuple20[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple20[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i]}
+		ret[i] = tuples.Tuple20[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i]}
 	}
 	return ret
 }
@@ -862,7 +862,7 @@ func Zip21[S ~[]tuples.Tuple21[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple21[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i]}
+		ret[i] = tuples.Tuple21[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i]}
 	}
 	return ret
 }
@@ -936,7 +936,7 @@ func Zip22[S ~[]tuples.Tuple22[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple22[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i]}
+		ret[i] = tuples.Tuple22[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i]}
 	}
 	return ret
 }
@@ -1013,7 +1013,7 @@ func Zip23[S ~[]tuples.Tuple23[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple23[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i]}
+		ret[i] = tuples.Tuple23[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i]}
 	}
 	return ret
 }
@@ -1093,7 +1093,7 @@ func Zip24[S ~[]tuples.Tuple24[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple24[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i]}
+		ret[i] = tuples.Tuple24[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i]}
 	}
 	return ret
 }
@@ -1176,7 +1176,7 @@ func Zip25[S ~[]tuples.Tuple25[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple25[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i]}
+		ret[i] = tuples.Tuple25[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i]}
 	}
 	return ret
 }
@@ -1262,7 +1262,7 @@ func Zip26[S ~[]tuples.Tuple26[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple26[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i]}
+		ret[i] = tuples.Tuple26[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i]}
 	}
 	return ret
 }
@@ -1351,7 +1351,7 @@ func Zip27[S ~[]tuples.Tuple27[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple27[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i]}
+		ret[i] = tuples.Tuple27[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i]}
 	}
 	return ret
 }
@@ -1443,7 +1443,7 @@ func Zip28[S ~[]tuples.Tuple28[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple28[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i]}
+		ret[i] = tuples.Tuple28[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i]}
 	}
 	return ret
 }
@@ -1538,7 +1538,7 @@ func Zip29[S ~[]tuples.Tuple29[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple29[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i]}
+		ret[i] = tuples.Tuple29[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i]}
 	}
 	return ret
 }
@@ -1636,7 +1636,7 @@ func Zip30[S ~[]tuples.Tuple30[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple30[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i]}
+		ret[i] = tuples.Tuple30[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i]}
 	}
 	return ret
 }
@@ -1737,7 +1737,7 @@ func Zip31[S ~[]tuples.Tuple31[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple31[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i]}
+		ret[i] = tuples.Tuple31[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i]}
 	}
 	return ret
 }
@@ -1841,7 +1841,7 @@ func Zip32[S ~[]tuples.Tuple32[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple32[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i]}
+		ret[i] = tuples.Tuple32[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i]}
 	}
 	return ret
 }
@@ -1948,7 +1948,7 @@ func Zip33[S ~[]tuples.Tuple33[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple33[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i]}
+		ret[i] = tuples.Tuple33[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i]}
 	}
 	return ret
 }
@@ -2058,7 +2058,7 @@ func Zip34[S ~[]tuples.Tuple34[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple34[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i]}
+		ret[i] = tuples.Tuple34[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i]}
 	}
 	return ret
 }
@@ -2171,7 +2171,7 @@ func Zip35[S ~[]tuples.Tuple35[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple35[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i]}
+		ret[i] = tuples.Tuple35[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i]}
 	}
 	return ret
 }
@@ -2287,7 +2287,7 @@ func Zip36[S ~[]tuples.Tuple36[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple36[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i]}
+		ret[i] = tuples.Tuple36[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i]}
 	}
 	return ret
 }
@@ -2406,7 +2406,7 @@ func Zip37[S ~[]tuples.Tuple37[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple37[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i]}
+		ret[i] = tuples.Tuple37[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i]}
 	}
 	return ret
 }
@@ -2528,7 +2528,7 @@ func Zip38[S ~[]tuples.Tuple38[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple38[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i]}
+		ret[i] = tuples.Tuple38[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i]}
 	}
 	return ret
 }
@@ -2653,7 +2653,7 @@ func Zip39[S ~[]tuples.Tuple39[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple39[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i]}
+		ret[i] = tuples.Tuple39[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i]}
 	}
 	return ret
 }
@@ -2781,7 +2781,7 @@ func Zip40[S ~[]tuples.Tuple40[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple40[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i]}
+		ret[i] = tuples.Tuple40[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i]}
 	}
 	return ret
 }
@@ -2912,7 +2912,7 @@ func Zip41[S ~[]tuples.Tuple41[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple41[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i]}
+		ret[i] = tuples.Tuple41[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i]}
 	}
 	return ret
 }
@@ -3046,7 +3046,7 @@ func Zip42[S ~[]tuples.Tuple42[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple42[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i]}
+		ret[i] = tuples.Tuple42[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i]}
 	}
 	return ret
 }
@@ -3183,7 +3183,7 @@ func Zip43[S ~[]tuples.Tuple43[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple43[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i]}
+		ret[i] = tuples.Tuple43[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i]}
 	}
 	return ret
 }
@@ -3323,7 +3323,7 @@ func Zip44[S ~[]tuples.Tuple44[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple44[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i]}
+		ret[i] = tuples.Tuple44[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i]}
 	}
 	return ret
 }
@@ -3466,7 +3466,7 @@ func Zip45[S ~[]tuples.Tuple45[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple45[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i]}
+		ret[i] = tuples.Tuple45[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i]}
 	}
 	return ret
 }
@@ -3612,7 +3612,7 @@ func Zip46[S ~[]tuples.Tuple46[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple46[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i]}
+		ret[i] = tuples.Tuple46[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i], V46: s46[i]}
 	}
 	return ret
 }
@@ -3761,7 +3761,7 @@ func Zip47[S ~[]tuples.Tuple47[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple47[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i]}
+		ret[i] = tuples.Tuple47[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i], V46: s46[i], V47: s47[i]}
 	}
 	return ret
 }
@@ -3913,7 +3913,7 @@ func Zip48[S ~[]tuples.Tuple48[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple48[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i]}
+		ret[i] = tuples.Tuple48[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i], V46: s46[i], V47: s47[i], V48: s48[i]}
 	}
 	return ret
 }
@@ -4068,7 +4068,7 @@ func Zip49[S ~[]tuples.Tuple49[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple49[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i]}
+		ret[i] = tuples.Tuple49[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i], V46: s46[i], V47: s47[i], V48: s48[i], V49: s49[i]}
 	}
 	return ret
 }
@@ -4226,7 +4226,7 @@ func Zip50[S ~[]tuples.Tuple50[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple50[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i]}
+		ret[i] = tuples.Tuple50[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i], V46: s46[i], V47: s47[i], V48: s48[i], V49: s49[i], V50: s50[i]}
 	}
 	return ret
 }
@@ -4387,7 +4387,7 @@ func Zip51[S ~[]tuples.Tuple51[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple51[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i]}
+		ret[i] = tuples.Tuple51[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i], V46: s46[i], V47: s47[i], V48: s48[i], V49: s49[i], V50: s50[i], V51: s51[i]}
 	}
 	return ret
 }
@@ -4551,7 +4551,7 @@ func Zip52[S ~[]tuples.Tuple52[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple52[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i]}
+		ret[i] = tuples.Tuple52[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i], V46: s46[i], V47: s47[i], V48: s48[i], V49: s49[i], V50: s50[i], V51: s51[i], V52: s52[i]}
 	}
 	return ret
 }
@@ -4718,7 +4718,7 @@ func Zip53[S ~[]tuples.Tuple53[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple53[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i]}
+		ret[i] = tuples.Tuple53[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i], V46: s46[i], V47: s47[i], V48: s48[i], V49: s49[i], V50: s50[i], V51: s51[i], V52: s52[i], V53: s53[i]}
 	}
 	return ret
 }
@@ -4888,7 +4888,7 @@ func Zip54[S ~[]tuples.Tuple54[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple54[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i]}
+		ret[i] = tuples.Tuple54[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i], V46: s46[i], V47: s47[i], V48: s48[i], V49: s49[i], V50: s50[i], V51: s51[i], V52: s52[i], V53: s53[i], V54: s54[i]}
 	}
 	return ret
 }
@@ -5061,7 +5061,7 @@ func Zip55[S ~[]tuples.Tuple55[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple55[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i]}
+		ret[i] = tuples.Tuple55[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i], V46: s46[i], V47: s47[i], V48: s48[i], V49: s49[i], V50: s50[i], V51: s51[i], V52: s52[i], V53: s53[i], V54: s54[i], V55: s55[i]}
 	}
 	return ret
 }
@@ -5237,7 +5237,7 @@ func Zip56[S ~[]tuples.Tuple56[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple56[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i], s56[i]}
+		ret[i] = tuples.Tuple56[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i], V46: s46[i], V47: s47[i], V48: s48[i], V49: s49[i], V50: s50[i], V51: s51[i], V52: s52[i], V53: s53[i], V54: s54[i], V55: s55[i], V56: s56[i]}
 	}
 	return ret
 }
@@ -5416,7 +5416,7 @@ func Zip57[S ~[]tuples.Tuple57[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple57[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i], s56[i], s57[i]}
+		ret[i] = tuples.Tuple57[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i], V46: s46[i], V47: s47[i], V48: s48[i], V49: s49[i], V50: s50[i], V51: s51[i], V52: s52[i], V53: s53[i], V54: s54[i], V55: s55[i], V56: s56[i], V57: s57[i]}
 	}
 	return ret
 }
@@ -5598,7 +5598,7 @@ func Zip58[S ~[]tuples.Tuple58[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple58[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i], s56[i], s57[i], s58[i]}
+		ret[i] = tuples.Tuple58[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i], V46: s46[i], V47: s47[i], V48: s48[i], V49: s49[i], V50: s50[i], V51: s51[i], V52: s52[i], V53: s53[i], V54: s54[i], V55: s55[i], V56: s56[i], V57: s57[i], V58: s58[i]}
 	}
 	return ret
 }
@@ -5783,7 +5783,7 @@ func Zip59[S ~[]tuples.Tuple59[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple59[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i], s56[i], s57[i], s58[i], s59[i]}
+		ret[i] = tuples.Tuple59[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i], V46: s46[i], V47: s47[i], V48: s48[i], V49: s49[i], V50: s50[i], V51: s51[i], V52: s52[i], V53: s53[i], V54: s54[i], V55: s55[i], V56: s56[i], V57: s57[i], V58: s58[i], V59: s59[i]}
 	}
 	return ret
 }
@@ -5971,7 +5971,7 @@ func Zip60[S ~[]tuples.Tuple60[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple60[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i], s56[i], s57[i], s58[i], s59[i], s60[i]}
+		ret[i] = tuples.Tuple60[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i], V46: s46[i], V47: s47[i], V48: s48[i], V49: s49[i], V50: s50[i], V51: s51[i], V52: s52[i], V53: s53[i], V54: s54[i], V55: s55[i], V56: s56[i], V57: s57[i], V58: s58[i], V59: s59[i], V60: s60[i]}
 	}
 	return ret
 }
@@ -6162,7 +6162,7 @@ func Zip61[S ~[]tuples.Tuple61[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple61[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i], s56[i], s57[i], s58[i], s59[i], s60[i], s61[i]}
+		ret[i] = tuples.Tuple61[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i], V46: s46[i], V47: s47[i], V48: s48[i], V49: s49[i], V50: s50[i], V51: s51[i], V52: s52[i], V53: s53[i], V54: s54[i], V55: s55[i], V56: s56[i], V57: s57[i], V58: s58[i], V59: s59[i], V60: s60[i], V61: s61[i]}
 	}
 	return ret
 }
@@ -6356,7 +6356,7 @@ func Zip62[S ~[]tuples.Tuple62[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple62[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i], s56[i], s57[i], s58[i], s59[i], s60[i], s61[i], s62[i]}
+		ret[i] = tuples.Tuple62[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i], V46: s46[i], V47: s47[i], V48: s48[i], V49: s49[i], V50: s50[i], V51: s51[i], V52: s52[i], V53: s53[i], V54: s54[i], V55: s55[i], V56: s56[i], V57: s57[i], V58: s58[i], V59: s59[i], V60: s60[i], V61: s61[i], V62: s62[i]}
 	}
 	return ret
 }
@@ -6553,7 +6553,7 @@ func Zip63[S ~[]tuples.Tuple63[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple63[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i], s56[i], s57[i], s58[i], s59[i], s60[i], s61[i], s62[i], s63[i]}
+		ret[i] = tuples.Tuple63[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i], V46: s46[i], V47: s47[i], V48: s48[i], V49: s49[i], V50: s50[i], V51: s51[i], V52: s52[i], V53: s53[i], V54: s54[i], V55: s55[i], V56: s56[i], V57: s57[i], V58: s58[i], V59: s59[i], V60: s60[i], V61: s61[i], V62: s62[i], V63: s63[i]}
 	}
 	return ret
 }
@@ -6753,7 +6753,7 @@ func Zip64[S ~[]tuples.Tuple64[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple64[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64]{s1[i], s2[i], s3[i], s4[i], s5[i], s6[i], s7[i], s8[i], s9[i], s10[i], s11[i], s12[i], s13[i], s14[i], s15[i], s16[i], s17[i], s18[i], s19[i], s20[i], s21[i], s22[i], s23[i], s24[i], s25[i], s26[i], s27[i], s28[i], s29[i], s30[i], s31[i], s32[i], s33[i], s34[i], s35[i], s36[i], s37[i], s38[i], s39[i], s40[i], s41[i], s42[i], s43[i], s44[i], s45[i], s46[i], s47[i], s48[i], s49[i], s50[i], s51[i], s52[i], s53[i], s54[i], s55[i], s56[i], s57[i], s58[i], s59[i], s60[i], s61[i], s62[i], s63[i], s64[i]}
+		ret[i] = tuples.Tuple64[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64]{V1: s1[i], V2: s2[i], V3: s3[i], V4: s4[i], V5: s5[i], V6: s6[i], V7: s7[i], V8: s8[i], V9: s9[i], V10: s10[i], V11: s11[i], V12: s12[i], V13: s13[i], V14: s14[i], V15: s15[i], V16: s16[i], V17: s17[i], V18: s18[i], V19: s19[i], V20: s20[i], V21: s21[i], V22: s22[i], V23: s23[i], V24: s24[i], V25: s25[i], V26: s26[i], V27: s27[i], V28: s28[i], V29: s29[i], V30: s30[i], V31: s31[i], V32: s32[i], V33: s33[i], V34: s34[i], V35: s35[i], V36: s36[i], V37: s37[i], V38: s38[i], V39: s39[i], V40: s40[i], V41: s41[i], V42: s42[i], V43: s43[i], V44: s44[i], V45: s45[i], V46: s46[i], V47: s47[i], V48: s48[i], V49: s49[i], V50: s50[i], V51: s51[i], V52: s52[i], V53: s53[i], V54: s54[i], V55: s55[i], V56: s56[i], V57: s57[i], V58: s58[i], V59: s59[i], V60: s60[i], V61: s61[i], V62: s62[i], V63: s63[i], V64: s64[i]}
 	}
 	return ret
 }

@@ -23,7 +23,7 @@ for my $n(1..64) {
     say $fh "func Zip${n}[$types any]($slice_args) Optional[tuples.Tuple${n}[$types]] {";
     say $fh "\tif ", join(" && ", map { "v$_.valid" } 1..$n ), " {";
     say $fh "\t\treturn Optional[tuples.Tuple${n}[$types]]{";
-    say $fh "\t\t\tvalue: tuples.Tuple${n}[$types]{", join(", ", map { "v$_.value" } 1..$n ), "},";
+    say $fh "\t\t\tvalue: tuples.Tuple${n}[$types]{", join(", ", map { "V$_: v$_.value" } 1..$n ), "},";
     say $fh "\t\t\tvalid: true,";
     say $fh "\t\t}";
     say $fh "\t}";

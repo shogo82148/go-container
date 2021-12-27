@@ -8,11 +8,11 @@ import (
 
 func TestUnzip(t *testing.T) {
 	in := []tuples.Tuple2[int, string]{
-		{1, "one"},
-		{2, "two"},
-		{3, "three"},
-		{4, "four"},
-		{5, "five"},
+		{V1: 1, V2: "one"},
+		{V1: 2, V2: "two"},
+		{V1: 3, V2: "three"},
+		{V1: 4, V2: "four"},
+		{V1: 5, V2: "five"},
 	}
 	want1 := []int{1, 2, 3, 4, 5}
 	want2 := []string{"one", "two", "three", "four", "five"}
@@ -38,11 +38,11 @@ func TestUnzip(t *testing.T) {
 
 func TestUnzip2(t *testing.T) {
 	in := []tuples.Tuple2[int, string]{
-		{1, "one"},
-		{2, "two"},
-		{3, "three"},
-		{4, "four"},
-		{5, "five"},
+		{V1: 1, V2: "one"},
+		{V1: 2, V2: "two"},
+		{V1: 3, V2: "three"},
+		{V1: 4, V2: "four"},
+		{V1: 5, V2: "five"},
 	}
 	want1 := []int{1, 2, 3, 4, 5}
 	want2 := []string{"one", "two", "three", "four", "five"}

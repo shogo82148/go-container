@@ -11,11 +11,11 @@ func TestZip(t *testing.T) {
 	in2 := []string{"one", "two", "three", "four", "five"}
 	got := Zip(in1, in2)
 	want := []tuples.Tuple2[int, string]{
-		{1, "one"},
-		{2, "two"},
-		{3, "three"},
-		{4, "four"},
-		{5, "five"},
+		{V1: 1, V2: "one"},
+		{V1: 2, V2: "two"},
+		{V1: 3, V2: "three"},
+		{V1: 4, V2: "four"},
+		{V1: 5, V2: "five"},
 	}
 
 	if len(got) != len(want) {
@@ -33,11 +33,11 @@ func TestZip2(t *testing.T) {
 	in2 := []string{"one", "two", "three", "four", "five"}
 	got := Zip2(in1, in2)
 	want := []tuples.Tuple2[int, string]{
-		{1, "one"},
-		{2, "two"},
-		{3, "three"},
-		{4, "four"},
-		{5, "five"},
+		{V1: 1, V2: "one"},
+		{V1: 2, V2: "two"},
+		{V1: 3, V2: "three"},
+		{V1: 4, V2: "four"},
+		{V1: 5, V2: "five"},
 	}
 
 	if len(got) != len(want) {
@@ -55,10 +55,10 @@ func TestZip_shortest(t *testing.T) {
 	in2 := []string{"one", "two", "three", "four"}
 	got := Zip(in1, in2)
 	want := []tuples.Tuple2[int, string]{
-		{1, "one"},
-		{2, "two"},
-		{3, "three"},
-		{4, "four"},
+		{V1: 1, V2: "one"},
+		{V1: 2, V2: "two"},
+		{V1: 3, V2: "three"},
+		{V1: 4, V2: "four"},
 	}
 
 	if len(got) != len(want) {
@@ -76,10 +76,10 @@ func TestZip2_shortest(t *testing.T) {
 	in2 := []string{"one", "two", "three", "four"}
 	got := Zip2(in1, in2)
 	want := []tuples.Tuple2[int, string]{
-		{1, "one"},
-		{2, "two"},
-		{3, "three"},
-		{4, "four"},
+		{V1: 1, V2: "one"},
+		{V1: 2, V2: "two"},
+		{V1: 3, V2: "three"},
+		{V1: 4, V2: "four"},
 	}
 
 	if len(got) != len(want) {
@@ -98,11 +98,11 @@ func TestZip_underlying(t *testing.T) {
 	in2 := []string{"one", "two", "three", "four", "five"}
 	got := Zip[IntStrings](in1, in2)
 	want := IntStrings{
-		{1, "one"},
-		{2, "two"},
-		{3, "three"},
-		{4, "four"},
-		{5, "five"},
+		{V1: 1, V2: "one"},
+		{V1: 2, V2: "two"},
+		{V1: 3, V2: "three"},
+		{V1: 4, V2: "four"},
+		{V1: 5, V2: "five"},
 	}
 
 	if _, ok := (interface{})(got).(IntStrings); !ok {
@@ -124,11 +124,11 @@ func TestZip2_underlying(t *testing.T) {
 	in2 := []string{"one", "two", "three", "four", "five"}
 	got := Zip2[IntStrings](in1, in2)
 	want := IntStrings{
-		{1, "one"},
-		{2, "two"},
-		{3, "three"},
-		{4, "four"},
-		{5, "five"},
+		{V1: 1, V2: "one"},
+		{V1: 2, V2: "two"},
+		{V1: 3, V2: "three"},
+		{V1: 4, V2: "four"},
+		{V1: 5, V2: "five"},
 	}
 
 	if _, ok := (interface{})(got).(IntStrings); !ok {

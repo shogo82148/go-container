@@ -13,7 +13,7 @@ func Zip[S ~[]tuples.Tuple2[T1, T2], T1, T2 any](s1 []T1, s2 []T2) S {
 	}
 	ret := make(S, l)
 	for i := 0; i < l; i++ {
-		ret[i] = tuples.Tuple2[T1, T2]{s1[i], s2[i]}
+		ret[i] = tuples.Tuple2[T1, T2]{V1: s1[i], V2: s2[i]}
 	}
 	return ret
 }
