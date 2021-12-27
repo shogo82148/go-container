@@ -13,7 +13,7 @@ func TestUnzip2(t *testing.T) {
 		want2 Optional[string]
 	}{
 		{
-			in:    New(tuples.Tuple2[int, string]{1, "one"}),
+			in:    New(tuples.Tuple2[int, string]{V1: 1, V2: "one"}),
 			want1: New(1),
 			want2: New("one"),
 		},

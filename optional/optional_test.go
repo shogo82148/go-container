@@ -30,7 +30,7 @@ func TestOptional(t *testing.T) {
 }
 
 func TestGetOr(t *testing.T) {
-	got := New[int](42).GetOr(46)
+	got := New(42).GetOr(46)
 	if got != 42 {
 		t.Errorf("want 42, got %d", got)
 	}
@@ -48,7 +48,7 @@ func TestGetOrFunc(t *testing.T) {
 		return 46
 	}
 
-	got := New[int](42).GetOrFunc(f)
+	got := New(42).GetOrFunc(f)
 	if got != 42 {
 		t.Errorf("want 42, got %d", got)
 	}

@@ -185,7 +185,7 @@ func Product[T1, T2 comparable](s1 Set[T1], s2 Set[T2]) Set[tuples.Tuple2[T1, T2
 	ret := make(Set[tuples.Tuple2[T1, T2]], len(s1)*len(s2))
 	for v1 := range s1 {
 		for v2 := range s2 {
-			ret[tuples.Tuple2[T1, T2]{v1, v2}] = struct{}{}
+			ret[tuples.Tuple2[T1, T2]{V1: v1, V2: v2}] = struct{}{}
 		}
 	}
 	return ret
