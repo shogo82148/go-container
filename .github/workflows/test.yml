@@ -16,6 +16,7 @@ jobs:
       - uses: actions/setup-go@v2
         with:
           go-version: "${{ matrix.go }}"
+          stable: ${{ !contains(matrix.go, 'beta') }}
       - uses: actions/checkout@v2
       - name: Test
         run: |
