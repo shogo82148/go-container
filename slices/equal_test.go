@@ -1,7 +1,6 @@
 package slices
 
 import (
-	"constraints"
 	"math"
 	"strings"
 	"testing"
@@ -76,8 +75,12 @@ func equalNaN[T comparable](v1, v2 T) bool {
 	return v1 == v2 || (isNaN(v1) && isNaN(v2))
 }
 
+type integer interface {
+	~int | ~int8 | ~int16 | ~int32 | ~int64 | ~uint | ~uint8 | ~uint16 | ~uint32 | ~uint64 | ~uintptr
+}
+
 // offByOne returns true if integers v1 and v2 differ by 1.
-func offByOne[Elem constraints.Integer](v1, v2 Elem) bool {
+func offByOne[Elem integer](v1, v2 Elem) bool {
 	return v1 == v2+1 || v1 == v2-1
 }
 
