@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/shogo82148/go-container/slices"
+	"github.com/shogo82148/go-container/tuples"
 )
 
 func ExampleFilter() {
@@ -25,7 +26,7 @@ func ExampleFilter() {
 }
 
 func ExampleMap() {
-	out := slices.Map(
+	out := slices.Map[[]string](
 		[]int{1, 2, 3, 4, 5, 6},
 		func(a int) string {
 			return fmt.Sprintf("<%d>", a)
@@ -46,7 +47,7 @@ func ExampleMap() {
 }
 
 func ExampleZip() {
-	out := slices.Zip(
+	out := slices.Zip[[]tuples.Tuple2[int, string]](
 		[]int{1, 2, 3, 4, 5},
 		[]string{"one", "two", "three", "four", "five"},
 	)

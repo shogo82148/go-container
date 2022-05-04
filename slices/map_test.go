@@ -10,7 +10,7 @@ func TestMap(t *testing.T) {
 	f := func(a int) string {
 		return fmt.Sprintf("<%d>", a)
 	}
-	got := Map(in, f)
+	got := Map[[]string](in, f)
 
 	want := []string{"<1>", "<2>", "<3>", "<4>", "<5>", "<6>"}
 

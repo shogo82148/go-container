@@ -9,7 +9,7 @@ import (
 func TestZip(t *testing.T) {
 	in1 := []int{1, 2, 3, 4, 5}
 	in2 := []string{"one", "two", "three", "four", "five"}
-	got := Zip(in1, in2)
+	got := Zip[[]tuples.Tuple2[int, string]](in1, in2)
 	want := []tuples.Tuple2[int, string]{
 		{V1: 1, V2: "one"},
 		{V1: 2, V2: "two"},
@@ -31,7 +31,7 @@ func TestZip(t *testing.T) {
 func TestZip2(t *testing.T) {
 	in1 := []int{1, 2, 3, 4, 5}
 	in2 := []string{"one", "two", "three", "four", "five"}
-	got := Zip2(in1, in2)
+	got := Zip2[[]tuples.Tuple2[int, string]](in1, in2)
 	want := []tuples.Tuple2[int, string]{
 		{V1: 1, V2: "one"},
 		{V1: 2, V2: "two"},
@@ -53,7 +53,7 @@ func TestZip2(t *testing.T) {
 func TestZip_shortest(t *testing.T) {
 	in1 := []int{1, 2, 3, 4, 5}
 	in2 := []string{"one", "two", "three", "four"}
-	got := Zip(in1, in2)
+	got := Zip[[]tuples.Tuple2[int, string]](in1, in2)
 	want := []tuples.Tuple2[int, string]{
 		{V1: 1, V2: "one"},
 		{V1: 2, V2: "two"},
@@ -74,7 +74,7 @@ func TestZip_shortest(t *testing.T) {
 func TestZip2_shortest(t *testing.T) {
 	in1 := []int{1, 2, 3, 4, 5}
 	in2 := []string{"one", "two", "three", "four"}
-	got := Zip2(in1, in2)
+	got := Zip2[[]tuples.Tuple2[int, string]](in1, in2)
 	want := []tuples.Tuple2[int, string]{
 		{V1: 1, V2: "one"},
 		{V1: 2, V2: "two"},

@@ -16,7 +16,7 @@ func TestUnzip(t *testing.T) {
 	}
 	want1 := []int{1, 2, 3, 4, 5}
 	want2 := []string{"one", "two", "three", "four", "five"}
-	got1, got2 := Unzip(in)
+	got1, got2 := Unzip[[]int, []string](in)
 
 	if len(got1) != len(want1) {
 		t.Fatalf("unexpected length: want %d, got %d", len(want1), len(got1))
