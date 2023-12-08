@@ -1,3 +1,7 @@
+# ARCHIVED
+
+It is moved to https://github.com/shogo82148/hi
+
 # go-container
 Go experimental containers library using generics
 
